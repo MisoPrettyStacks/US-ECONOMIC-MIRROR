@@ -33,6 +33,8 @@ jobs:
       - name: Generate Tetlock AI forecast
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: https://routerai.net/api/v1
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: npm run generate-forecast
 
       - name: Commit updated data

@@ -24,9 +24,12 @@ jobs:
           node-version: "20"
           cache: "npm"
       - run: npm ci
-      - - run: npm run build
-  env:
-    VITE_BASE_PATH: /US-ECONOMIC-MIRROR/
+      - run: npm run build
+        env:
+          VITE_BASE_PATH: /US-ECONOMIC-MIRROR/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     environment:

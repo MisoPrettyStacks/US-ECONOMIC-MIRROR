@@ -1,1 +1,104 @@
-{ "indicators": [], "lastRefresh": "" }
+{
+  "indicators": [
+    {
+      "seriesId": "GDPC1",
+      "name": "Real GDP",
+      "unit": "Billions of Chained 2017 Dollars",
+      "category": "Output",
+      "value": 24180.419,
+      "previousValue": 24055.749,
+      "date": "2026-01-01"
+    },
+    {
+      "seriesId": "UNRATE",
+      "name": "Unemployment Rate",
+      "unit": "Percent",
+      "category": "Labor",
+      "value": 4.2,
+      "previousValue": 4.3,
+      "date": "2026-06-01"
+    },
+    {
+      "seriesId": "CPIAUCSL",
+      "name": "Inflation Rate",
+      "unit": "Index 1982-1984=100",
+      "category": "Prices",
+      "value": 4.17,
+      "previousValue": 3.68,
+      "date": "2026-05-01"
+    },
+    {
+      "seriesId": "FEDFUNDS",
+      "name": "Federal Funds Rate",
+      "unit": "Percent",
+      "category": "Monetary Policy",
+      "value": 3.63,
+      "previousValue": 3.63,
+      "date": "2026-06-01"
+    },
+    {
+      "seriesId": "DGS10",
+      "name": "10-Year Treasury Yield",
+      "unit": "Percent",
+      "category": "Interest Rates",
+      "value": 4.48,
+      "previousValue": 4.44,
+      "date": "2026-07-01"
+    },
+    {
+      "seriesId": "GFDEBTN",
+      "name": "Federal Debt",
+      "unit": "Millions of Dollars",
+      "category": "Fiscal",
+      "value": 39065421,
+      "previousValue": 38514009,
+      "date": "2026-01-01"
+    },
+    {
+      "seriesId": "BOPGSTB",
+      "name": "Goods and Services Trade Balance",
+      "unit": "Millions of Dollars",
+      "category": "Trade",
+      "value": -55881,
+      "previousValue": -56585,
+      "date": "2026-04-01"
+    },
+    {
+      "seriesId": "INDPRO",
+      "name": "Industrial Production",
+      "unit": "Index 2017=100",
+      "category": "Production",
+      "value": 102.6475,
+      "previousValue": 102.509,
+      "date": "2026-05-01"
+    },
+    {
+      "seriesId": "RSAFS",
+      "name": "Retail Sales",
+      "unit": "Millions of Dollars",
+      "category": "Consumer",
+      "value": 763705,
+      "previousValue": 757036,
+      "date": "2026-05-01"
+    },
+    {
+      "seriesId": "HOUST",
+      "name": "Housing Starts",
+      "unit": "Thousands of Units",
+      "category": "Housing",
+      "value": 1177,
+      "previousValue": 1392,
+      "date": "2026-05-01"
+    },
+    {
+      "seriesId": "PAYEMS",
+      "name": "Nonfarm Payrolls",
+      "unit": "Thousands of Persons",
+      "category": "Employment",
+      "value": 158984,
+      "previousValue": 158927,
+      "date": "2026-06-01"
+    }
+  ],
+  "lastRefresh": "2026-07-05T22:01:32.774Z"
+}

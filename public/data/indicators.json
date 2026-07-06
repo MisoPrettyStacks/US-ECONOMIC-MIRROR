@@ -23,8 +23,7 @@
       "name": "Inflation Rate",
       "unit": "Index 1982-1984=100",
       "category": "Prices",
-      "value": 4.17,
-      "previousValue": 3.68,
+      "value": 3.9,
       "date": "2026-05-01"
     },
     {
@@ -100,5 +99,5 @@
       "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-07-05T22:01:32.774Z"
+  "lastRefresh": "2026-07-06T01:48:25.552Z"
 }

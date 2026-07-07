@@ -58,9 +58,9 @@
       "name": "Goods and Services Trade Balance",
       "unit": "Millions of Dollars",
       "category": "Trade",
-      "value": -55881,
-      "previousValue": -56585,
-      "date": "2026-04-01"
+      "value": -77585,
+      "previousValue": -54570,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "INDPRO",
@@ -99,5 +99,5 @@
       "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-07-07T14:01:53.579Z"
+  "lastRefresh": "2026-07-07T19:29:01.907Z"
 }

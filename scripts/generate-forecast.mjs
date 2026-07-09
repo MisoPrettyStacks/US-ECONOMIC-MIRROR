@@ -162,22 +162,43 @@ async function main() {
     .join("\n");
 
   console.log(`Calling ${OPENAI_BASE_URL} for Tetlock forecast...`);
-  const res = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: OPENAI_MODEL,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: buildUserPrompt(indicatorSummary) },
-      ],
-      response_format: { type: "json_object" },
-      max_tokens: 8000,
-    }),
+
+  const requestBody = JSON.stringify({
+    model: OPENAI_MODEL,
+    messages: [
+      { role: "system", content: SYSTEM_PROMPT },
+      { role: "user", content: buildUserPrompt(indicatorSummary) },
+    ],
+    response_format: { type: "json_object" },
+    max_tokens: 8000,
   });
+
+  let res;
+  const maxAttempts = 4;
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    res = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: requestBody,
+    });
+
+    if (res.ok) break;
+
+    // Free-tier models on OpenRouter sometimes hit a transient upstream
+    // rate limit (HTTP 429) shared across all users. Retry with backoff
+    // before giving up, rather than treating it as a hard failure.
+    if (res.status === 429 && attempt < maxAttempts) {
+      const waitMs = attempt * 5000;
+      console.log(`Rate-limited (attempt ${attempt}/${maxAttempts}), retrying in ${waitMs / 1000}s...`);
+      await new Promise((resolve) => setTimeout(resolve, waitMs));
+      continue;
+    }
+
+    break;
+  }
 
   if (!res.ok) {
     const text = await res.text();

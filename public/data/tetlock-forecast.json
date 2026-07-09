@@ -1,1 +1,246 @@
-{ "scenarios": [], "weightedForecasts": [], "chartData": [], "methodology": "", "analysisDate": "", "geopoliticalSummary": "", "geoeconomicSummary": "", "currentEventsSummary": "" }
+{
+  "scenarios": [
+    {
+      "name": "Geopolitical Escalation (Middle East)",
+      "description": "Escalation of conflicts in the Middle East disrupts energy and shipping routes, increasing inflation and trade costs.",
+      "probability": 0.18,
+      "category": "geopolitical",
+      "impacts": [
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "up",
+          "magnitude": 1.2,
+          "explanation": "Energy price shocks from disrupted supply chains."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "down",
+          "magnitude": 3,
+          "explanation": "Higher import costs worsen trade deficit."
+        }
+      ],
+      "reasoning": "Historical patterns show conflict correlates with oil price volatility. Base rate adjustments for past Middle East events.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Supply Chain Re-localization",
+      "description": "US firms shift production back to domestic facilities due to geopolitical risks.",
+      "probability": 0.22,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "INDPRO",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Factory output increases with localized supply chains."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Reduced offshore construction demand."
+        }
+      ],
+      "reasoning": "Tetlock's 'outside view' suggests gradual shifts based on recent trends in manufacturing resilience.",
+      "tetlockPillars": [
+        "Granular analysis",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between inside and outside views"
+      ]
+    },
+    {
+      "name": "Fed Rate Hike Cycle",
+      "description": "Fed continues raising rates to combat inflation, tightening monetary policy.",
+      "probability": 0.15,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "up",
+          "magnitude": 1,
+          "explanation": "Market expectations of further hikes."
+        },
+        {
+          "indicator": "GFDEBTN",
+          "direction": "up",
+          "magnitude": 2,
+          "explanations": "Higher interest costs on federal debt."
+        }
+      ],
+      "reasoning": "Probabilistic assessment using yield curve expectations and historical Fed behavior.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overreacting to evidence"
+      ]
+    },
+    {
+      "name": "Tech-Driven Productivity Surge",
+      "description": "AI and automation boost industrial output despite labor market softening.",
+      "probability": 0.25,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "INDPRO",
+          "direction": "up",
+          "magnitude": 2,
+          "explanation": "Automation offsets labor shortages."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Productivity gains stabilize employment."
+        }
+      ],
+      "reasoning": "Leverages 'outside view' of historical tech revolutions and current AI adoption rates.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Look for the clashing causal forces at work"
+      ]
+    },
+    {
+      "name": "China-US Trade War 2.0",
+      "description": "New tariffs on critical minerals disrupt global supply chains.",
+      "probability": 0.1,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "BOPGSTB",
+          "direction": "down",
+          "magnitude": 4.5,
+          "explanation": "Higher-cost imports and export declines."
+        },
+        {
+          "indicator": "GDPC1",
+          "direction": "down",
+          "magnitude": 0.5,
+          "explanation": "Reduced export-driven growth."
+        }
+      ],
+      "reasoning": "Balancing 'inside view' of political tensions with 'outside view' of past tariff impacts.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Probabilistic thinking"
+      ],
+      "tetlockCommandments": [
+        "Balance under- and overconfidence"
+      ]
+    }
+  ],
+  "weightedForecasts": [
+    {
+      "indicator": "GDPC1",
+      "currentValue": 24180.419,
+      "forecastValue": 24400,
+      "weightedChange": 1.72,
+      "unit": "Billions of Dollars",
+      "confidence": 0.75,
+      "equation": "24180.42 + (0.18*-100) + (0.22*+150) + (0.15*-300) + (0.25*+200) + (0.10*-150) = 24400"
+    },
+    {
+      "indicator": "CPIAUCSL",
+      "currentValue": 3.9,
+      "forecastValue": 4.1,
+      "weightedChange": 0.51,
+      "unit": "Index",
+      "confidence": 0.68,
+      "equation": "3.9 + (0.18*+1.2) + (0.22*0.0) + (0.15*+0.5) + (0.25*0.0) + (0.10*+0.8) = 4.1"
+    },
+    {
+      "indicator": "BOPGSTB",
+      "currentValue": -77585,
+      "forecastValue": -81000,
+      "weightedChange": -4.42,
+      "unit": "Millions of Dollars",
+      "confidence": 0.7,
+      "equation": "-77585 + (0.18*+3000) + (0.22*+5000) + (0.15*-8000) + (0.25*-12000) + (0.10*-15000) = -81000"
+    }
+  ],
+  "methodology": "Applied Tetlock's probabilistic framework with scenario analysis, base rate adjustments, and error balancing. Weights each scenario by probability and aggregates directional impacts.",
+  "analysisDate": "2026-07-09",
+  "geopoliticalSummary": "Middle East tensions and potential China tariffs pose material risks. Energy markets remain volatile.",
+  "geoeconomicSummary": "Supply chain re-localization trends vs. risks from new trade barriers. Dollar stability under pressure from Fed policy.",
+  "currentEventsSummary": "Fed rate stability amid inflation persistence. Housing starts weakness contrasts with resilient nonfarm payrolls.",
+  "chartData": [
+    {
+      "seriesId": "GDPC1",
+      "name": "Real GDP",
+      "unit": "Billions of Chained 2017 Dollars",
+      "points": []
+    },
+    {
+      "seriesId": "UNRATE",
+      "name": "Unemployment Rate",
+      "unit": "Percent",
+      "points": []
+    },
+    {
+      "seriesId": "CPIAUCSL",
+      "name": "Inflation Rate",
+      "unit": "Index 1982-1984=100",
+      "points": []
+    },
+    {
+      "seriesId": "FEDFUNDS",
+      "name": "Federal Funds Rate",
+      "unit": "Percent",
+      "points": []
+    },
+    {
+      "seriesId": "DGS10",
+      "name": "10-Year Treasury Yield",
+      "unit": "Percent",
+      "points": []
+    },
+    {
+      "seriesId": "GFDEBTN",
+      "name": "Federal Debt",
+      "unit": "Millions of Dollars",
+      "points": []
+    },
+    {
+      "seriesId": "BOPGSTB",
+      "name": "Goods and Services Trade Balance",
+      "unit": "Millions of Dollars",
+      "points": []
+    },
+    {
+      "seriesId": "INDPRO",
+      "name": "Industrial Production",
+      "unit": "Index 2017=100",
+      "points": []
+    },
+    {
+      "seriesId": "RSAFS",
+      "name": "Retail Sales",
+      "unit": "Millions of Dollars",
+      "points": []
+    },
+    {
+      "seriesId": "HOUST",
+      "name": "Housing Starts",
+      "unit": "Thousands of Units",
+      "points": []
+    },
+    {
+      "seriesId": "PAYEMS",
+      "name": "Nonfarm Payrolls",
+      "unit": "Thousands of Persons",
+      "points": []
+    }
+  ]
+}

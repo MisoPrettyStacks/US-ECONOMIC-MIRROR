@@ -4,7 +4,7 @@ import { INDICATOR_SERIES, fetchFredHistory, computeYoYSeries, linearTrendForeca
 
 const OUT_DIR = path.resolve(import.meta.dirname, "..", "public", "data");
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4o";
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "meta-llama/llama-3.3-70b-instruct:free";
 const OPENAI_BASE_URL = process.env.OPENAI_BASE_URL || "https://api.openai.com/v1";
 
 function normalizeName(name) {
@@ -175,6 +175,7 @@ async function main() {
         { role: "user", content: buildUserPrompt(indicatorSummary) },
       ],
       response_format: { type: "json_object" },
+      max_tokens: 8000,
     }),
   });
 

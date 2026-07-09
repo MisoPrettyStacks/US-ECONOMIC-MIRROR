@@ -1,4 +1,4 @@
-# U.S. Economic Mirror — GitHub Edition
+# U.S. Economic Mirror — THIS IS A LEARNING TOOL, FOR EDUCATIONAL AND ENTERTAINMENT PURPOSES 
 
 A free, self-hosted copy of the U.S. Economic Mirror dashboard. It shows live
 Federal Reserve (FRED) indicators, an interactive what-if simulator, and an
@@ -104,3 +104,5 @@ this workflow takes well under a minute per run.
 - The Tetlock AI forecast is generated on the schedule above rather than
   on-demand per visitor, since there's no server to call OpenAI safely from
   a static site.
+
+  ***This tool is not financial advice***

@@ -7,8 +7,9 @@ interface Props {
 }
 
 export function IndicatorCard({ indicator }: Props) {
-  const isPositive = indicator.percentChange > 0;
-  const isNegative = indicator.percentChange < 0;
+  const percentChange = indicator.percentChange ?? 0;
+  const isPositive = percentChange > 0;
+  const isNegative = percentChange < 0;
 
   return (
     <div className="bg-card border border-border rounded-lg p-5">
@@ -33,7 +34,7 @@ export function IndicatorCard({ indicator }: Props) {
           }`}
         >
           {isPositive ? "+" : ""}
-          {indicator.percentChange.toFixed(2)}%
+          {percentChange.toFixed(2)}%
         </span>
         <span className="text-xs text-muted-foreground">latest FRED change</span>
       </div>

@@ -25,6 +25,11 @@ async function buildIndicators() {
       previousValue = obs[1] ? parseFloat(obs[1].value) : undefined;
       date = obs[0]?.date ?? "";
     }
+    const percentChange =
+      previousValue !== undefined && previousValue !== null && previousValue !== 0
+        ? ((value - previousValue) / Math.abs(previousValue)) * 100
+        : 0;
+
     indicators.push({
       seriesId: series.seriesId,
       name: series.name,
@@ -32,6 +37,7 @@ async function buildIndicators() {
       category: series.category,
       value,
       previousValue,
+      percentChange,
       date,
     });
   }

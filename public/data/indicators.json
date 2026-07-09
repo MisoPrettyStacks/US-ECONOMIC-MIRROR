@@ -7,7 +7,8 @@
       "category": "Output",
       "value": 24180.419,
       "previousValue": 24055.749,
-      "date": "2026-01-01"
+      "date": "2026-01-01",
+      "percentChange": 0.5183
     },
     {
       "seriesId": "UNRATE",
@@ -16,7 +17,8 @@
       "category": "Labor",
       "value": 4.2,
       "previousValue": 4.3,
-      "date": "2026-06-01"
+      "date": "2026-06-01",
+      "percentChange": -2.3256
     },
     {
       "seriesId": "CPIAUCSL",
@@ -24,7 +26,8 @@
       "unit": "Index 1982-1984=100",
       "category": "Prices",
       "value": 3.9,
-      "date": "2026-05-01"
+      "date": "2026-05-01",
+      "percentChange": 0
     },
     {
       "seriesId": "FEDFUNDS",
@@ -33,7 +36,8 @@
       "category": "Monetary Policy",
       "value": 3.63,
       "previousValue": 3.63,
-      "date": "2026-06-01"
+      "date": "2026-06-01",
+      "percentChange": 0.0
     },
     {
       "seriesId": "DGS10",
@@ -42,7 +46,8 @@
       "category": "Interest Rates",
       "value": 4.48,
       "previousValue": null,
-      "date": "2026-07-06"
+      "date": "2026-07-06",
+      "percentChange": 0
     },
     {
       "seriesId": "GFDEBTN",
@@ -51,7 +56,8 @@
       "category": "Fiscal",
       "value": 39065421,
       "previousValue": 38514009,
-      "date": "2026-01-01"
+      "date": "2026-01-01",
+      "percentChange": 1.4317
     },
     {
       "seriesId": "BOPGSTB",
@@ -60,7 +66,8 @@
       "category": "Trade",
       "value": -77585,
       "previousValue": -54570,
-      "date": "2026-05-01"
+      "date": "2026-05-01",
+      "percentChange": -42.1752
     },
     {
       "seriesId": "INDPRO",
@@ -69,7 +76,8 @@
       "category": "Production",
       "value": 102.6475,
       "previousValue": 102.509,
-      "date": "2026-05-01"
+      "date": "2026-05-01",
+      "percentChange": 0.1351
     },
     {
       "seriesId": "RSAFS",
@@ -78,7 +86,8 @@
       "category": "Consumer",
       "value": 763705,
       "previousValue": 757036,
-      "date": "2026-05-01"
+      "date": "2026-05-01",
+      "percentChange": 0.8809
     },
     {
       "seriesId": "HOUST",
@@ -87,7 +96,8 @@
       "category": "Housing",
       "value": 1177,
       "previousValue": 1392,
-      "date": "2026-05-01"
+      "date": "2026-05-01",
+      "percentChange": -15.4454
     },
     {
       "seriesId": "PAYEMS",
@@ -96,7 +106,8 @@
       "category": "Employment",
       "value": 158984,
       "previousValue": 158927,
-      "date": "2026-06-01"
+      "date": "2026-06-01",
+      "percentChange": 0.0359
     }
   ],
   "lastRefresh": "2026-07-08T19:01:59.479Z"

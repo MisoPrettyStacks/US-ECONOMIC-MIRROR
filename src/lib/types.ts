@@ -17,6 +17,15 @@ export interface ForecastPoint {
   date: string;
   value: number;
   type: "historical" | "forecast";
+  // Cross-series, correlation-weighted projection that also accounts for
+  // every other slider's deviation from its live value, not just this
+  // series' own slider. Only populated on forecast points.
+  correlated?: number;
+}
+
+export interface CorrelationDriver {
+  seriesId: string;
+  correlation: number;
 }
 
 export interface WhatIfForecast {
@@ -24,6 +33,9 @@ export interface WhatIfForecast {
   name: string;
   unit: string;
   points: ForecastPoint[];
+  // The other series whose slider is currently having the biggest
+  // data-driven correlated effect on this forecast, if any slider has moved.
+  topDriver?: CorrelationDriver | null;
 }
 
 export interface ScenarioImpact {

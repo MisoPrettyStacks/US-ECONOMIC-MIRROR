@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback, useRef } from "react";
+import { useEffect, useState, useCallback, useRef, useMemo } from "react";
 import { RefreshCw, Moon, Sun, Printer, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -21,6 +21,14 @@ export default function Dashboard() {
     refetch();
   }, [refetch]);
 
+  const seriesMeta = useMemo(() => {
+    const map: Record<string, { name: string; unit: string }> = {};
+    indicators.forEach((ind) => {
+      map[ind.seriesId] = { name: ind.name, unit: ind.unit };
+    });
+    return map;
+  }, [indicators]);
+
   useEffect(() => {
     if (indicators.length > 0 && !initializedRef.current) {
       initializedRef.current = true;
@@ -29,9 +37,12 @@ export default function Dashboard() {
         vals[ind.seriesId] = ind.value;
       });
       setSliderValues(vals);
-      calculate(indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })));
+      calculate(
+        indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })),
+        seriesMeta,
+      );
     }
-  }, [indicators, calculate]);
+  }, [indicators, calculate, seriesMeta]);
 
   const handleSliderChange = useCallback((seriesId: string, value: number) => {
     setSliderValues((prev) => ({ ...prev, [seriesId]: value }));
@@ -43,16 +54,19 @@ export default function Dashboard() {
       vals[ind.seriesId] = ind.value;
     });
     setSliderValues(vals);
-    calculate(indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })));
-  }, [indicators, calculate]);
+    calculate(
+      indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })),
+      seriesMeta,
+    );
+  }, [indicators, calculate, seriesMeta]);
 
   const debouncedCalculate = useCallback(() => {
     const adjustments = Object.entries(sliderValues).map(([seriesId, value]) => ({
       seriesId,
       value,
     }));
-    calculate(adjustments);
-  }, [sliderValues, calculate]);
+    calculate(adjustments, seriesMeta);
+  }, [sliderValues, calculate, seriesMeta]);
 
   useEffect(() => {
     if (!initializedRef.current) return;

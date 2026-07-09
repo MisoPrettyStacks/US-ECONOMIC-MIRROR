@@ -7,8 +7,8 @@
       "category": "Output",
       "value": 24180.419,
       "previousValue": 24055.749,
-      "date": "2026-01-01",
-      "percentChange": 0.5183
+      "percentChange": 0.5182544929280809,
+      "date": "2026-01-01"
     },
     {
       "seriesId": "UNRATE",
@@ -17,8 +17,8 @@
       "category": "Labor",
       "value": 4.2,
       "previousValue": 4.3,
-      "date": "2026-06-01",
-      "percentChange": -2.3256
+      "percentChange": -2.3255813953488293,
+      "date": "2026-06-01"
     },
     {
       "seriesId": "CPIAUCSL",
@@ -26,8 +26,8 @@
       "unit": "Index 1982-1984=100",
       "category": "Prices",
       "value": 3.9,
-      "date": "2026-05-01",
-      "percentChange": 0
+      "percentChange": 0,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "FEDFUNDS",
@@ -36,18 +36,18 @@
       "category": "Monetary Policy",
       "value": 3.63,
       "previousValue": 3.63,
-      "date": "2026-06-01",
-      "percentChange": 0.0
+      "percentChange": 0,
+      "date": "2026-06-01"
     },
     {
       "seriesId": "DGS10",
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 4.48,
-      "previousValue": null,
-      "date": "2026-07-06",
-      "percentChange": 0
+      "value": 4.55,
+      "previousValue": 4.48,
+      "percentChange": 1.5624999999999862,
+      "date": "2026-07-07"
     },
     {
       "seriesId": "GFDEBTN",
@@ -56,8 +56,8 @@
       "category": "Fiscal",
       "value": 39065421,
       "previousValue": 38514009,
-      "date": "2026-01-01",
-      "percentChange": 1.4317
+      "percentChange": 1.431718001623773,
+      "date": "2026-01-01"
     },
     {
       "seriesId": "BOPGSTB",
@@ -66,8 +66,8 @@
       "category": "Trade",
       "value": -77585,
       "previousValue": -54570,
-      "date": "2026-05-01",
-      "percentChange": -42.1752
+      "percentChange": -42.1751878321422,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "INDPRO",
@@ -76,8 +76,8 @@
       "category": "Production",
       "value": 102.6475,
       "previousValue": 102.509,
-      "date": "2026-05-01",
-      "percentChange": 0.1351
+      "percentChange": 0.13511008789471501,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "RSAFS",
@@ -86,8 +86,8 @@
       "category": "Consumer",
       "value": 763705,
       "previousValue": 757036,
-      "date": "2026-05-01",
-      "percentChange": 0.8809
+      "percentChange": 0.8809356490312217,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "HOUST",
@@ -96,8 +96,8 @@
       "category": "Housing",
       "value": 1177,
       "previousValue": 1392,
-      "date": "2026-05-01",
-      "percentChange": -15.4454
+      "percentChange": -15.445402298850574,
+      "date": "2026-05-01"
     },
     {
       "seriesId": "PAYEMS",
@@ -106,9 +106,9 @@
       "category": "Employment",
       "value": 158984,
       "previousValue": 158927,
-      "date": "2026-06-01",
-      "percentChange": 0.0359
+      "percentChange": 0.035865523164723426,
+      "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-07-08T19:01:59.479Z"
+  "lastRefresh": "2026-07-09T00:14:33.603Z"
 }

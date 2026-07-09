@@ -33,6 +33,11 @@ export interface WhatIfForecast {
   name: string;
   unit: string;
   points: ForecastPoint[];
+  // Last known historical reading this forecast is projected from.
+  baselineValue: number;
+  // Combined correlation-weighted shock (own slider + every other moved
+  // slider, weighted by data-driven correlation). 0 means "no change".
+  correlatedShock: number;
   // The other series whose slider is currently having the biggest
   // data-driven correlated effect on this forecast, if any slider has moved.
   topDriver?: CorrelationDriver | null;

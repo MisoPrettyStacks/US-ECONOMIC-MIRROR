@@ -1,4 +1,4 @@
-import { writeFile, readFile, mkdir } from "node:fs/promises";
+import { writeFile, readFile, mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import { INDICATOR_SERIES, fetchFredHistory, computeYoYSeries, linearTrendForecast } from "./lib/fred.mjs";
 
@@ -193,11 +193,31 @@ async function main() {
 
   await mkdir(OUT_DIR, { recursive: true });
   await writeFile(path.join(OUT_DIR, "tetlock-forecast.json"), JSON.stringify({ ...result, chartData }, null, 2));
+  await rm(path.join(OUT_DIR, "tetlock-forecast-error.json"), { force: true });
 
   console.log(`Wrote Tetlock forecast to ${path.join(OUT_DIR, "tetlock-forecast.json")}`);
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error("generate-forecast failed:", err);
+  try {
+    await mkdir(OUT_DIR, { recursive: true });
+    await writeFile(
+      path.join(OUT_DIR, "tetlock-forecast-error.json"),
+      JSON.stringify(
+        {
+          failedAt: new Date().toISOString(),
+          message: err?.message || String(err),
+          openaiBaseUrl: OPENAI_BASE_URL,
+          openaiModel: OPENAI_MODEL,
+          hasApiKey: Boolean(OPENAI_API_KEY),
+        },
+        null,
+        2,
+      ),
+    );
+  } catch (writeErr) {
+    console.error("Also failed to write error diagnostic file:", writeErr);
+  }
   process.exit(1);
 });

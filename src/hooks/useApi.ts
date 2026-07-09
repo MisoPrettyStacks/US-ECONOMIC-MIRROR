@@ -119,7 +119,7 @@ export function useWhatIf() {
           // Clamp so a chain of strong correlations can't blow up the chart.
           correlatedShock = Math.max(-0.9, Math.min(3, correlatedShock));
 
-          if (historicalPoints.length > 0 && (ownShock !== 0 || topDriver)) {
+          if (historicalPoints.length > 0) {
             const lastPoint = historicalPoints[historicalPoints.length - 1];
             const lastDate = new Date(lastPoint.date);
             const lastHistorical = lastPoint.value;
@@ -140,11 +140,14 @@ export function useWhatIf() {
           }
 
           const info = meta?.[seriesId];
+          const lastHistorical = points.length > 0 ? points[points.length - 1].value : 0;
           return {
             seriesId,
             name: info?.name ?? seriesId,
             unit: info?.unit ?? "",
             points: historicalPoints,
+            baselineValue: lastHistorical,
+            correlatedShock,
             topDriver,
           };
         });

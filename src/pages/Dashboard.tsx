@@ -14,7 +14,10 @@ export default function Dashboard() {
   const { isDark, toggle } = useTheme();
   const { indicators, lastRefresh, loading, error, refetch } = useFredIndicators();
   const { forecasts, loading: whatIfLoading, calculate } = useWhatIf();
-  const [sliderValues, setSliderValues] = useState<Record<string, number>>({});
+  // Only sliders the person has actually dragged live here. These are the
+  // sole source of "shocks" that get propagated to everything else, which
+  // keeps the correlation feedback loop from chasing its own tail.
+  const [manualValues, setManualValues] = useState<Record<string, number>>({});
   const initializedRef = useRef(false);
 
   useEffect(() => {
@@ -32,47 +35,62 @@ export default function Dashboard() {
   useEffect(() => {
     if (indicators.length > 0 && !initializedRef.current) {
       initializedRef.current = true;
-      const vals: Record<string, number> = {};
-      indicators.forEach((ind) => {
-        vals[ind.seriesId] = ind.value;
-      });
-      setSliderValues(vals);
-      calculate(
-        indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })),
-        seriesMeta,
-      );
+      calculate([], seriesMeta);
     }
   }, [indicators, calculate, seriesMeta]);
 
   const handleSliderChange = useCallback((seriesId: string, value: number) => {
-    setSliderValues((prev) => ({ ...prev, [seriesId]: value }));
+    setManualValues((prev) => ({ ...prev, [seriesId]: value }));
   }, []);
 
   const handleResetToLive = useCallback(() => {
-    const vals: Record<string, number> = {};
-    indicators.forEach((ind) => {
-      vals[ind.seriesId] = ind.value;
-    });
-    setSliderValues(vals);
-    calculate(
-      indicators.map((ind) => ({ seriesId: ind.seriesId, value: ind.value })),
-      seriesMeta,
-    );
-  }, [indicators, calculate, seriesMeta]);
+    setManualValues({});
+    calculate([], seriesMeta);
+  }, [calculate, seriesMeta]);
 
   const debouncedCalculate = useCallback(() => {
-    const adjustments = Object.entries(sliderValues).map(([seriesId, value]) => ({
+    const adjustments = Object.entries(manualValues).map(([seriesId, value]) => ({
       seriesId,
       value,
     }));
     calculate(adjustments, seriesMeta);
-  }, [sliderValues, calculate, seriesMeta]);
+  }, [manualValues, calculate, seriesMeta]);
 
   useEffect(() => {
     if (!initializedRef.current) return;
     const timer = setTimeout(debouncedCalculate, 500);
     return () => clearTimeout(timer);
-  }, [sliderValues, debouncedCalculate]);
+  }, [manualValues, debouncedCalculate]);
+
+  const forecastBySeriesId = useMemo(() => {
+    const map: Record<string, (typeof forecasts)[number]> = {};
+    forecasts.forEach((f) => {
+      map[f.seriesId] = f;
+    });
+    return map;
+  }, [forecasts]);
+
+  // Sliders the person hasn't touched slide to the value implied by
+  // whatever they DID move, weighted by historical correlation - this is
+  // the visible "effect in the other sliders" the model produces.
+  const displaySliderValues = useMemo(() => {
+    const vals: Record<string, number> = {};
+    indicators.forEach((ind) => {
+      if (manualValues[ind.seriesId] !== undefined) {
+        vals[ind.seriesId] = manualValues[ind.seriesId];
+        return;
+      }
+      const f = forecastBySeriesId[ind.seriesId];
+      if (f && f.correlatedShock !== 0) {
+        const range = getSliderRange(ind.seriesId, ind.value);
+        const implied = f.baselineValue * (1 + f.correlatedShock);
+        vals[ind.seriesId] = Math.min(range.max, Math.max(range.min, implied));
+      } else {
+        vals[ind.seriesId] = ind.value;
+      }
+    });
+    return vals;
+  }, [indicators, manualValues, forecastBySeriesId]);
 
   const formatLastRefresh = (iso: string) => {
     if (!iso) return "";
@@ -191,16 +209,21 @@ export default function Dashboard() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {indicators.map((ind) => {
                   const range = getSliderRange(ind.seriesId, ind.value);
+                  const isManual = manualValues[ind.seriesId] !== undefined;
+                  const displayValue = displaySliderValues[ind.seriesId] ?? ind.value;
+                  const isCorrelated = !isManual && Math.abs(displayValue - ind.value) > 1e-9;
                   return (
                     <WhatIfSlider
                       key={ind.seriesId}
                       seriesId={ind.seriesId}
                       name={ind.name}
                       liveValue={ind.value}
-                      currentValue={sliderValues[ind.seriesId] ?? ind.value}
+                      currentValue={displayValue}
                       min={range.min}
                       max={range.max}
                       step={range.step}
+                      isCorrelated={isCorrelated}
+                      topDriver={forecastBySeriesId[ind.seriesId]?.topDriver ?? null}
                       onChange={(v) => handleSliderChange(ind.seriesId, v)}
                     />
                   );

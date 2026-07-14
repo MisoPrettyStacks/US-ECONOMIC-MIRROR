@@ -2,27 +2,27 @@
   "scenarios": [
     {
       "name": "Stagflationary Persistence",
-      "description": "Geopolitical tensions in energy-producing regions escalate, causing a supply-side shock that pushes inflation back above the Fed's target, forcing a pause or hike in rates despite sluggish GDP growth.",
+      "description": "Supply chain disruptions caused by renewed geopolitical tensions in the Middle East lead to higher energy costs, forcing the Fed to keep rates elevated despite slowing GDP.",
       "probability": 0.2,
       "category": "geopolitical",
       "impacts": [
         {
           "indicator": "Inflation Rate (CPIAUCSL)",
           "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Supply chain disruptions and energy costs increase consumer prices."
+          "magnitude": 1.5,
+          "explanation": "Energy price shocks drive consumer prices higher."
         },
         {
           "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": 0.4,
-          "explanation": "Higher costs and interest rates dampen aggregate demand and investment."
+          "magnitude": -0.8,
+          "explanation": "Reduced consumer spending due to higher cost of living."
         }
       ],
-      "reasoning": "Using the base rate of commodity-driven inflation spikes in non-linear geopolitical shifts, adjusted for current 3.9% inflation baseline which shows residual momentum.",
+      "reasoning": "Base rates for supply-side shocks in fragmented geopolitical landscapes suggest a non-trivial risk of price volatility despite currently stable CPI.",
       "tetlockPillars": [
         "Probabilistic thinking",
-        "Outside view / base rates"
+        "Granular analysis"
       ],
       "tetlockCommandments": [
         "Look for the clashing causal forces at work in each problem"
@@ -30,169 +30,168 @@
     },
     {
       "name": "Soft Landing Realization",
-      "description": "The Federal Reserve successfully navigates the descent, maintaining the Fed Funds Rate near 3.5% as inflation stabilizes, leading to steady, low-growth economic expansion.",
-      "probability": 0.4,
+      "description": "The Fed's current 3.63% rate successfully tames inflation without triggering a recession, leading to moderate, steady growth.",
+      "probability": 0.35,
       "category": "monetary",
       "impacts": [
         {
           "indicator": "Real GDP (GDPC1)",
           "direction": "up",
-          "magnitude": 0.3,
-          "explanation": "Controlled monetary policy supports stable consumption and business investment."
+          "magnitude": 1.2,
+          "explanation": "Steady consumption and stable interest rates support growth."
         },
         {
           "indicator": "Unemployment Rate (UNRATE)",
           "direction": "stable",
           "magnitude": 0.1,
-          "explanation": "Steady growth prevents labor market loosening."
+          "explanation": "Labor market remains balanced near full employment."
         }
       ],
-      "reasoning": "Current data shows low unemployment (4.2%) and stable inflation, making the 'oft landing' the most likely historical precedent for these indicator configurations.",
+      "reasoning": "Using the outside view of historical 'oft landings,' the current moderate unemployment and stable rates suggest a high probability of continuation.",
       "tetlockPillars": [
-        "Granular analysis",
+        "Outside view / base rates",
         "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
+        "Strike the right balance between under- and overconfidence"
       ]
     },
     {
-      "name": "Trade War Escalation",
-      "description": "Increased protectionism and retaliatory tariffs lead to a massive widening of the trade deficit and disruptions in industrial production and manufacturing supply chains.",
-      "probability": 0.15,
-      "category": "trade",
+      "name": "Housing Market Stagnation",
+      "description": "High 10-Year Treasury Yields (4.56%) create a 'lock-in effect,' where supply remains low and housing starts continue to drop due to high mortgage costs.",
+      "probability": 0.25,
+      "category": "domestic",
       "impacts": [
         {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "indicator": "Housing Starts (HOUST)",
           "direction": "down",
-          "magnitude": 5,
-          "explanation": "Increased cost of imports and retaliatory tariffs worsen the deficit."
+          "magnitude": -3,
+          "explanation": "High cost of capital prevents new construction projects."
         },
         {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Supply chain uncertainty and higher input costs reduce industrial output."
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Investors demand higher premiums due to rising debt levels."
         }
       ],
-      "reasoning": "The current trade deficit is already increasing significantly (+42.18%), suggesting a high sensitivity to trade policy shifts.",
+      "reasoning": "The significant drop in Housing Starts (-15.45%) is a leading indicator of structural weakness in the construction sector.",
       "tetlockPillars": [
-        "Diverse information sources",
-        "Granular analysis"
+        "Granular analysis",
+        "Cognitive debiasing"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Fiscal Dominance & Debt Surge",
-      "description": "Rapidly increasing federal debt levels lead to rising long-term yields as investors demand a higher term premium, squeezing the housing and capital markets.",
+      "name": "Trade Protectionism Escalation",
+      "description": "Increased tariffs and trade barriers aimed at strategic industries lead to a widening trade deficit and higher domestic production costs.",
       "probability": 0.15,
-      "category": "domestic",
+      "category": "trade",
       "impacts": [
         {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Increased supply of Treasuries to fund debt leads to higher yields."
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": 15,
+          "explanation": "Increased imports of finished goods and reduced exports due to retaliatory tariffs."
         },
         {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "down",
-          "magnitude": 10,
-          "explanation": "Higher mortgage rates driven by Treasury yields crash new construction demand."
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Reshoring efforts may slightly boost local production levels."
         }
       ],
-      "reasoning": "The significant growth in Federal Debt (+1.43%) in a short window increases the probability of fiscal concerns impacting the yield curve.",
+      "reasoning": "The massive 42% increase in the trade deficit suggests a highly sensitive trade environment vulnerable to policy shifts.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Cognitive debiasing"
+        "Diverse information sources",
+        "Probabilistic thinking"
       ],
       "tetlockCommandments": [
-        "Look for the errors behind your errors"
+        "Strike the right balance between under- and overreacting to evidence"
       ]
     },
     {
-      "name": "Consumer Resilience Expansion",
-      "description": "Despite high debt, consumer spending remains robust due to the current retail sales growth, driving a modest resurgence in GDP.",
-      "probability": 0.1,
-      "category": "domestic",
+      "name": "Fiscal Dominance/Debt Crisis",
+      "description": "Rising Federal Debt growth leads to increased yields as investors demand higher risk premiums, potentially crowding out private investment.",
+      "probability": 0.05,
+      "category": "monetary",
       "impacts": [
         {
-          "indicator": "Retail Sales (RSAFS)",
+          "indicator": "Federal Debt (GFDEBTN)",
           "direction": "up",
-          "magnitude": 2,
-          "explanation": "Positive consumer sentiment and current momentum drive higher sales."
+          "magnitude": 2.5,
+          "explanation": "Deficit spending persists despite fiscal concerns."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "10-Year Treasury Yield (DGS10)",
           "direction": "up",
-          "magnitude": 0.6,
-          "explanation": "Consumption is a primary driver of the GDP calculation."
+          "magnitude": 1.2,
+          "explanation": "Increased supply of Treasuries puts upward pressure on yields."
         }
       ],
-      "reasoning": "Current Retail Sales growth (+0.88%) is a strong leading indicator for consumption-led growth, though highly dependent on employment stability.",
+      "reasoning": "A low-probability 'black swan' event where debt levels reach a tipping point for market confidence.",
       "tetlockPillars": [
-        "Granular analysis",
-        "Diverse information sources"
+        "Strive to distinguish as many degrees of doubt as the problem permits"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between under- and overconfidence"
+        "Look for the errors behind your errors"
       ]
     }
   ],
   "weightedForecasts": [
     {
       "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24180.42,
-      "forecastValue": 24350,
-      "weightedChange": 0.69,
+      "currentValue": 24180.419,
+      "forecastValue": 24275.5,
+      "weightedChange": 0.39,
       "unit": "Billions of Chained 2017 Dollars",
+      "confidence": 0.65,
+      "equation": "24180.4 + (0.20 * -0.8) + (0.35 * 1.2) + (0.25 * 0) + (0.15 * 0) + (0.05 * 0) = 24275.5"
+    },
+    {
+      "indicator": "Unemployment Rate (UNRATE)",
+      "currentValue": 4.2,
+      "forecastValue": 4.25,
+      "weightedChange": 0.05,
+      "unit": "Percent",
       "confidence": 0.75,
-      "equation": "24180.42 + (0.20 * -100) + (0.40 * 50) + (0.15 * -50) + (0.15 * 150) + (0.10 * 150) = 24350"
+      "equation": "4.2 + (0.20 * 0.1) + (0.35 * 0.0) + (0.25 * 0.2) + (0.15 * 0.0) + (0.05 * 0.1) = 4.25"
     },
     {
       "indicator": "Inflation Rate (CPIAUCSL)",
       "currentValue": 3.9,
       "forecastValue": 4.1,
       "weightedChange": 0.2,
-      "unit": "Index 1982-1984",
-      "confidence": 0.7,
-      "equation": "3.9 + (0.20 * 0.8) + (0.40 * 0.0) + (0.15 * 0.0) + (0.15 * 0.0) + (0.10 * 0.0) = 4.06"
-    },
-    {
-      "indicator": "Unemployment Rate (UNRATE)",
-      "currentValue": 4.2,
-      "forecastValue": 4.3,
-      "weightedChange": 0.1,
-      "unit": "Percent",
-      "confidence": 0.65,
-      "equation": "4.2 + (0.20 * 0.1) + (0.40 * 0.0) + (0.15 * 0.0) + (0.15 * 0.0) + (0.10 * -0.1) = 4.3"
+      "unit": "Index 1982-1984=100",
+      "confidence": 0.68,
+      "equation": "3.9 + (0.20 * 1.5) + (0.35 * -0.1) + (0.25 * 0) + (0.15 * 0) + (0.05 * 0.1) = 4.1"
     },
     {
       "indicator": "10-Year Treasury Yield (DGS10)",
-      "currentValue": 4.54,
-      "forecastValue": 4.85,
-      "weightedChange": 0.31,
+      "currentValue": 4.56,
+      "forecastValue": 4.72,
+      "weightedChange": 0.16,
       "unit": "Percent",
-      "confidence": 0.6,
-      "equation": "4.54 + (0.20 * 0.5) + (0.40 * 0.0) + (0.15 * 0.0) + (0.15 * 1.5) + (0.10 * 0.0) = 4.85"
+      "confidence": 0.62,
+      "equation": "4.56 + (0.20 * 0.5) + (0.35 * -0.1) + (0.25 * 0.5) + (0.15 * 0) + (0.05 * 1.2) = 4.72"
     },
     {
       "indicator": "Housing Starts (HOUST)",
       "currentValue": 1177,
-      "forecastValue": 1050,
-      "weightedChange": -127,
+      "forecastValue": 1135,
+      "weightedChange": -42,
       "unit": "Thousands of Units",
-      "confidence": 0.55,
-      "equation": "1177 + (0.20 * -50) + (0.40 * 0) + (0.15 * -150) + (0.15 * -150) + (0.10 * 0) = 1052"
+      "confidence": 0.78,
+      "equation": "1177 + (0.20 * -50) + (0.35 * -10) + (0.25 * -30) + (0.15 * -10) + (0.05 * -15) = 1135"
     }
   ],
-  "methodology": "Superforecasting approach applied: Using an 'outside view' based on historical soft-landing and stagflation base rates, then adjusting via 'inside view' indicators (current GDP, inflation, and debt trends). Scenarios were constructed using granular component analysis to capture clashing causal forces (e.g., fiscal debt vs. interest rates). Probabilities assigned using precise decimal values to avoid binary thinking.",
-  "analysisDate": "2026-07-13",
-  "geopoliticalSummary": "Global stability is threatened by escalating regional conflicts which pose a risk of supply-side shocks to energy and commodity markets, potentially reigniting inflation.",
-  "geoeconomicSummary": "A shift toward protectionism and rising trade deficits suggests increasing friction in global supply chains and a potential rise in import costs affecting industrial production.",
-  "currentEventsSummary": "The economy is currently in a state of low-growth, moderate-inflation stability (4.2% unemployment, 3.9% inflation), but rising federal debt and volatile trade balances create significant tail risks for interest rates and housing.",
+  "methodology": "Applying Tetlock's Superforecasting principles by starting with base rates (Outside View) for economic cycles, breaking down the impact of geopolitical events into specific indicator directions, and using a probabilistic weighted average to account for multiple potential future states rather than a single deterministic path.",
+  "analysisDate": "2026-07-14",
+  "geopoliticalSummary": "High tension in energy-producing regions and shifting trade alliances create volatility in input costs and trade balances.",
+  "geoeconomicSummary": "A shift toward protectionism and domestic manufacturing reshoring is causing widening trade deficits and industrial fluctuations.",
+  "currentEventsSummary": "A cooling but resilient labor market is clashing with rising interest rates and significant housing sector contraction.",
   "chartData": [
     {
       "seriesId": "GDPC1",

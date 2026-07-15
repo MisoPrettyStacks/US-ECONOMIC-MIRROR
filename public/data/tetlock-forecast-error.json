@@ -1,7 +1,0 @@
-{
-  "failedAt": "2026-07-14T18:59:17.022Z",
-  "message": "Unexpected token '<', ...\"  \n   \n   </</</</</\"... is not valid JSON",
-  "openaiBaseUrl": "https://openrouter.ai/api/v1",
-  "openaiModel": "openrouter/free",
-  "hasApiKey": true
-}

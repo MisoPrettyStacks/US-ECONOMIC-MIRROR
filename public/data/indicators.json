@@ -95,10 +95,10 @@
       "name": "Housing Starts",
       "unit": "Thousands of Units",
       "category": "Housing",
-      "value": 1177,
-      "previousValue": 1392,
-      "percentChange": -15.445402298850574,
-      "date": "2026-05-01"
+      "value": 1427,
+      "previousValue": 1199,
+      "percentChange": 19.01584653878232,
+      "date": "2026-06-01"
     },
     {
       "seriesId": "PAYEMS",
@@ -111,5 +111,5 @@
       "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-07-17T07:48:17.222Z"
+  "lastRefresh": "2026-07-17T12:55:41.557Z"
 }

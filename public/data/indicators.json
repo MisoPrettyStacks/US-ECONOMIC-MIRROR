@@ -75,10 +75,10 @@
       "name": "Industrial Production",
       "unit": "Index 2017=100",
       "category": "Production",
-      "value": 102.6475,
-      "previousValue": 102.509,
-      "percentChange": 0.13511008789471501,
-      "date": "2026-05-01"
+      "value": 102.6395,
+      "previousValue": 102.5606,
+      "percentChange": 0.07693012716384695,
+      "date": "2026-06-01"
     },
     {
       "seriesId": "RSAFS",
@@ -111,5 +111,5 @@
       "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-07-17T12:55:41.557Z"
+  "lastRefresh": "2026-07-17T18:48:24.553Z"
 }

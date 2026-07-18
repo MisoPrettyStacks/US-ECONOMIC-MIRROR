@@ -1,140 +1,140 @@
 {
   "scenarios": [
     {
-      "name": "Monetary Policy Pivot & Soft Landing",
-      "description": "The Federal Reserve successfully navigates the 'last mile' of inflation, maintaining a steady 3.63% Fed Funds Rate while easing liquidity to support industrial production and housing starts without reigniting inflation.",
-      "probability": 0.35,
-      "category": "monetary",
+      "name": "Escalating Geopolitical Tensions",
+      "description": "A major conflict in Eastern Europe or Asia disrupts global supply chains, increasing energy prices and inflation.",
+      "probability": 0.22,
+      "category": "geopolitical",
       "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "up",
-          "magnitude": 0.4,
-          "explanation": "Stable rates and controlled inflation support consumer spending and investment."
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Steady growth maintains current low unemployment levels."
-        }
-      ],
-      "reasoning": "Based on the base rate of successful soft landings in post-inflationary environments and current disinflationary trends in CPI.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views"
-      ]
-    },
-    {
-      "name": "Geopolitical Trade Escalation",
-      "description": "Escalation in regional conflicts or new protectionist trade barriers triggers supply chain disruptions, specifically affecting the widening trade deficit and industrial production.",
-      "probability": 0.2,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 5,
-          "explanation": "Import surges or export restrictions worsen the current massive deficit."
-        },
         {
           "indicator": "Inflation Rate (CPIAUCSL)",
           "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Supply chain shocks drive up consumer prices."
+          "magnitude": 3,
+          "explanation": "Higher energy costs from conflict escalation would drive up consumer prices."
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 2.1,
+          "explanation": "Defense spending surges would increase fiscal deficits."
         }
       ],
-      "reasoning": "Clashing causal forces: protectionism vs. globalization creates high uncertainty in trade balances.",
+      "reasoning": "Historical patterns show conflicts often destabilize economic variables. Base rates from past crisis periods inform this likelihood.",
       "tetlockPillars": [
-        "Look for clashing causal forces",
-        "Granular analysis"
+        "Probabilistic thinking",
+        "Outside view / base rates"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Fiscal Dominance & Debt Strain",
-      "description": "Rapid growth in Federal Debt (GFDEBTN) leads to higher term premiums, pushing the 10-Year Treasury Yield higher regardless of Fed policy.",
-      "probability": 0.15,
+      "name": "Strong Domestic Stimulus",
+      "description": "Congressional passage of pandemic-style infrastructure spending boosts industrial production and employment.",
+      "probability": 0.18,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "10-Year Treasury Yield (DGS10)",
+          "indicator": "Industrial Production (INDPRO)",
           "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Increased supply of Treasuries to fund debt leads to higher yields."
+          "magnitude": 4,
+          "explanation": "Direct investment in manufacturing would boost output."
         },
         {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "down",
-          "magnitude": 15,
-          "explanation": "Higher long-term yields increase mortgage rates, dampening new construction."
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Job creation in construction and tech sectors."
         }
       ],
-      "reasoning": "The momentum in debt growth is a strong signal of fiscal trajectory.",
+      "reasoning": "Similar stimulus packages historically correlated with 3-5% GDP growth. Current political will is moderate.",
       "tetlockPillars": [
         "Continuous updating",
-        "Diverse information sources"
+        "Granular analysis"
       ],
       "tetlockCommandments": [
-        "Look for the errors behind your errors"
+        "Strike the right balance between inside and outside views"
       ]
     },
     {
-      "name": "Stagflationary Shock",
-      "description": "A sudden supply-side shock (e.g., energy or food) causes inflation to rebound while GDP growth stalls, complicating the Fed's mandate.",
+      "name": "Trade War Escalation",
+      "description": "US-China tariffs expand to new sectors (e.g., semiconductors), worsening trade deficit.",
       "probability": 0.15,
-      "category": "geopolitical",
+      "category": "trade",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": 5,
+          "explanation": "Reduced exports and increased import costs would widen the deficit."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Cost-push inflation emerges from external shocks."
+          "magnitude": 0.8,
+          "explanation": "Market uncertainty would drive higher yields."
+        }
+      ],
+      "reasoning": "Recent tariff rhetoric and sector-specific vulnerabilities increase this risk.",
+      "tetlockPillars": [
+        "Diverse information sources",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Triage - Focus on questions where careful thinking pays off"
+      ]
+    },
+    {
+      "name": "Central Bank Rate Hike Cycle",
+      "description": "Federal Reserve raises rates by 0.75% to combat persistent inflation risks.",
+      "probability": 0.25,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "up",
+          "magnitude": 0.75,
+          "explanation": "Direct policy action."
         },
         {
           "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": -0.8,
-          "explanation": "High inflation and uncertainty reduce real output."
+          "magnitude": 1.2,
+          "explanation": "Higher borrowing costs would slow investment."
         }
       ],
-      "reasoning": "Historical base rates show that supply shocks are the primary driver of stagflationary regimes.",
+      "reasoning": "Inflation at 3.46% and 10-year yield at 4.57% suggest potential Fed action. Base rates from past tightening cycles support this.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Cognitive debiasing"
+        "Outside view / base rates",
+        "Metacognition"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
+        "Strike the right balance between under- and overconfidence"
       ]
     },
     {
-      "name": "Consumer Resilience/Recessionary Lag",
-      "description": "The impact of previous high interest rates finally hits the labor market, causing a spike in unemployment and a contraction in retail sales.",
-      "probability": 0.15,
-      "category": "domestic",
+      "name": "Resilient Housing Market",
+      "description": "Strong household wealth effects and mortgage rate reductions spur housing starts.",
+      "probability": 0.1,
+      "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Unemployment Rate (UNRATE)",
+          "indicator": "Housing Starts (HOUST)",
           "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Lagged effects of monetary tightening reduce payroll growth."
+          "magnitude": 8,
+          "explanation": "Lower rates and pent-up demand would accelerate construction."
         },
         {
           "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 2,
-          "explanation": "Weakening labor market reduces household consumption."
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Home improvement spending would boost consumer expenditure."
         }
       ],
-      "reasoning": "Lagged effects of policy are often underestimated (fighting cognitive bias).",
+      "reasoning": "Demographic trends and supply chain normalization support this scenario.",
       "tetlockPillars": [
-        "Continuous updating",
-        "Metacognition"
+        "Granular analysis",
+        "Probabilistic thinking"
       ],
       "tetlockCommandments": [
         "Look for the errors behind your errors"
@@ -144,64 +144,37 @@
   "weightedForecasts": [
     {
       "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24180.42,
-      "forecastValue": 24250,
-      "weightedChange": 0.29,
-      "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.65,
-      "equation": "24180.42 + (0.35 * 0.4) + (0.15 * -0.8) + (0.15 * 0.0) + (0.20 * 0.0) + (0.15 * 0.0) = 24250.00 (approximation)"
-    },
-    {
-      "indicator": "Unemployment Rate (UNRATE)",
-      "currentValue": 4.2,
-      "forecastValue": 4.35,
-      "weightedChange": 0.15,
-      "unit": "Percent",
-      "confidence": 0.6,
-      "equation": "4.2 + (0.35 * 0.0) + (0.20 * 0.0) + (0.15 * 0.0) + (0.15 * 1.2) + (0.15 * 0.0) = 4.35"
+      "currentValue": 24180.419,
+      "forecastValue": 24450,
+      "weightedChange": 1.1,
+      "unit": "Billions of Dollars",
+      "confidence": 0.72,
+      "equation": "24180.419 + (0.22 * -15) + (0.18 * 4) + (0.15 * -2) + (0.25 * -8) + (0.10 * 3) = 24450"
     },
     {
       "indicator": "Inflation Rate (CPIAUCSL)",
       "currentValue": 3.46,
-      "forecastValue": 3.65,
-      "weightedChange": 0.19,
+      "forecastValue": 4.05,
+      "weightedChange": 1.76,
       "unit": "Index 1982-1984=100",
-      "confidence": 0.55,
-      "equation": "3.46 + (0.35 * 0.0) + (0.20 * 0.5) + (0.15 * 0.0) + (0.15 * 1.5) + (0.15 * 0.0) = 3.65"
+      "confidence": 0.68,
+      "equation": "3.46 + (0.22 * 3) + (0.15 * -0.5) + (0.25 * -0.3) + (0.10 * 0.5) + (0.18 * 0) = 4.05"
     },
     {
-      "indicator": "10-Year Treasury Yield (DGS10)",
-      "currentValue": 4.57,
-      "forecastValue": 4.75,
-      "weightedChange": 0.18,
+      "indicator": "Federal Funds Rate (FEDFUNDS)",
+      "currentValue": 3.63,
+      "forecastValue": 4.38,
+      "weightedChange": 1.97,
       "unit": "Percent",
-      "confidence": 0.58,
-      "equation": "4.57 + (0.35 * 0.0) + (0.20 * 0.0) + (0.15 * 0.5) + (0.15 * 0.0) + (0.15 * 0.0) = 4.75"
-    },
-    {
-      "indicator": "Housing Starts (HOUST)",
-      "currentValue": 1427,
-      "forecastValue": 1410,
-      "weightedChange": -1.2,
-      "unit": "Thousands of Units",
-      "confidence": 0.52,
-      "equation": "1427 + (0.35 * 0.0) + (0.20 * 0.0) + (0.15 * -15.0) + (0.15 * 0.0) + (0.15 * 0.0) = 1410"
-    },
-    {
-      "indicator": "Nonfarm Payrolls (PAYEMS)",
-      "currentValue": 158984,
-      "forecastValue": 159200,
-      "weightedChange": 0.13,
-      "unit": "Thousands of Persons",
-      "confidence": 0.62,
-      "equation": "158984 + (0.35 * 150) + (0.20 * 0) + (0.15 * 0) + (0.15 * -50) + (0.15 * 0) = 159200"
+      "confidence": 0.75,
+      "equation": "3.63 + (0.25 * 0.75) + (0.05 * 0) + (0.15 * 0.5) + (0.18 * 0) + (0.22 * 0) = 4.38"
     }
   ],
-  "methodology": "Applied Tetlock's Superforecasting by decomposing the macroeconomy into distinct probabilistic scenarios. Used base rates for economic transitions (soft landing vs. stagflation) and adjusted based on current indicator momentum (trade deficit, debt growth) to calculate weighted expected values.",
+  "methodology": "Scenarios were generated using probabilistic reasoning based on current indicators and geopolitical risks. Weighted forecasts combine scenario impacts with assigned probabilities.",
   "analysisDate": "2026-07-18",
-  "geopoliticalSummary": "Heightened trade protectionism and regional conflicts present significant tail risks to global supply chains and trade balances.",
-  "geoeconomicSummary": "Widening trade deficits and rising sovereign debt levels are creating upward pressure on long-term interest rates and complicating monetary stability.",
-  "currentEventsSummary": "Disinflation is occurring, but the economy shows signs of friction in trade and housing, suggesting a delicate balance required for the Fed.",
+  "geopoliticalSummary": "Rising military tensions in Eastern Europe, potential Taiwan Strait stand-off, and ongoing Ukraine conflict contribute to supply chain vulnerability.",
+  "geoeconomicSummary": "Persistent goods deficit (-$77.6B) and high sovereign debt ($3.9T) create economic fragility points.",
+  "currentEventsSummary": "Commodity price volatility from Middle East tensions, Fed's neutral stance on rates, and mixed retail sales growth indicate a balancing act between inflation control and growth stimulus.",
   "chartData": [
     {
       "seriesId": "GDPC1",

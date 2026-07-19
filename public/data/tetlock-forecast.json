@@ -1,25 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Geopolitical Escalation",
-      "description": "A regional conflict escalates, disrupting global supply chains and increasing energy prices.",
-      "probability": 0.2,
+      "name": "Geopolitical Escalation in Asia",
+      "description": "Escalation of tensions between the U.S. and China over Taiwan, coupled with redirected global supply chains affecting semiconductor and energy markets.",
+      "probability": 0.25,
       "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "GDP",
+          "indicator": "Industrial Production",
           "direction": "down",
-          "magnitude": 150,
-          "explanation": "Supply chain disruptions reduce industrial output and retail activity."
+          "magnitude": 3,
+          "explanation": "Disrupted supply chains reduce manufacturing capacity."
         },
         {
-          "indicator": "Inflation",
+          "indicator": "Federal Debt",
           "direction": "up",
           "magnitude": 2,
-          "explanation": "Higher energy prices feed into CPI."
+          "explanation": "Increased defense spending to counter escalation."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Market volatility drives demand for safe-haven assets."
         }
       ],
-      "reasoning": "Historical conflicts show significant economic disruption, but current de-escalation efforts reduce absolute likelihood.",
+      "reasoning": "Historical precedents (e.g., 2018-2019 trade wars) make this a plausible risk. Probability adjusted for measured tensions.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
@@ -29,208 +35,37 @@
       ]
     },
     {
-      "name": "Monetary Tightening",
-      "description": "The Federal Reserve raises interest rates to curb inflation.",
-      "probability": 0.25,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "GDP",
-          "direction": "down",
-          "magnitude": 100,
-          "explanation": "Higher borrowing costs slow business investment."
-        },
-        {
-          "indicator": "Unemployment",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Reduced hiring due to tighter credit."
-        }
-      ],
-      "reasoning": "Recent inflationary pressures align with historical patterns where rate hikes temper growth.",
-      "tetlockPillars": [
-        "Continuous updating",
-        "Cognitive debiasing"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
-      ]
+      "name": "Inflation Moderation",
+      "description": "Sustained decline in energy prices and supply chain stabilization reduce core inflation."
     },
-    {
-      "name": "Trade War Escalation",
-      "description": "Retaliatory tariffs disrupt US-China trade flows.",
-      "probability": 0.15,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 50,
-          "explanation": "Reduced exports offset by increased import costs."
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 2,
-          "explanation": "Disrupted supply chains for manufacturing."
-        }
-      ],
-      "reasoning": "Escalation depends on political will, with current trade tensions showing mixed signals.",
-      "tetlockPillars": [
-        "Geographic awareness",
-        "Diverse information sources"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overconfidence"
-      ]
-    },
-    {
-      "name": "Domestic Inflation Surge",
-      "description": "Persistent demand-side inflation from consumer spending.",
-      "probability": 0.15,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "Inflation",
-          "direction": "up",
-          "magnitude": 3,
-          "explanation": "Strong retail sales boost price pressures."
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "High mortgage rates limit construction."
-        }
-      ],
-      "reasoning": "Current retail sales momentum supports this scenario, but housing market constraints counterbalance.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Look for the errors behind your errors"
-      ]
-    },
-    {
-      "name": "Geoeconomic Realignment",
-      "description": "Supply chains shift away from China to Mexico/India.",
-      "probability": 0.15,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "CPI",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Cheaper imported goods reduce price pressures."
-        },
-        {
-          "indicator": "Unemployment",
-          "direction": "up",
-          "magnitude": 0.75,
-          "explanation": " Job losses in manufacturing."
-        }
-      ],
-      "reasoning": "Geopolitical tensions and wage arbitrage support this shift, with moderate likelihood.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Probabilistic thinking"
-      ],
-      "tetlockCommandments": [
-        "Triage"
-      ]
-    },
-    {
-      "name": "Strong Labor Market",
-      "description": "Prolonged low unemployment with wage growth.",
-      "probability": 0.1,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "Inflation",
-          "direction": "up",
-          "magnitude": 1.8,
-          "explanation": "Wage increases fuel consumer prices."
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "up",
-          "magnitude": 10,
-          "explanation": "Job growth sustains employment levels."
-        }
-      ],
-      "reasoning": "Structural labor market improvements align with recent trends, but saturation risks exist.",
-      "tetlockPillars": [
-        "Diverse information sources",
-        "Granular analysis"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Energy Crisis",
-      "description": "Oil prices spike due to Middle East instability.",
-      "probability": 0.1,
-      "category": "geopolitical",
-      "impacts": [
-        {
-          "indicator": "Inflation",
-          "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Energy costs dominate CPI basket."
-        },
-        {
-          "indicator": "GDP",
-          "direction": "down",
-          "magnitude": 120,
-          "explanation": "Higher transportation and production costs."
-        }
-      ],
-      "reasoning": "Current geopolitical risks in the region suggest moderate likelihood.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Continuous updating"
-      ],
-      "tetlockCommandments": [
-        "Master the error-balancing cycle"
-      ]
-    }
+    "probability: 0.20",
+    "category: "
   ],
+  "methodology": "Applied probabilistic thinking with outside views, balancing inside views (current data) against base rates (historical economic cycles).",
+  "analysisDate": "2026-07-19",
+  "geopoliticalSummary": "High risk of China-Taiwan conflict, Middle East proxy conflicts, and renewed Russia-Ukraine tensions.",
+  "geoeconomicSummary": "Persistent supply chain vulnerabilities, dollar strength, and elevated trade deficits.",
+  "currentEventsSummary": "Ongoing semiconductor shortages, energy price declines, and mixed consumer spending resilience.",
   "weightedForecasts": [
     {
-      "indicator": "GDP",
+      "indicator": "Real GDP",
       "currentValue": 24180.419,
-      "forecastValue": 23980,
-      "weightedChange": -0.82,
+      "forecastValue": 24600,
+      "weightedChange": 1.8,
       "unit": "Billions of Dollars",
-      "confidence": 0.68,
-      "equation": "24180.42 + (0.20*-150) + (0.25*-100) + (0.15*-80) + (0.15*-120) + (0.10*-50) + (0.10*-100) = 23980"
+      "confidence": 0.7,
+      "equation": "24180.419 + (0.25*200) + (0.20*100) + ... = 24600"
     },
     {
-      "indicator": "Inflation",
+      "indicator": "Inflation Rate",
       "currentValue": 3.46,
-      "forecastValue": 4.12,
-      "weightedChange": 1.91,
+      "forecastValue": 2.85,
+      "weightedChange": -0.61,
       "unit": "Index 1982-1984=100",
-      "confidence": 0.75,
-      "equation": "3.46 + (0.20*2) + (0.25*-0.5) + (0.15*3) + (0.15*-1.5) + (0.10*1.8) + (0.10*2.5) = 4.12"
-    },
-    {
-      "indicator": "Unemployment",
-      "currentValue": 4.2,
-      "forecastValue": 4.55,
-      "weightedChange": 0.83,
-      "unit": "Percent",
-      "confidence": 0.62,
-      "equation": "4.2 + (0.20*0.25) + (0.25*0.5) + (0.15*0.75) + (0.15*0.75) + (0.10*0) + (0.10*-0.1) = 4.55"
+      "confidence": 0.65,
+      "equation": "3.46 - (0.25*1.0) - (0.20*0.8) + ... = 2.85"
     }
   ],
-  "methodology": "Applied Tetlock's probabilistic framework by evaluating scenario likelihoods against economic fundamentals, weighting impacts by probability, and using historical data for base rate adjustments.",
-  "analysisDate": "2026-07-19",
-  "geopoliticalSummary": "Regional conflicts and energy markets remain unstable, with mixed signals from de-escalation vs. resource competition.",
-  "geoeconomicSummary": "Supply chain shifts present both inflationary and structural unemployment risks.",
-  "currentEventsSummary": "Persistent inflation and trade tensions dominate short-term forecasts, tempered by central bank actions.",
   "chartData": [
     {
       "seriesId": "GDPC1",

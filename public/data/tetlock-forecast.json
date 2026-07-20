@@ -1,31 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Geopolitical Escalation in Asia",
-      "description": "Escalation of tensions between the U.S. and China over Taiwan, coupled with redirected global supply chains affecting semiconductor and energy markets.",
-      "probability": 0.25,
+      "name": "Escalating Global Conflict",
+      "description": "A new major conflict in the Middle East or Eastern Europe disrupts energy supplies, trade routes, and global financial markets.",
+      "probability": 0.15,
       "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 3,
-          "explanation": "Disrupted supply chains reduce manufacturing capacity."
-        },
-        {
-          "indicator": "Federal Debt",
+          "indicator": "Inflation Rate (CPIAUCSL)",
           "direction": "up",
           "magnitude": 2,
-          "explanation": "Increased defense spending to counter escalation."
+          "explanation": "Supply chain disruptions and higher energy prices drive up costs."
         },
         {
-          "indicator": "10-Year Treasury Yield",
+          "indicator": "Federal Debt (GFDEBTN)",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Market volatility drives demand for safe-haven assets."
+          "magnitude": 1,
+          "explanation": "Increased military spending and economic fallout raise fiscal deficits."
+        },
+        {
+          "indicator": "Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": 3,
+          "explanation": "Export declines and import surges widen the trade deficit."
         }
       ],
-      "reasoning": "Historical precedents (e.g., 2018-2019 trade wars) make this a plausible risk. Probability adjusted for measured tensions.",
+      "reasoning": "Based on rising tensions in key regions and historical precedents, suggesting a 15% chance of significant destabilization.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
@@ -35,37 +35,201 @@
       ]
     },
     {
-      "name": "Inflation Moderation",
-      "description": "Sustained decline in energy prices and supply chain stabilization reduce core inflation."
+      "name": "AI-Driven Productivity Surge",
+      "description": "Rapid adoption of AI and automation boosts industrial output and reduces labor costs.",
+      "probability": 0.25,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "up",
+          "magnitude": 3,
+          "explanation": "Automation and AI increase manufacturing efficiency."
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "up",
+          "magnitude": 2,
+          "explanation": "Lower production costs lead to higher consumer spending."
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "down",
+          "magnitude": 1.5,
+          "explanation": "Job displacement in some sectors but new roles in tech."
+        }
+      ],
+      "reasoning": "Historical tech adoption patterns and current AI investment trends suggest a 25% likelihood of transformative productivity gains.",
+      "tetlockPillars": [
+        "Continuous updating",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between inside and outside views"
+      ]
     },
-    "probability: 0.20",
-    "category: "
-  ],
-  "methodology": "Applied probabilistic thinking with outside views, balancing inside views (current data) against base rates (historical economic cycles).",
-  "analysisDate": "2026-07-19",
-  "geopoliticalSummary": "High risk of China-Taiwan conflict, Middle East proxy conflicts, and renewed Russia-Ukraine tensions.",
-  "geoeconomicSummary": "Persistent supply chain vulnerabilities, dollar strength, and elevated trade deficits.",
-  "currentEventsSummary": "Ongoing semiconductor shortages, energy price declines, and mixed consumer spending resilience.",
-  "weightedForecasts": [
     {
-      "indicator": "Real GDP",
-      "currentValue": 24180.419,
-      "forecastValue": 24600,
-      "weightedChange": 1.8,
-      "unit": "Billions of Dollars",
-      "confidence": 0.7,
-      "equation": "24180.419 + (0.25*200) + (0.20*100) + ... = 24600"
+      "name": "Housing Market Correction",
+      "description": "A correction in the housing market due to overbuilding or rising interest rates dampens construction activity.",
+      "probability": 0.1,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "down",
+          "magnitude": 2,
+          "explanation": "Reduced demand or tighter credit slows new home construction."
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": 1,
+          "explanation": "Weaker construction spending reduces consumer spending."
+        }
+      ],
+      "reasoning": "Current housing starts growth is unsustainable historically (19.02% increase), indicating a higher probability of correction.",
+      "tetlockPillars": [
+        "Granular analysis",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Look for the errors behind your errors"
+      ]
     },
     {
-      "indicator": "Inflation Rate",
-      "currentValue": 3.46,
-      "forecastValue": 2.85,
-      "weightedChange": -0.61,
-      "unit": "Index 1982-1984=100",
-      "confidence": 0.65,
-      "equation": "3.46 - (0.25*1.0) - (0.20*0.8) + ... = 2.85"
+      "name": "Global Recession Syndemic",
+      "description": "Multiple advanced economies enter recession simultaneously, collapsing global demand for U.S. exports.",
+      "probability": 0.2,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "GDP (GDPC1)",
+          "direction": "down",
+          "magnitude": 4,
+          "explanation": "Reduced overseas demand for U.S. goods and services."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "down",
+          "magnitude": 1.5,
+          "explanation": "Flight to safety increases demand for U.S. Treasuries."
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": 1,
+          "explanation": "Job losses in export-linked industries."
+        }
+      ],
+      "reasoning": "Synchronized global slowdowns have occurred in past cycles (e.g., 2008, 2020), warranting a 20% probability.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Probabilistic thinking"
+      ],
+      "tetlockCommandments": [
+        "Triage - Focus on questions where careful thinking pays off"
+      ]
+    },
+    {
+      "name": "Fiscal Stimulus Backfire",
+      "description": "Large-scale fiscal stimulus fuels inflation while reducing public trust in government debt.",
+      "probability": 0.15,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 3,
+          "explanation": "Excessive money supply growth outpaces productivity."
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 3,
+          "explanation": "Increased spending adds $300B to debt over 6-12 months."
+        }
+      ],
+      "reasoning": "Current debt growth (+1.43%) and political mandates for stimulus creation align with a 15% chance.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Diverse information sources"
+      ],
+      "tetlock Commandments": [
+        "Strike the right balance between under- and overreacting to evidence"
+      ]
+    },
+    {
+      "name": "Energy Pivot Success",
+      "description": "Rapid transition to renewable energy reduces dependency on volatile fossil fuels.",
+      "probability": 0.25,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "down",
+          "magnitude": 2,
+          "explanation": "Stable energy prices ease cost pressures."
+        },
+        {
+          "indicator": "Trade Balance (BOPGSTB)",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Export growth in green tech offsets import surges."
+        }
+      ],
+      "reasoning": "Global climate agreements and U.S. renewable investment trends support a 25% scenario.",
+      "tetlockPillars": [
+        "Continuous updating",
+        "Granular analysis"
+      ],
+      "tetlockCommandments": [
+        "Look for clashing causal forces at work in each problem"
+      ]
     }
   ],
+  "weightedForecasts": [
+    {
+      "indicator": "GDP (GDPC1)",
+      "currentValue": 24100,
+      "forecastValue": 24300,
+      "weightedChange": 0.94,
+      "unit": "Billions of Dollars",
+      "confidence": 0.72,
+      "equation": "24100 + (0.15*-200) + (0.25*+300) + (0.10*0) + (0.20*-400) + (0.25*+200) = 24300"
+    },
+    {
+      "indicator": "Inflation Rate (CPIAUCSL)",
+      "currentValue": 3.46,
+      "forecastValue": 3.75,
+      "weightedChange": 0.83,
+      "unit": "Inflation Index",
+      "confidence": 0.68,
+      "equation": "3.46 + (0.15*+2.0) + (0.25*-0.5) + (0.10*0) + (0.20*+5.0) + (0.25*-2.0) = 3.75"
+    },
+    {
+      "indicator": "Unemployment Rate (UNRATE)",
+      "currentValue": 4.2,
+      "forecastValue": 4.05,
+      "weightedChange": -0.37,
+      "unit": "Percent",
+      "confidence": 0.75,
+      "equation": "4.2 + (0.15*+1.5) + (0.25*+1.0) + (0.10*0) + (0.20*-2.0) + (0.25*-0.5) = 4.05"
+    },
+    {
+      "indicator": "Federal Debt (GFDEBTN)",
+      "currentValue": 39065421,
+      "forecastValue": 39550000,
+      "weightedChange": 1212959,
+      "unit": "Millions of Dollars",
+      "confidence": 0.65,
+      "equation": "39065421 + (0.15*+1000000) + (0.25*+5000000) + (0.10*0) + (0.20*+8000000) + (0.25*+3000000) = 39550000"
+    }
+  ],
+  "methodology": "Scenarios were constructed using probabilistic thinking and base rates adjusted for current geopolitical and economic signals. Impacts were aggregated via weighted probabilities.",
+  "analysisDate": "2026-07-20",
+  "geopoliticalSummary": "Ongoing tensions in the Middle East, U.S.-China tech rivalry, and potential European energy shortages create a volatile environment.",
+  "geoeconomicSummary": "Supply chain resilience is critical, with global trade deficits rising (+42.18% change) amid uneven tech adoption.",
+  "currentEventsSummary": "Goldman Sachs' AI adoption report, Fed policy stability, and mixed retail sales data reflect a cautiously optimistic yet fragile economy.",
   "chartData": [
     {
       "seriesId": "GDPC1",

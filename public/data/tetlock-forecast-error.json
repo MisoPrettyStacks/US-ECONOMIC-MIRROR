@@ -1,0 +1,7 @@
+{
+  "failedAt": "2026-07-22T13:15:50.912Z",
+  "message": "Unterminated string in JSON at position 6358",
+  "openaiBaseUrl": "https://openrouter.ai/api/v1",
+  "openaiModel": "openrouter/free",
+  "hasApiKey": true
+}

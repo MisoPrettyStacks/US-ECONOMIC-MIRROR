@@ -1,198 +1,575 @@
 {
   "scenarios": [
     {
-      "name": "Stagflationary Re-emergence",
-      "description": "Supply chain disruptions from geopolitical conflicts lead to a spike in energy prices, pushing inflation back up despite sluggish GDP growth.",
-      "probability": 0.15,
+      "name": "Stagnant Energy Prices",
+      "description": "Oil and natural gas prices remain elevated and volatile, limiting domestic manufacturing competitiveness and increasing import costs.",
+      "probability": 0.18,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "GDPC1",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Higher energy costs reduce consumable and investment demand."
+        },
+        {
+          "indicator": "UNRATE",
+          "direction": "up",
+          "magnitude": 0.15,
+          "explanation": "Higher input costs reduce hiring momentum."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "up",
+          "magnitude": 0.4,
+          "explanation": "Fuel cost pass-through raises CPI."
+        },
+        {
+          "indicator": "GFDEBTN",
+          "direction": "up",
+          "magnitude": 0.2,
+          "explanation Bata": "Higher borrowing costs and tax burdens to fund inflation."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "down",
+          "magnitude": 0.5,
+          "explanation": "Higher import values increase trade deficit."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "down",
+          "magnitude": -0.2,
+          "explanation": "Energy-intensive industries see lower output."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Consumer spending dampened by energy nanging."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "down",
+          "magnitude": -0.05,
+          "explanation": "Higher mortgage rates reduce construction."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "down",
+          "magnitude": -0.05,
+          "explanation": "Cost-shift reduces hiring pace."
+        }
+      ],
+      "reasoning": "Base rates on historical energy price shocks; balanced uncertainty, but the potential downside outweighs upside.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems Fusion"
+      ]
+    },
+    {
+      "name": "Escalating Ukraine Conflict",
+      "description": "Conflicts near Ukraine intensify, triggering renewed sanctions on Russia and disruptions to grain and energy supplies.",
+      "probability": 0.12,
       "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Supply shocks drive consumer price increases."
+          "indicator": "GDPC1",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Supply‑chain shocks and investor risk‑aversion curb growth."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "UNRATE",
+          "direction": "up",
+          "magnitude": 0.25,
+          "explanation": "Uncertainty spurs slower hiring."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "up",
+          "magnitude": 0.6,
+          "explanation": "Energy and commodity surge pushes inflation."
+        },
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "up",
+          "magnitude": 0.25,
+          "explanation": "Fed tightens to curb inflation."
+        },
+        {
+          "indicator": "DGS10",
+          "direction": "up",
+          "magnitude": 0.6,
+          "explanation": "Yield curve steepens from risk‑premium."
+        },
+        {
+          "indicator": "GFDEBTN",
           "direction": "down",
-          "magnitude": 0.8,
-          "explanation": "Higher costs reduce consumer discretionary spending and investment."
+          "magnitude": -0.3,
+          "explanation": "Higher funding cost offsets borrowing."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "down",
+          "magnitude": 0.6,
+          "explanation": "Import costs rise, deficit deepens."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Manufacturing slows due to raw‑material scarcity."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": "down",
+          "magnitude": -0.2,
+          "explanation": "Higher energy makes household food staff more pricey."
+        },
+        {
+          "indicator": "HOUST_employee",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Construction delays."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Job creation lags."
         }
       ],
-      "reasoning": "Base rate for inflation volatility in fragmented geopolitical regimes is high. Low probability due to current downward momentum in CPI, but non-zero due to 'clashing causal forces' of trade wars vs. energy transition.",
+      "reasoning": "Historical patterns of conflict-induced inflation and growth suppression justify a modest upside probability.",
+      "tetlockPillars": [
+        "_locations outside / base rates",
+        "ongoing reviewing"
+      ]
+    },
+    {
+      "name": "Robust حاولSupply Chain Reforms",
+      "description": "The U.S. government implements acceleration of high‑tech supply‑chain resilience programs, promoting domestic chip it and bulk steel manufacturing.",
+      "probability": 0.22,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "GDPC1",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "New production boosts overall output."
+        },
+        {
+          "indicator": "UNRATE",
+          "direction": "down",
+          "magnitude": -0.15,
+          "explanation": "Employment in manufacturing rises."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Higher production offset input cost increases."
+        },
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "No immediate policy adjustment."
+        },
+        {
+          "indicator": "DGS10",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Reduced risk premium."
+        },
+        {
+          "indicator": "GFDEBTN",
+          "direction": "down",
+          "magnitude": -0.2,
+          "explanation": "Lower financing costs for new projects."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "up",
+          "magnitude": 0.4,
+          "explanation": "Reduced import dependency expands trade surplus."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Enhanced domestic manufacturing."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": " حتی",
+          "magnitude": 0.2,
+          "explanation": "Consumer spending benefits from improved product availability."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "up",
+          "magnitude": 0.1,
+          "explanation": "Housing market supports construction financing."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "up",
+          "magnitude": 0.12,
+          "explanation": "Job growth in new factories."
+        }
+      ],
+      "reasoning": "Base rates on prior supply‑chain shift data; moderate probability given policy adoption momentum.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Granular analysis"
       ],
       "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem"
+        "Strive to distinguish as many degrees of doubt"
       ]
     },
     {
-      "name": "Soft Landing - Goldilocks Scenario",
-      "description": "Disinflation continues as planned, the Fed maintains the current rate, and consumer spending supports steady, albeit slow, growth.",
-      "probability": 0.45,
+      "name": "Quantitative Tightening Resumes",
+      "description": "The Fed signals a decisive shift to aggressive policy tightening, raising the federal funds rate expected in the next 12 months.",
+      "probability": 0.1,
       "category": "monetary",
       "impacts": [
         {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Steady employment avoids recessionary pressures."
+          "indicator": "GDPC1",
+          "direction": "down",
+          "magnitude": -0.7,
+          "explanation": "Higher borrowing costs reduce business investment."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "UNRATE",
+          "direction": "up",
+          "magnitude": 0.35,
+          "explanation": "Consumption and investment slowdown reducesocê hiring."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Tightening contains inflation expectations."
+        },
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Rate hikes directly set."
+        },
+        {
+          "indicator": "DGS10",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Yield curve steepens."
+        },
+        {
+          "indicator": "GFDEBTN",
           "direction": "up",
           "magnitude": 0.4,
-          "explanation": "Stable consumption supports modest expansion."
+          "explanation": "Government borrowing costs increase."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "down",
+          "magnitude": -0.4,
+          " caracterতুন": "Demand for exports weakens."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Manufacturing reliant on financing dies."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Consumer spending slides."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "down",
+          "magnitude": -0.25,
+          "explanation": "Housing activity falters."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "down",
+          "magnitude": -0.25,
+          "explanation": "Employment lags."
         }
       ],
-      "reasoning": "The current trajectory of CPI (-11.28%) and stable FEDFUNDS (3.63%) suggests a continuation of the existing trend. This is the 'outside view' baseline for current trends.",
+      "reasoning": "Historical impact of first‑time rate hikes motivates low probability of aggressive tightening.",
       "tetlockPillars": [
         "Outside view / base rates",
         "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
+        "Triage"
       ]
     },
     {
-      "name": "Protectionist Trade War",
-      "description": "New tariff regimes or sanctions escalate the current trade deficit, increasing costs for domestic manufacturers and reducing exports.",
-      "probability": 0.2,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 35,
-          "explanation": "Increased tariffs lead to higher imports and volatility in trade balances."
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Higher input costs for manufacturers reduce output efficiency."
-        }
-      ],
-      "reasoning": "Geopolitical tensions suggest a pivot from globalization to regionalism. The widening trade deficit (+42.18%) is a sensitive variable.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Diverse information sources"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Monetary Policy Error - Recessionary Pivot",
-      "description": "The Fed maintains the 3.63% rate too long while the economy cools, leading to a sharp contraction in industrial and retail sectors.",
-      "probability": 0.1,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 2,
-          "explanation": "Delayed rate cuts result in a liquidity squeeze."
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 180,
-          "explanation": "Rising unemployment as businesses cut costs."
-        }
-      ],
-      "reasoning": "Lagged effects of previous rate hikes could manifest if the current 0% change in FEDFUNDS fails to react to cooling indicators.",
-      "tetlockPillars": [
-        "Cognitive debiasing",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Look for the errors behind your errors"
-      ]
-    },
-    {
-      "name": "Housing Market Boom",
-      "description": "High housing starts (+19.02%) and stabilizing rates trigger a construction and related services surge.",
-      "probability": 0.1,
+      "name": "Housing Market Cooling",
+      "description": "Interest‑rate shock plus tightening policy dampen housing demand, leading to a decline in prices and construction activity.",
+      "probability": 0.14,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "up",
-          "magnitude": 5,
-          "explanation": "Positive momentum in starts creates a multiplier effect in the economy."
+          "indicator": "GDPC1",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Housing sector contracts, affecting overall output."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Construction investment drives broader economic activity."
+          "indicator": "UNRATE",
+          "direction": "down",
+          "magnitude": -0.05,
+          "explanation": "Construction job loss dampens hiring but small."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Lower construction input costs reduce inflationременно."
+        },
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Minor changes."
+        },
+        {
+          "indicator": "DGS10",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Reduced borrowing for mortgages reduces overall funding, lowering yields."
+        },
+        {
+          "indicator": "GFDEBTN",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Lower bonds issuances."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Export demand unaffected."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "down",
+          "magnitude": -0.2,
+          "explanation": "Construction manufacturing contracts."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": "down",
+          "magnitude": -0.15,
+          "explanation": "Consumer spending on home goods falls."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Direct effect."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Construction employment falls."
         }
       ],
-      "reasoning": "Current data shows significant momentum in housing starts. This scenario tests whether this is a temporary surge or a structural trend.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Granular analysis"
+      "reasoning": "Probability drawn from recent housing data; moderate risk."
+    },
+    {
+      "name": "Global Trade Expansion",
+      "description": "A new multilateral trade agreement between the U.S. and the EU/Asia increases tariff‑free trade flows and global supply chain resilience.",
+      "probability": 0.14,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "GDPC1",
+          "direction": "up",
+          "magnitude": 0.6,
+          "explanation": "Exports surge."
+        },
+        {
+          "indicator": "UNRATE",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Manufacturing jobs increase."
+        },
+        {
+          "indicator": "CPIAUCSL",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Demand rise offset by supply."
+        },
+        {
+          "indicator": "FEDFUNDS",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "No immediate change."
+        },
+        {
+          "indicator": "DGS10",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Yield curve easesushi."
+        },
+        {
+          "indicator": "GFDEBTN",
+          "direction": "down",
+          "magnitude": -0.15,
+          "explanation": "Lower-funding costs."
+        },
+        {
+          "indicator": "BOPGSTB",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Surging exports widen surplus."
+        },
+        {
+          "indicator": "INDPRO",
+          "direction": "up",
+          "magnitude": 0.35,
+          "explanation": "Production rises."
+        },
+        {
+          "indicator": "RSAFS",
+          "direction": "up",
+          "magnitude": 0.25,
+          "explanation": "Higher consumer spending."
+        },
+        {
+          "indicator": "HOUST",
+          "direction": "up",
+          "magnitude": 0.12,
+          "explanation": "Housing demand buoyed by employment."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "up",
+          "magnitude": 0.15,
+          "explanation": "Job growth."
+        }
       ],
-      "tetlockCommandments": [
-        "Strive to distinguish as many degrees of doubt as the problem permits"
-      ]
+      "reasoning": "Standard base‑rate adjustment for trade liberalization; moderate probability."
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24180.42,
-      "forecastValue": 24285,
-      "weightedChange": 0.43,
+      "indicator": "GDPC1",
+      "currentValue": 24180.419,
+      "forecastValue": 24285.6,
+      "weightedChange": 0.448,
       "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.65,
-      "equation": "24180.42 + (0.15 * -15.0) + (0.45 * 0.5) + (0.20 * -15.0) + (0.10 * -30.0) + (0.10 * 5.0) = 24285.0"
+      "confidence": 0.72,
+      "equation": "24180.419 + (0.18*(-72.25)) + (0.12*(-96.316)) + (0.22*121.907) + (0.1*(-169.606)) + (0.14*(-72.25)) + (0.14*121.907) = 24285.600"
     },
     {
-      "indicator": "Unemployment Rate (UNRATE)",
+      "indicator": "UNRATE",
       "currentValue": 4.2,
-      "forecastValue": 4.25,
-      "weightedChange": 0.05,
+      "forecastValue": 4.23,
+      "weightedChange": 0.714,
       "unit": "Percent",
-      "confidence": 0.7,
-      "equation": "4.2 + (0.15 * 0.2) + (0.45 * 0.0) + (0.20 * 0.1) + (0.10 * 0.3) + (0.10 * -0.1) = 4.25"
+      "confidence": 0.72,
+      "equation": "4.2 + (0.18*0.63) + (0.12*0.53) + (0.22*(-0.63)) + (0.1*0.85) + (0.14*(-0.05)) + (0.14*(-0.1)) = 4.23"
     },
     {
-      "indicator": "Inflation Rate (CPIAUCSL)",
+      "indicator": "CPIAUCSL",
       "currentValue": 3.46,
-      "forecastValue": 3.6,
-      "weightedChange": 0.14,
-      "unit": "Index",
-      "confidence": 0.6,
-      "equation": "3.46 + (0.15 * 0.5) + (0.45 * -0.2) + (0.20 * 0.1) + (0.10 * 0.4) + (0.10 * -0.1) = 3.6"
+      "forecastValue": 3.42,
+      "weightedChange": -1.158,
+      "unit": "Index 1982-1984=100",
+      "confidence": 0.72,
+      "equation": "3.46 + (0.18*0.139) + (0.12*0.207) + (0.22*0.0) +暗 (0.1*(-0.172)) + (0.14*(-0.3)) + (0.14*0.0) = 3.42"
     },
     {
-      "indicator": "Housing Starts (HOUST)",
+      "indicator": "FEDFUNDS",
+      "currentValue": 3.63,
+      "forecastValue": 4.01,
+      "weightedChange": 10.47,
+      "unit": "Percent",
+      "confidence": 0.72,
+      "equation": "3.63 + (0.18*0.0) + (0.12*0.25) + (0.22*0.0) + (0.1*0.5) + (0.14*0.0) + (0.14*0.0) = 4.01"
+    },
+    {
+      "indicator": "DGS10",
+      "currentValue": 4.6,
+      "forecastValue": 4.73,
+      "weightedChange": 2.78,
+      "unit": "Percent",
+      "confidence": 0.72,
+      "equation": "4.6 + (0.18*0.0) + (0.12*0.6) + (0.22*0.0) + (0.1*0.5) + (0.14*(-0.4)) + (0.14*(-0.3)) = 4.73"
+    },
+    {
+      "indicator": "GFDEBTN",
+      "currentValue": 39065421,
+      "forecastValue": 39255942,
+      "weightedChange": 4.94,
+      "unit": "Millions of Dollars",
+      "confidence": 0.72,
+      "equation": "39065421 + (0.18*0.015*39065421) + (0.12*0.006*39065421) + (0.22*(-0.002)*39065421) + (0.1*0.025*39065421) + (0.14*(-0.001)*39065421) + (0.14*(-0.001)*39065421) = 39255942"
+    },
+    {
+      "indicator": "BOPGSTB",
+      "currentValue": -77585,
+      "forecastValue": -69754,
+      "weightedChange": 10.06,
+      "unit": "Millions of Dollars",
+      "confidence": 0.72,
+      "equation": "-77585 + (0.18*(-0.5))*-77585 + (0.12*0.6)*-77585 + (0.22*0.4)*-77585 + (0.1*(-0.4))*-77585 + (0.14*0.5)*-77585 + (0.14*0.5)*-77585 = -69754"
+    },
+    {
+      "indicator": "INDPRO",
+      "currentValue": 102.6395,
+      "forecastValue": 103,
+      "weightedChange": 1.77,
+      "unit": "Index 2017=100ҷаи",
+      "confidence": 0.72,
+      "equation": "102.6395 + (0.18*(-0.2)) + (0.12*(-0ऱ blah)) + (0.22*0.3) + (0.1*(-0.5)) + (0.14*0.2) + (0.14*0.35) = 103.00"
+    },
+    {
+      "indicator": "RSAFS",
+      "currentValue": 768553,
+      "forecastValue": 780641,
+      "weightedChange": 1.56,
+      "unit": "Millions of Dollars",
+      "confidence": 0.72,
+      "equation": "768553 + (0.18*(-0.1))*768553 + ... = 780641"
+    },
+    {
+      "indicator": "HOUST",
       "currentValue": 1427,
-      "forecastValue": 1475,
-      "weightedChange": 48,
+      "forecastValue": 1450,
+      "weightedChange": 1.6,
       "unit": "Thousands of Units",
-      "confidence": 0.55,
-      "equation": "1427 + (0.15 * 10) + (0.45 * 15) + (0.20 * 5) + (0.10 * 40) + (0.10 * 50) = 1475"
+      "confidence": 0.72,
+      "equation": "1427 + (0.18*(-0.05))*1427 + ... = 1450"
     },
     {
-      "indicator": "Nonfarm Payrolls (PAYEMS)",
+      "indicator": "PAYEMS",
       "currentValue": 158984,
-      "forecastValue": 159100,
-      "weightedChange": 116,
+      "forecastValue": 159500,
+      "weightedChange": 0.33,
       "unit": "Thousands of Persons",
-      "confidence": 0.68,
-      "equation": "158984 + (0.15 * -20) + (0.45 * 40) + (0.20 * 0) + (0.10 * -100) + (0.10 * 20 = 159100"
+      "confidence": 0.72,
+      "equation": "158984 + (0.18*(-0.05))*158984 + ... = 159 uni"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting framework by breaking the macro-economy into granular sub-problems, establishing base rates for inflation and GDP, and using weighted probability scenarios to mitigate cognitive biases (overconfidence/recency bias).",
-  "analysisDate": "2026-07-21",
-  "geopoliticalSummary": "Increasing fragmentation in global trade and potential shifts in energy corridors are driving heightened volatility in trade balances and inflation.",
-  "geoeconomicSummary": "A transition from hyper-globalization to strategic protectionism is visible in the rising trade deficit and shifting supply chain dependencies.",
-  "currentEventsSummary": "The economy shows signs of decelerating growth but stabilized inflation; housing starts are a bright spot, while payroll growth is slowing significantly.",
+  "methodology": "Probabilistic weighting of scenario impacts; probabilities derived from anchored base‑rate analysis, adjusted for evidence and cognitive debiasing.",
+  "analysisDate": "2026-07-22",
+  "geopoliticalSummary": "Ongoing tensions in Eastern Europe and its spill‑over sanctions, alongside shifting U.S.–China relations, create volatility in commodity markets and trade incentives.",
+  "geoeconomicSummary": "Global supply‑chain shocks mitigated by 為 domestic manufacturing expansion; currency flows push dollar slightly appreciated against emerging markets.",
+  "currentEventsSummary": "Recent U.S unsus­f actions on trade policy, Fed rate updates, and new real(:,:, exploration of new trade deals with EU and Asia.",
   "chartData": [
     {
       "seriesId": "GDPC1",

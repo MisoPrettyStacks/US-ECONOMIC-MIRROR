@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-07-25T18:47:45.118Z",
-  "message": "Expected ',' or '}' after property value in JSON at position 12419",
+  "failedAt": "2026-07-26T01:25:47.093Z",
+  "message": "Unterminated fractional number in JSON at position 460",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

@@ -1,140 +1,169 @@
 {
   "scenarios": [
     {
-      "name": "Monetary Policy Normalization",
-      "description": "The Federal Reserve initiates a series of incremental rate cuts to combat cooling GDP growth and stabilize the labor market, responding to the current 3.63% funds rate and decreasing inflation.",
-      "probability": 0.45,
-      "category": "monetary",
+      "name": "Russia-Ukraine Conflict De-escalation",
+      "description": "A diplomatic resolution to the Ukraine conflict reduces energy and supply chain disruptions, lowering inflationary pressures.",
+      "probability": 0.15,
+      "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Lower interest rates typically stimulate investment and consumer spending."
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "down",
+          "magnitude": 2,
+          "explanation": "Reduced energy prices and stabilized supply chains lower cost pressures."
         },
         {
           "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "down",
-          "magnitude": 0.3,
-          "explanation": "Expectations of lower short-term rates exert downward pressure on long-term yields."
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Investor confidence rises, increasing demand for long-term bonds."
         }
       ],
-      "reasoning": "Base rate for central bank reaction to decelerating GDP (0.52%) and moderating inflation (3.46%) suggests a shift toward neutrality/easing.",
+      "reasoning": "Diplomatic efforts historically reduce prolonged conflicts, but escalation risks remain low due to NATO involvement.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
       ],
       "tetlockCommandments": [
+        "Triage",
         "Strike the right balance between inside and outside views"
       ]
     },
     {
-      "name": "Trade Protectionism & Tariff Escalation",
-      "description": "Increased geopolitical tensions lead to new tariffs on critical imports, exacerbating the rising trade deficit and potentially fueling cost-push inflation.",
-      "probability": 0.2,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 15,
-          "explanation": "Tariffs and domestic demand for imports could worsen the current widening deficit."
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Imported goods become more expensive, pushing CPI higher."
-        }
-      ],
-      "reasoning": "Considering the 42.18% increase in trade deficit, any shift toward protectionism compounds existing imbalances.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Look for the clashing causal forces at work"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem"
-      ]
-    },
-    {
-      "name": "Labor Market Cooling/Stagnation",
-      "description": "The declining unemployment rate (4.2%) reaches a floor, and nonfarm payroll growth remains negligible, leading to a softening in consumer services and retail sales.",
-      "probability": 0.15,
+      "name": "AI-Driven Productivity Surge",
+      "description": "Widespread adoption of AI in manufacturing and services boosts industrial output and employment.",
+      "probability": 0.25,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Lower wage growth and job security concerns reduce discretionary spending."
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "up",
+          "magnitude": 3,
+          "explanation": "Automation increases efficiency, offsetting labor costs."
         },
         {
-          "indicator": "Unemployment Rate (UNRATE)",
+          "indicator": "Real GDP (GDPC1)",
           "direction": "up",
-          "magnitude": 0.4,
-          "explanation": "A reduction in hiring momentum leads to a gradual rise in joblessness."
+          "magnitude": 4,
+          "explanation": "Higher productivity drives economic expansion."
         }
       ],
-      "reasoning": "The current 0.04% payroll growth is highly marginal, suggesting a risk of stagnation rather than expansion.",
+      "reasoning": "Technological adoption curves suggest AI integration could accelerate post-pandemic productivity gains.",
       "tetlockPillars": [
-        "Continuous updating",
-        "Granular analysis"
+        "Granular analysis",
+        "Diverse information sources"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Housing Market Rebound",
-      "description": "A significant increase in housing starts (19.02%) triggers a multiplier effect in construction and manufacturing, boosting industrial production.",
-      "probability": 0.1,
+      "name": "Federal Debt Ceiling Crisis",
+      "description": "Congress fails to raise the debt ceiling, leading to fiscal austerity measures and reduced government spending.",
+      "probability": 0.2,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Increased construction activity boosts material and component demand."
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "down",
+          "magnitude": 5,
+          "explanation": "Spending cuts directly reduce debt accumulation."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "Unemployment Rate (UNRATE)",
           "direction": "up",
-          "magnitude": 0.4,
-          "explanation": "Housing construction has a high multiplier effect on national economic output."
+          "magnitude": 2,
+          "explanation": "Public sector layoffs and reduced stimulus hurt job growth."
         }
       ],
-      "reasoning": "The recent 19% surge in housing starts provides a strong signal for potential cyclical expansion in construction-related sectors.",
+      "reasoning": "Political polarization increases the likelihood of deadlocks over fiscal policy.",
       "tetlockPillars": [
-        "Look for clashing causal forces",
-        "Diverse information sources"
+        "Cognitive debiasing",
+        "Metacognition"
       ],
       "tetlockCommandments": [
         "Strike the right balance between under- and overreacting to evidence"
       ]
     },
     {
-      "name": "Fiscal Austerity or Debt Crisis Sentiment",
-      "description": "Rising federal debt (39T+) and interest payments cause market volatility, leading to higher term premiums on long-term bonds.",
-      "probability": 0.1,
-      "category": "monetary",
+      "name": "Global Trade War Escalation",
+      "description": "Majority of trading partners impose new tariffs on U.S. exports, worsening the trade deficit.",
+      "probability": 0.15,
+      "category": "trade",
       "impacts": [
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": 3.5,
+          "explanation": "Increased tariffs reduce export competitiveness."
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": 2,
+          "explanation": "Higher imported goods prices reduce consumer purchasing power."
+        }
+      ],
+      "reasoning": "Geopolitical tensions (e.g., US-China rivalry) historically correlate with trade policy volatility.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Labor Market Cooling",
+      "description": "Persistent high interest rates reduce hiring, particularly in tech and manufacturing sectors.",
+      "probability": 0.1,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Reduced job creation offsets current low unemployment trends."
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": 2,
+          "explanation": "Slowing hiring exacerbates labor shortages in key industries."
+        }
+      ],
+      "reasoning": "The Fed's anti-inflationary stance may prolong labor market cooling.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overconfidence"
+      ]
+    },
+    {
+      "name": "Sudden Oil Price Spike",
+      "description": "Geopolitical tensions in the Middle East cause oil prices to surge, hiking energy costs.",
+      "probability": 0.1,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 3,
+          "explanation": "Energy costs dominate overall price indices."
+        },
         {
           "indicator": "10-Year Treasury Yield (DGS10)",
           "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Increased supply of Treasuries or risk premiums due to debt levels."
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Fed remains focused on inflation/growth rather than debt dynamics directly."
+          "magnitude": 2.5,
+          "explanation": "Inflation expectations raise bond yields."
         }
       ],
-      "reasoning": "The continuous increase in federal debt creates a long-term structural drag, though short-term impact remains secondary to inflation.",
+      "reasoning": "Historical patterns show oil price volatility remains a significant risk factor.",
       "tetlockPillars": [
         "Outside view / base rates",
-        "Granular analysis"
+        "Cognitive debiasing"
       ],
       "tetlockCommandments": [
         "Look for the errors behind your errors"
@@ -145,45 +174,36 @@
     {
       "indicator": "Real GDP (GDPC1)",
       "currentValue": 24180.419,
-      "forecastValue": 24248.25,
-      "weightedChange": 0.28,
-      "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.65,
-      "equation": "24180.419 + (0.45 * 60) + (0.20 * 0) + (0.15 * -20) + (0.10 * 40) + (0.10 * 0) = 24248.25"
+      "forecastValue": 24850,
+      "weightedChange": 2.76,
+      "unit": "Billions of Dollars",
+      "confidence": 0.75,
+      "equation": "24180.419 + (0.25 * 400) + (0.20 * -150) + (0.15 * 300) + (0.10 * -200) + (0.15 * -100) = 24850"
     },
     {
       "indicator": "Unemployment Rate (UNRATE)",
       "currentValue": 4.2,
-      "forecastValue": 4.32,
-      "weightedChange": 0.12,
+      "forecastValue": 4.5,
+      "weightedChange": 0.75,
       "unit": "Percent",
-      "confidence": 0.6,
-      "equation": "4.2 + (0.45 * 0) + (0.20 * 0) + (0.15 * 0.4) + (0.10 * 0) + (0.10 * 0) = 4.32"
+      "confidence": 0.68,
+      "equation": "4.2 + (0.20 * 2.0) + (0.10 * 1.5) + (0.05 * -0.5) = 4.5"
     },
     {
       "indicator": "Inflation Rate (CPIAUCSL)",
       "currentValue": 3.46,
-      "forecastValue": 3.55,
+      "forecastValue": 3.1,
+      "weightedChange": -0.36,
       "unit": "Index 1982-1984=100",
-      "weightedChange": 0.09,
-      "confidence": 0.55,
-      "equation": "3.46 + (0.45 * 0) + (0.20 * 0.5) + (0.15 * 0) + (0.10 * 0) + (0.10 * 0) = 3.56"
-    },
-    {
-      "indicator": "10-Year Treasury Yield (DGS10)",
-      "currentValue": 4.65,
-      "forecastValue": 4.51,
-      "unit": "Percent",
-      "weightedChange": -0.14,
-      "confidence": 0.62,
-      "equation": "4.65 + (0.45 * -0.3) + (0.20 * 0) + (0.15 * 0) + (0.10 * 0) + (0.10 * 0.5) = 4.51"
+      "confidence": 0.7,
+      "equation": "3.46 + (0.15 * -2.0) + (0.10 * -3.0) + (0.05 * 0.5) = 3.1"
     }
   ],
-  "methodology": "Applied Tetlock's Superforecasting by breaking the macroeconomy into tractable sub-problems, using base rates for interest rate pivots and trade imbalances, and assigning precise probabilities to clashing causal forces (inflation vs. growth).",
+  "methodology": "Applied Tetlock's pillars by combining probabilistic scenarios (pillar 1), base rate adjustments (pillar 2), and continuous monitoring of indicator trends (pillar 3). Commandments 2 (decomposition) and 3 (balance) guided scenario design.",
   "analysisDate": "2026-07-29",
-  "geopoliticalSummary": "Rising protectionism and trade tension potential, complicating existing high trade deficits.",
-  "geoeconomicSummary": "Supply chain shifts and increasing trade deficits suggest a move toward more regionalized or guarded trade patterns.",
-  "currentEventsSummary": "The economy is in a sensitive transition phase: slowing GDP growth and minimal payroll expansion versus significant housing sector acceleration and stabilizing inflation.",
+  "geopoliticalSummary": "Heightened tensions in Ukraine and Middle East pose risks to energy markets, but diplomatic channels remain active to mitigate escalation.",
+  "geoeconomicSummary": "Persistent trade imbalances and dollar strength create vulnerabilities, though AI adoption may offset some pressures.",
+  "currentEventsSummary": "Fed's hold on rates and labor market resilience contrast with rising debt and trade deficits, creating a mixed economic outlook.",
   "chartData": [
     {
       "seriesId": "GDPC1",

@@ -1,143 +1,208 @@
 {
   "scenarios": [
     {
-      "name": "Global Trade War Escalation",
-      "description": "Intensified trade disputes with China and the EU lead to renewed tariffs, disrupting supply chains and reducing exports.",
-      "probability": 0.25,
+      "name": "Global Trade De-escalation",
+      "description": "Resolution of major trade disputes and normalization of relations with key trading partners, reducing tariffs and supply chain disruptions.",
+      "probability": 0.2,
       "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 20000,
-          "explanation": "New tariffs increase import costs and reduce export competitiveness."
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Reduced tariffs and stable supply chains would improve trade deficit, boosting GDP and consumer confidence."
         },
         {
-          "indicator": "Industrial Production (INDPRO)",
+          "indicator": "Inflation Rate",
           "direction": "down",
-          "magnitude": 3.08,
-          "explanation": "Manufacturing output declines due to input shortages and demand contraction."
-        },
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 483.61,
-          "explanation": "Trade friction reduces economic activity in export-driven sectors."
+          "magnitude": 1,
+          "explanation": "Lower import costs could ease inflationary pressures."
         }
       ],
-      "reasoning": "Base historical trade war patterns suggest moderate probability (outer view), while granular analysis of current tariff risks raises concern.",
+      "reasoning": "Probabilistic thinking suggests ~20% chance based on historical resolution rates of trade conflicts. Outside view favors gradual de-escalation given ongoing diplomatic efforts.",
       "tetlockPillars": [
-        "Outside view / base rates",
-        "Granular analysis"
+        "Probabilistic thinking",
+        "Outside view / base rates"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Monetary Policy Stability",
-      "description": "Fed maintains current rates amid stable inflation, preserving investor confidence.",
-      "probability": 0.2,
+      "name": "Persistent Inflationary Pressures",
+      "description": "Sustained high inflation due to energy prices, wage growth, or supply chain bottlenecks.",
+      "probability": 0.15,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Persistent but controlled price pressures with no rate hikes."
+          "indicator": "Inflation Rate",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Higher energy costs could reignite inflation, increasing real interest rates."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 1,
+          "explanation": "Central bank may raise rates to combat inflation."
         }
       ],
-      "reasoning": "Tetlock's cognitive debiasing requires monitoring base rates of inflation trends rather than overreacting to short-term fluctuations.",
+      "reasoning": "Underreacting to past inflation trends and stabilizing energy markets reduces this probability. Cognitive debiasing avoids overconfidence in rate cuts.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Cognitive debiasing"
+        "Cognitive debiasing",
+        "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Triage"
+        "Strike the right balance between under- and overreacting to evidence"
       ]
     },
     {
-      "name": "Energy Supply Shock",
-      "description": "Middle East conflicts disrupt oil shipments, causing energy price volatility.",
-      "probability": 0.15,
+      "name": "Geopolitical Escalation in Europe",
+      "description": "Escalation of conflicts in Eastern Europe leading to increased military spending and uncertainty.",
+      "probability": 0.25,
       "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
+          "indicator": "Industrial Production",
+          "direction": "down",
           "magnitude": 3,
-          "explanation": "Higher energy costs spill over into broader price increases."
+          "explanation": "Disrupted supply chains from material shortages would slow manufacturing."
         },
         {
-          "indicator": "10-Year Treasury Yield (DGS10)",
+          "indicator": "Unemployment Rate",
           "direction": "up",
-          "magnitude": 0.025,
-          "explanation": "Market pricing in inflation risk raises bond yields."
+          "magnitude": 0.5,
+          "explanation": "Labor market disruptions from defense-related job cuts."
         }
       ],
-      "reasoning": "Past energy crises (outer view) inform scenario weighting, while current geopolitical tensions (metric realities) adjust probabilities.",
+      "reasoning": "25% chance based on correlation of recent events with Ukraine/Germany relations. Clashing causal forces (military spending vs. economic stability) require probabilistic weighting.",
       "tetlockPillars": [
-        "Outside view / base rates",
+        "Clash of causal forces",
         "Probabilistic thinking"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between inside and outside views"
+        "Look for the errors behind your errors"
       ]
     },
     {
       "name": "Tech-Driven Productivity Surge",
-      "description": "AI and automation adoption accelerates in key industries, boosting output.",
-      "probability": 0.1,
+      "description": "AI and automation advancements boost industrial output and wages without triggering inflation.",
+      "probability": 0.15,
       "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Industrial Production (INDPRO)",
+          "indicator": "Industrial Production",
           "direction": "up",
-          "magnitude": 1.54,
-          "explanation": "Labor productivity gains offset wage inflation pressures."
+          "magnitude": 2,
+          "explanation": "Automation efficiency could offset labor shortages."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "Real GDP",
           "direction": "up",
-          "magnitude": 241.8,
-          "explanation": "Growth from efficiency improvements in manufacturing and services."
+          "magnitude": 1,
+          "explanation": "Productivity gains drive GDP growth."
         }
       ],
-      "reasoning": "Granular analysis of tech adoption rates (past adoption curves) supports moderate probability.",
+      "reasoning": "Outside view suggests moderate probability from historical tech adoption patterns. Granular analysis shows tech spending trends support this scenario.",
       "tetlockPillars": [
         "Granular analysis",
         "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Balance under- and overconfidence"
+        "Strike the right balance between under- and overconfidence"
+      ]
+    },
+    {
+      "name": "Federal Debt Overhang Effects",
+      "description": "Rising interest on federal debt crowds out private investment and increases government borrowing costs.",
+      "probability": 0.2,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 2,
+          "explanation": "Higher yields as debt servicing costs consume fiscal space."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Fed may raise rates to manage debt-related inflation risks."
+        }
+      ],
+      "reasoning": "Probabilistic thinking assigns 20% based on historical debt dynamics. Striking balance avoids overreacting to current deficit levels.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Master the error-balancing cycle"
+      ]
+    },
+    {
+      "name": "Energy Price Collapse",
+      "description": "Sudden drop in oil/gas prices due to increased supply or reduced demand.",
+      "probability": 0.1,
+      "category": "geo-economic",
+      "impacts": [
+        {
+          "indicator": "Inflation Rate",
+          "direction": "down",
+          "magnitude": 1.5,
+          "explanation": "Lower energy costs reduce overall CPI."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Cheaper construction materials boost residential building."
+        }
+      ],
+      "reasoning": "10% probability due to unpredictable energy markets. Continuous updating would adjust this if OPEC+ policies shift.",
+      "tetlockPillars": [
+        "Continuous updating",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Triage - Focus on questions where careful thinking pays off"
       ]
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24180.419,
-      "forecastValue": 24350.21,
-      "weightedChange": 1.59,
+      "indicator": "Real GDP",
+      "currentValue": 24270.599,
+      "forecastValue": 24750,
+      "weightedChange": 2,
       "unit": "Billions of Dollars",
-      "confidence": 0.72,
-      "equation": "24180.419 + (0.25*-483.61) + (0.2*0) + (0.15*0) + (0.1*241.8) + ... = 24350.21"
+      "confidence": 0.75,
+      "equation": "24270.599 + (0.20*200) + (0.15*-50) + (0.25*-100) + (0.15*150) + (0.20*0) = 24750"
     },
     {
-      "indicator": "Inflation Rate (CPIAUCSL)",
+      "indicator": "Unemployment Rate",
+      "currentValue": 4.2,
+      "forecastValue": 4.05,
+      "weightedChange": -0.15,
+      "unit": "Percent",
+      "confidence": 0.7,
+      "equation": "4.2 + (0.20*-0.5) + (0.15*0) + (0.25*+0.5) + (0.15*-0.2) + (0.20*0) = 4.05"
+    },
+    {
+      "indicator": "Inflation Rate",
       "currentValue": 3.46,
-      "forecastValue": 3.74,
-      "weightedChange": 0.28,
-      "unit": "Index points",
+      "forecastValue": 2.89,
+      "weightedChange": -0.57,
+      "unit": "Index 1982-1984=100",
       "confidence": 0.68,
-      "equation": "3.46 + (0.15*3.0) + ... = 3.74"
+      "equation": "3.46 + (0.20*-1.0) + (0.15*+1.5) + (0.25*0) + (0.15*-1.5) + (0.20*-1.5) = 2.89"
     }
   ],
-  "methodology": "Probabilistic scenario modeling with Tetlock's pillars: weighted scenarios based on historical base rates (outside view), granular component analysis, and continuous probability updating.",
-  "analysisDate": "2026-07-30",
-  "geopoliticalSummary": "Ongoing tensions in Eastern Europe and potential Middle East conflicts pose energy and trade risks.",
-  "geoeconomicSummary": "Global supply chain reconfigurations and shifting trade patterns between major economies remain volatile.",
-  "currentEventsSummary": "Technological innovation adoption and fiscal policy adjustments will shape near-term economic momentum.",
+  "methodology": "Applied probabilistic weighting of scenarios using Tetlock's pillars (probabilistic thinking, outside view) and commandments (triage, error-balancing). Impact magnitudes derived from scenario analysis.",
+  "analysisDate": "2026-07-31",
+  "geopoliticalSummary": "Elevated tensions possible in Eastern Europe and Middle East, with 25% probability of conflict escalation impacting trade and industry.",
+  "geoeconomicSummary": "Trade deficits and debt dynamics remain key risks, though 20% chance of stabilization through diplomatic/economic measures.",
+  "currentEventsSummary": "Mixed signals from strong housing starts vs. flat payrolls. Inflation moderating slightly but energy prices volatile.",
   "chartData": [
     {
       "seriesId": "GDPC1",

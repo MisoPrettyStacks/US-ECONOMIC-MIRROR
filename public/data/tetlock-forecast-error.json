@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-08-04T08:20:21.772Z",
-  "message": "Unterminated string in JSON at position 16187",
+  "failedAt": "2026-08-04T13:33:30.028Z",
+  "message": "Unexpected token 'W', \"We need to\"... is not valid JSON",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

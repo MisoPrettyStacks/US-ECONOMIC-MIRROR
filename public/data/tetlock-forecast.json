@@ -1,198 +1,61 @@
 {
   "scenarios": [
     {
-      "name": "Stagflationary Resurgence",
-      "description": "Geopolitical escalations in energy-producing regions cause a sudden spike in oil prices, conflicting with current low inflation trends and forcing the Fed to maintain high rates despite slowing GDP growth.",
-      "probability": 0.15,
+      "name": "Geopolitical Escalation in Middle East",
+      "description": "A significant conflict escalates in the Middle East, disrupting oil supplies and supply chains.",
+      "probability": 0.22,
       "category": "geopolitical",
       "impacts": [
         {
           "indicator": "Inflation Rate (CPIAUCSL)",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Energy supply shocks directly drive consumer price increases."
+          "magnitude": 1.2,
+          "explanation": "Oil supply constraints drive up energy costs and input prices."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": -0.8,
-          "explanation": "Higher costs for production and consumers dampen aggregate demand."
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Increased military spending raises national debt."
         }
       ],
-      "reasoning": "While inflation has dropped significantly (-11.28%), the 'outside view' suggests that energy volatility remains a recurring historical driver of inflation shocks. The low probability reflects the current downward momentum in CPI.",
+      "reasoning": "Historical conflicts have increased inflation and debt. Current tensions in the region provide a base rate for risk.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem"
-      ]
-    },
-    {
-      "name": "The Soft Landing Realized",
-      "description": "Inflation continues its descent toward 2% without triggering a significant spike in unemployment, allowing the Fed to continue gradual rate cuts as GDP stabilizes.",
-      "probability": 0.45,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "down",
-          "magnitude": 0.5,
-          "explanation": "Stable low inflation allows for normalization of interest rates."
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Steady growth supports current low unemployment levels."
-        }
-      ],
-      "reasoning": "The current base rate for inflation is trending down rapidly. Granular analysis of retail sales and housing starts suggests consumer resilience, making a soft landing the most likely baseline scenario.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Continuous updating"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
-      ]
-    },
-    {
-      "name": "Trade Protectionism Spike",
-      "description": "New tariff regimes or intensified trade wars increase the cost of imported goods and worsen the trade deficit, impacting supply chain stability.",
-      "probability": 0.25,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": -15,
-          "explanation": "Increased tariffs often increase import costs, worsening the deficit."
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": -0.5,
-          "explanation": "Supply chain disruptions from trade barriers slow manufacturing output."
-        }
-      ],
-      "reasoning": "The significant increase in the trade deficit (+42.18%) indicates a high sensitivity to trade policy shifts. This scenario accounts for the 'clashing causal forces' of trade protectionism vs. domestic demand.",
-      "tetlockPillars": [
-        "Look for the clashing causal forces at work in each problem",
-        "Diverse information sources"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Credit Crunch / Financial Stress",
-      "description": "The high 10-Year Treasury yield (4.68%) combined with rising federal debt leads to increased volatility in bond markets, causing tight credit conditions.",
-      "probability": 0.1,
-      "category": "monetary",
+      "name": "Geoeconomic Supply Chain Diversification",
+      "description": "Global companies shift manufacturing out of the U.S. to avoid tariffs or attract subsidies.",
+      "probability": 0.18,
+      "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Housing Starts (HOUST)",
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
           "direction": "down",
-          "magnitude": -5,
-          "explanation": "Higher yields increase mortgage rates, cooling the housing market."
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": -1.2,
-          "explanation": "Tightening credit reduces consumer discretionary spending."
-        }
-      ],
-      "reasoning": "The divergence between current low unemployment and rising Treasury yields suggests a market pricing in future inflation or debt concerns, creating a 'clashing force' for credit availability.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Cognitive debiasing"
-      ],
-      "tetlockCommandments": [
-        "Strive to distinguish as many degrees of doubt as the problem permits"
-      ]
-    },
-    {
-      "name": "Productivity Boom",
-      "description": "Technological integration (AI/Automation) offsets rising labor costs and debt burdens, driving a new wave of non-inflationary GDP growth.",
-      "probability": 0.05,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Increased efficiency drives higher output without raising inflation."
+          "magnitude": 3,
+          "explanation": "Exports decline as domestic production decreases."
         },
         {
           "indicator": "Industrial Production (INDPRO)",
-          "direction": "up",
-          "magnitude": 1,
-          "explanation": "Automation boosts manufacturing output per hour."
+          "direction": "down",
+          "magnitude": 1.5,
+          "explanation": "Reduced domestic manufacturing activity."
         }
       ],
-      "reasoning": "A low-probability/high-impact scenario. While current indicators show slow growth (+0.37%), the long-term trend of technological shifts warrants consideration as a 'black swan' upside.",
-      "tetlockPillars": [
-        "Continuous updating",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overconfidence"
-      ]
-    }
+      "reasoning": "Trade war outcomes and multinational subsidies incentivize relocation. Recent manufacturing shifts in Mexico/Asia support this."
+    },
+    "tetlockPillars**: [",
+    "Granular analysis",
+    "Diverse information sources"
   ],
-  "weightedForecasts": [
-    {
-      "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24270.599,
-      "forecastValue": 24345.12,
-      "weightedChange": 0.29,
-      "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.68,
-      "equation": "24270.599 + (0.45 * 0.4) + (0.15 * -1.2) + (0.25 * -0.4) + (0.10 * 0.0) + (0.05 * 1.5) = 24345.12"
-    },
-    {
-      "indicator": "Inflation Rate (CPIAUCSL)",
-      "currentValue": 3.46,
-      "forecastValue": 3.15,
-      "weightedChange": -0.31,
-      "unit": "Index 1982-1984=100",
-      "confidence": 0.75,
-      "equation": "3.46 + (0.45 * -0.5) + (0.15 * 1.5) + (0.25 * -0.2) + (0.10 * -0.2) + (0.05 * -0.2) = 3.15"
-    },
-    {
-      "indicator": "Unemployment Rate (UNRATE)",
-      "currentValue": 4.2,
-      "forecastValue": 4.25,
-      "weightedChange": 0.05,
-      "unit": "Percent",
-      "confidence": 0.7,
-      "equation": "4.2 + (0.45 * 0.0) + (0.15 * 0.3) + (0.25 * 0.0) + (0.10 * 0.2) + (0.05 * -0.1) = 4.25"
-    },
-    {
-      "indicator": "Federal Funds Rate (FEDFUNDS)",
-      "currentValue": 3.63,
-      "forecastValue": 3.38,
-      "weightedChange": -0.25,
-      "unit": "Percent",
-      "confidence": 0.72,
-      "equation": "3.63 + (0.45 * -0.5) + (0.15 * 0.0) + (0.25 * -0.1) + (0.10 * -0.2) + (0.05 * 0.0) = 3.38"
-    },
-    {
-      "indicator": "Housing Starts (HOUST)",
-      "currentValue": 1427,
-      "forecastValue": 1385,
-      "weightedChange": -42,
-      "unit": "Thousands of Units",
-      "confidence": 0.65,
-      "equation": "1427 + (0.45 * 0.0) + (0.15 * 0.0) + (0.25 * 0.0) + (0.10 * -80) + (0.05 * 0.0) = 1347 (Error check calculation: 1385)"
-    }
+  "tetlockCommandments": [
+    "Strive to distinguish as many degrees of doubt as the problem permits"
   ],
-  "methodology": "Applied a Bayesian updating approach to establish base rates for each scenario, then adjusted probabilities based on current indicator trends (inflation downward, yields upward). Scenarios were broken into granular economic impacts and aggregated via probability-weighted sums.",
-  "analysisDate": "2026-08-03",
-  "geopoliticalSummary": "Tensions in commodity-exporting regions remain the primary threat to the disinflationary trend observed in the CPI data.",
-  "geoeconomicSummary": "The widening trade deficit and rising Treasury yields suggest growing friction in global trade patterns and increased debt-service scrutiny.",
-  "currentEventsSummary": "The economy is currently in a transitional phase: low inflation and low unemployment suggest a soft landing, but rising yields and deficits act as countervailing forces.",
   "chartData": [
     {
       "seriesId": "GDPC1",

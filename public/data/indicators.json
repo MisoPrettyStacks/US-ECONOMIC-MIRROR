@@ -25,9 +25,8 @@
       "name": "Inflation Rate",
       "unit": "Index 1982-1984=100",
       "category": "Prices",
-      "value": 3.46,
-      "previousValue": 3.9,
-      "percentChange": -11.282051282051281,
+      "value": 3.23,
+      "percentChange": 0,
       "date": "2026-06-01"
     },
     {
@@ -45,10 +44,10 @@
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 4.75,
-      "previousValue": 4.68,
-      "percentChange": 1.495726495726502,
-      "date": "2026-07-31"
+      "value": 4.7,
+      "previousValue": 4.75,
+      "percentChange": -1.0526315789473648,
+      "date": "2026-08-03"
     },
     {
       "seriesId": "GFDEBTN",
@@ -111,5 +110,5 @@
       "date": "2026-06-01"
     }
   ],
-  "lastRefresh": "2026-08-04T19:15:28.573Z"
+  "lastRefresh": "2026-08-05T01:16:06.435Z"
 }

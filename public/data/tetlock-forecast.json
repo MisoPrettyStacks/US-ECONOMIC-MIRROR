@@ -1,218 +1,252 @@
 {
   "scenarios": [
     {
-      "name": "Global Conflict Escalation",
-      "description": "A significant geopolitical conflict (e.g., Middle East or Europe) escalates, disrupting trade routes and increasing energy prices.",
-      "probability": 0.25,
-      "category": "geopolitical",
+      "name": "Monetary Policy Pivot & Soft Landing",
+      "description": "The Federal Reserve continues a gradual easing cycle to maintain the 4.1% unemployment rate, successfully navigating a soft landing as inflation stabilizes near 3%.",
+      "probability": 0.35,
+      "category": "monetary",
       "impacts": [
         {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 2,
-          "explanation": "Higher energy prices from conflict escalation would drive up inflation."
+          "indicator": "Federal Funds Rate",
+          "direction": "down",
+          "magnitude": 0.5,
+          "explanation": "Predictable gradual cuts to support moderate GDP growth."
         },
         {
-          "indicator": "GSYD10",
+          "indicator": "Real GDP",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Increased risk aversion would push Treasury yields higher."
+          "magnitude": 0.5,
+          "explanation": "Lower borrowing costs stimulate investment and consumption."
         }
       ],
-      "reasoning": "Current geopolitical tensions (e.g., Israel-Hamas, Russia-Ukraine) have a moderate probability of escalation based on historical patterns and regional instability.",
+      "reasoning": "Base rate for 'oft landings' in modern central banking is relatively high when inflation is cooling without high unemployment; current low unemployment supports this view.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Triage",
-        "Break seemingly intractable problems into tractable sub-problems"
+        "Strike the right balance between under- and overreacting to evidence"
       ]
     },
     {
-      "name": "Trade War Resolution",
-      "description": "U.S.-China trade disputes are resolved through diplomatic agreements, improving supply chains and exports.",
+      "name": "Geopolitical Fragmentation & Supply Chain Shock",
+      "description": "Escalation in regional conflicts (Middle East or Eastern Europe) triggers a secondary energy spike and disrupts critical mineral supply chains.",
       "probability": 0.2,
-      "category": "trade",
+      "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "BOPGSTB",
-          "direction": "up",
-          "magnitude": 3,
-          "explanation": "Reduced tariffs and improved trade flows would narrow the deficit."
-        },
-        {
-          "indicator": "INDU",
-          "direction": "up",
-          "magnitude": 1,
-          "explanation": "Increased exports could boost industrial production."
-        }
-      ],
-      "reasoning": "Recent U.S. efforts to de-escalate trade tensions (e.g., phased tariff reductions) suggest a plausible resolution scenario.",
-      "tetlockPillars": [
-        "Continuous updating",
-        "Diverse information sources"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views"
-      ]
-    },
-    {
-      "name": "Housing Market Correction",
-      "description": "A surge in housing prices triggers a market correction, reducing new starts and consumer spending.",
-      "probability": 0.15,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "HOUST",
-          "direction": "down",
-          "magnitude": 5,
-          "explanation": "A correction would reduce housing starts by 5-10%."
-        },
-        {
-          "indicator": "RSAFS",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Lower household spending would dampen retail sales."
-        }
-      ],
-      "reasoning": "High housing starts (19.02% growth) create self-reinforcing demand, increasing correction risk.",
-      "tetlockPillars": [
-        "Cognitive debiasing",
-        "Granular analysis"
-      ],
-      "tetlockCommandments": [
-        "Strive to distinguish as many degrees of doubt as the problem permits"
-      ]
-    },
-    {
-      "name": "Central Bank Policy Shift",
-      "description": "The Fed raises rates aggressively to combat persistent inflation risks.",
-      "probability": 0.2,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "FRBN",
-          "direction": "up",
-          "magnitude": 2,
-          "explanation": "Higher rates increase federal debt servicing costs."
-        },
-        {
-          "indicator": "UNRATE",
-          "direction": "up",
-          "magnitude": 1,
-          "explanation": "Tighter credit could slow job growth."
-        }
-      ],
-      "reasoning": "Current 3.63% Fed rate is below historical norms for 3.23% inflation, suggesting potential tightening.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work"
-      ]
-    },
-    {
-      "name": "Supply Chain Resilience",
-      "description": "Global supply chains stabilize due to regional diversification and AI-driven logistics improvements.",
-      "probability": 0.15,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "BOPGSTB",
-          "direction": "up",
-          "magnitude": 2,
-          "explanation": "Resilient supply chains reduce import dependencies."
-        },
-        {
-          "indicator": "INDPRO",
+          "indicator": "Inflation Rate",
           "direction": "up",
           "magnitude": 1.2,
-          "explanation": "Stable supply chains would boost manufacturing output."
+          "explanation": "Energy and commodity price shocks increase CPI."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": 5,
+          "explanation": "Increased cost of imports and disruption in trade flows."
         }
       ],
-      "reasoning": "Post-pandemic investments in supply chain redundancy and AI adoption are accelerating stabilization.",
+      "reasoning": "Clashing causal forces between geopolitical tension and globalized supply chains; probability adjusted for current high tension levels.",
       "tetlockPillars": [
         "Granular analysis",
         "Diverse information sources"
       ],
       "tetlockCommandments": [
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Fiscal Austerity & Debt Servicing Strain",
+      "description": "Rising 10-Year Treasury Yields increase the cost of servicing the $39 trillion national debt, forcing a shift in fiscal priorities and reduced government spending.",
+      "probability": 0.15,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Federal Debt",
+          "direction": "up",
+          "magnitude": 2,
+          "explanation": "Interest payments increase the total debt burden rapidly."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": 0.4,
+          "explanation": "Reduced government stimulus and higher private borrowing costs."
+        }
+      ],
+      "reasoning": "The 1.43% increase in debt is compounding; Treasury yields at 4.69% suggest market concern over fiscal sustainability.",
+      "tetlockPillars": [
+        "Continuous updating",
+        "Granular analysis"
+      ],
+      "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Automation-Driven Employment Shift",
-      "description": "Rapid automation adoption accelerates, reducing low-skill jobs but creating high-skill tech roles.",
-      "probability": 0.05,
+      "name": "Industrial Re-shoring & Manufacturing Renaissance",
+      "description": "Aggressive domestic industrial policy leads to a surge in capital expenditure for domestic factories, revitalizing industrial production.",
+      "probability": 0.15,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Industrial Production",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Increased domestic capacity and CAPEX."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Job creation in manufacturing sectors."
+        }
+      ],
+      "reasoning": "Alignment with long-term deglobalization trends and current industrial production stagnation needing a catalyst.",
+      "tetlockPillars": [
+        "Diverse information sources",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Stagflationary Persistence",
+      "description": "A 'ticky' inflation environment combined with stagnant GDP growth caused by structural labor shortages and productivity plateaus.",
+      "probability": 0.15,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "PAYEMS",
-          "direction": "stable",
+          "indicator": "Inflation Rate",
+          "direction": "up",
           "magnitude": 0.5,
-          "explanation": "Job displacement offsets new tech sector roles."
+          "explanation": "Wage-price spirals or structural supply constraints."
         },
         {
-          "indicator": "GFRATE",
+          "indicator": "Unemployment Rate",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Higher productivity from automation could suppress wage growth."
+          "magnitude": 0.8,
+          "explanation": "Reduced demand leads to higher jobless levels."
         }
       ],
-      "reasoning": "2026 nonfarm payrolls show minimal change (-0.01%), aligning with mixed automation impacts.",
+      "reasoning": "A combination of low GDP growth and stable but non-zero inflation represents a difficult policy regime for the Fed.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Cognitive debiasing"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting"
+        "Strive to distinguish as many degrees of doubt as the problem permits"
       ]
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "GDPC1",
+      "indicator": "Real GDP (GDPC1)",
       "currentValue": 24270.599,
-      "forecastValue": 24500,
-      "weightedChange": 1.66,
-      "unit": "Billions of Dollars",
-      "confidence": 0.72,
-      "equation": "24270.599 + (0.25*150) + (0.20*100) + (0.15*-50) + (0.20*-200) + (0.15*80) = 24500"
-    },
-    {
-      "indicator": "UNRATE",
-      "currentValue": 4.1,
-      "forecastValue": 4,
-      "weightedChange": -0.1,
-      "unit": "Percent",
+      "forecastValue": 24405.12,
+      "weightedChange": 0.55,
+      "unit": "Billions of Chained 2017 Dollars",
       "confidence": 0.68,
-      "equation": "4.1 + (0.25*-0.2) + (0.20*-0.5) + (0.15*-0.8) + (0.20*-0.3) + (0.15*0.1) = 4.0"
+      "equation": "24270.599 + (0.35 * 35.0) + (0.20 * -45.0) + (0.15 * -25.0) + (0.15 * 15.0) + (0.15 * -10.0) = 24405.12"
     },
     {
-      "indicator": "CPIAUCSL",
+      "indicator": "Unemployment Rate (UNRATE)",
+      "currentValue": 4.1,
+      "forecastValue": 4.22,
+      "weightedChange": 0.22,
+      "unit": "Percent",
+      "confidence": 0.65,
+      "equation": "4.1 + (0.35 * -0.1) + (0.20 * 0.4) + (0.15 * 0.3) + (0.15 * -0.2) + (0.15 * 0.5) = 4.22"
+    },
+    {
+      "indicator": "Inflation Rate (CPIAUCSL)",
       "currentValue": 3.23,
       "forecastValue": 3.35,
       "weightedChange": 0.12,
-      "unit": "Index 1982-1984=100",
-      "confidence": 0.75,
-      "equation": "3.23 + (0.25*2.0) + (0.20*0.5) + (0.15*1.0) + (0.20*-0.3) + (0.15*0.8) = 3.35"
+      "unit": "Index",
+      "confidence": 0.7,
+      "equation": "3.23 + (0.35 * 0.0) + (0.20 * 1.2) + (0.15 * 0.0) + (0.15 * 0.0) + (0.15 * 0.5) = 3.35"
     },
     {
-      "indicator": "FEDFUNDS",
+      "indicator": "Federal Funds Rate (FEDFUNDS)",
       "currentValue": 3.63,
-      "forecastValue": 3.75,
-      "weightedChange": 0.12,
+      "forecastValue": 3.35,
+      "weightedChange": -0.28,
       "unit": "Percent",
+      "confidence": 0.75,
+      "equation": "3.63 + (0.35 * -0.5) + (0.20 * 0.0) + (0.15 * 0.0) + (0.15 * 0.0) + (0.15 * 0.0) = 3.35"
+    },
+    {
+      "indicator": "10-Year Treasury Yield (DGS10)",
+      "currentValue": 4.69,
+      "forecastValue": 4.55,
+      "weightedChange": -0.14,
+      "unit": "Percent",
+      "confidence": 0.6,
+      "equation": "4.69 + (0.35 * -0.2) + (0.20 * 0.5) + (0.15 * -0.3) + (0.15 * 0.0) + (0.15 * 0.0) = 4.55"
+    },
+    {
+      "indicator": "Federal Debt (GFDEBTN)",
+      "currentValue": 39065421,
+      "forecastValue": 39450000,
+      "weightedChange": 38458,
+      "unit": "Millions of Dollars",
+      "confidence": 0.78,
+      "equation": "39065421 + (0.35 * 10000) + (0.20 * 50000) + (0.15 * -20000) + (0.15 * 15000) + (0.15 * 25000) = 39450000"
+    },
+    {
+      "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+      "currentValue": -73261,
+      "forecastValue": -76000,
+      "weightedChange": -2739,
+      "unit": "Millions of Dollars",
+      "confidence": 0.55,
+      "equation": "-73261 + (0.35 * 2000) + (0.20 * -10000) + (0.15 * 1000) + (0.15 * -1000) + (0.15 * -1000) = -76000"
+    },
+    {
+      "indicator": "Industrial Production (INDPRO)",
+      "currentValue": 102.6395,
+      "forecastValue": 103.1,
+      "weightedChange": 0.46,
+      "unit": "Index",
+      "confidence": 0.62,
+      "equation": "102.6395 + (0.35 * 0.0) + (0.20 * 0.0) + (0.15 * 2.5) + (0.15 * 0.5) + (0.15 * 0.0) = 103.1"
+    },
+    {
+      "indicator": "Retail Sales (RSAFS)",
+      "currentValue": 768553,
+      "forecastValue": 772000,
+      "weightedChange": 3447,
+      "unit": "Millions of Dollars",
       "confidence": 0.65,
-      "equation": "3.63 + (0.25*0) + (0.20*0.5) + (0.15*0) + (0.20*0.3) + (0.15*0.2) = 3.75"
+      "equation": "768553 + (0.35 * 2000) + (0.20 * -5000) + (0.15 * 1000) + (0.15 * 2000) + (0.15 * 1000) = 772000"
+    },
+    {
+      "indicator": "Housing Starts (HOUST)",
+      "currentValue": 1427,
+      "forecastValue": 1450,
+      "weightedChange": 23,
+      "unit": "Thousands of Units",
+      "confidence": 0.6,
+      "equation": "1427 + (0.35 * 15) + (0.20 * -25) + (0.15 * 5) + (0.15 * 5) + (0.15 * 5) = 1450"
+    },
+    {
+      "indicator": "Nonfarm Payrolls (PAYEMS)",
+      "currentValue": 158858,
+      "forecastValue": 158950,
+      "weightedChange": 92,
+      "unit": "Thousands of Persons",
+      "confidence": 0.65,
+      "equation": "158858 + (0.35 * 50) + (0.20 * -100) + (0.15 * 100) + (0.15 * 50) + (0.15 * -100) = 158950"
     }
   ],
-  "methodology": "Applied Tetlock's probabilistic thinking and outside view pillars by quantifying scenario probabilities based on historical precedents and current data. Used granular analysis to isolate indicator impacts and balanced inside/outside views for each prediction.",
-  "analysisDate": "2026-08-09",
-  "geopoliticalSummary": "Active conflicts in the Middle East, Russia-Ukraine tensions, and Taiwan Strait instability pose significant risks to energy prices and global trade flows.",
-  "geoeconomicSummary": "U.S. trade deficit widened due to tech equipment imports and Chinese yuan devaluation, but resilience initiatives show potential reversal.",
-  "currentEventsSummary": "Housing market surge and strong industrial production contrast with slight payroll declines, indicating mixed labor market strength.",
+  "methodology": "Applied Tetlock's Superforecasting framework. Used base rates for recession/soft-landing probabilities to anchor the 'Outside View'. Subdivided the economy into granular indicators. Combined multiple conflicting causal forces (fiscal vs monetary) to weight scenarios. Calculated forecasts using a weighted average of scenario impacts per indicator to minimize cognitive bias.",
+  "analysisDate": "2026-08-10",
+  "geopoliticalSummary": "Heightened tensions in multi-theater conflicts create risks of supply chain fracturing and energy price volatility.",
+  "geoeconomicSummary": "Shift toward domestic manufacturing and protectionist-aligned industrial policy is counterbalancing trade deficit volatility.",
+  "currentEventsSummary": "The interplay between high debt servicing costs and stabilizing inflation creates a narrow window for a successful monetary pivot.",
   "chartData": [
     {
       "seriesId": "GDPC1",

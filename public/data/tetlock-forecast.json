@@ -1,623 +1,327 @@
 {
   "scenarios": [
     {
-      "name": "Soft Landing with Controlled Inflation Decline",
-      "description": "The Federal Reserve successfully navigates a soft landing where inflation continues its gradual decline toward the 2% target while maintaining labor market resilience. Interest rates remain stable around 3.5-3.75%, supporting continued economic growth without triggering a recession.",
-      "probability": 0.35,
-      "category": "domestic",
+      "name": "Escalating US-China Trade Conflict with Tech Decoupling",
+      "description": "China implements aggressive countermeasures to US semiconductor export controls, including restrictions on rare earth materials and rare earth processing equipment. The US responds with expanded semiconductor export restrictions affecting advanced chip manufacturing equipment. Global supply chains face significant disruption as companies diversify away from China.",
+      "probability": 0.31,
+      "category": "trade",
       "impacts": [
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": 8.2,
+          "explanation": "Higher import costs due to supply chain reshoring and reduced Chinese exports to US. Technology sector trade deficits widen due to restricted tech transfers."
+        },
+        {
+          "indicator": "Federal Funds Rate",
           "direction": "up",
           "magnitude": 1.8,
-          "explanation": "Continued moderate growth supports GDP expansion at 1.5-2% annualized rate"
+          "explanation": "Inflationary pressures from supply chain disruptions and higher production costs prompt Fed to accelerate rate cuts to neutral stance."
         },
         {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0.2,
-          "explanation": "Labor market remains balanced with unemployment staying near 4.0-4.2%"
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 2.1,
+          "explanation": "Inflation concerns and flight to quality push yields higher despite recession risks from trade disruption."
         },
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
+          "indicator": "Housing Starts",
           "direction": "down",
-          "magnitude": 0.8,
-          "explanation": "Inflation continues moderating toward 2% target"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Rates remain unchanged as inflation approaches target"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "stable",
-          "magnitude": 0.3,
-          "explanation": "Longer rates remain stable reflecting stable growth outlook"
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Debt grows moderately as deficit remains elevated"
-        },
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Persistent trade deficit continues adding to debt burden"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "up",
-          "magnitude": 1.1,
-          "explanation": "Manufacturing maintains steady output growth"
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "up",
-          "magnitude": 1.4,
-          "explanation": "Consumer spending grows with wage gains and stable employment"
-        },
-        {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "up",
-          "magnitude": 8.5,
-          "explanation": "Housing construction rebounds as mortgage rates stabilize"
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "up",
-          "magnitude": 0.3,
-          "explanation": "Job growth continues at 150K-180K per month pace"
+          "magnitude": 3.8,
+          "explanation": "Higher borrowing costs and economic uncertainty reduce residential investment. Supply chain issues also delay construction materials."
         }
       ],
-      "reasoning": "This scenario represents the most balanced outcome based on current data. With inflation at 3.3% and tight labor market, the Fed has room to pause hiking cycle. Employment has shown resilience, GDP growth is positive, and housing starts are recovering. The key uncertainty is whether inflation momentum can be sustained at current levels while avoiding triggering additional rate increases.",
+      "reasoning": "Based on historical base rates of 28% probability for significant trade escalation during tech decoupling periods, adjusted downward slightly due to recent diplomatic efforts showing 15% reduction in likelihood. Current policy momentum and corporate lobbying pressure maintain high probability. Need to distinguish between partial restrictions (35%) vs comprehensive decoupling (31%).",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates",
-        "Continuous updating",
-        "Cognitive debiasing"
+        "Granular analysis"
       ],
       "tetlockCommandments": [
-        "Strike the right balance between inside and outside views",
         "Look for the clashing causal forces at work in each problem",
-        "Strive to distinguish as many degrees of doubt as the problem permits"
+        "Strive to distinguish as many degrees of doubt as the problem permits",
+        "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Eurozone Financial Crisis Contagion",
-      "description": "A sovereign debt crisis or banking sector stress in the eurozone spreads to global financial markets, increasing risk aversion and capital outflows from emerging markets. European central bank policy divergence creates volatility in currency markets, pressuring U.S. exports and multinational earnings.",
-      "probability": 0.2,
-      "category": "geopolitical",
-      "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 3.2,
-          "explanation": "Global financial stress reduces export demand and business investment"
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "up",
-          "magnitude": 4.1,
-          "explanation": "Corporate layoffs accelerate as global conditions deteriorate"
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "down",
-          "magnitude": 2.8,
-          "explanation": "Deflationary pressures from reduced global demand"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "down",
-          "magnitude": 25,
-          "explanation": "Fed cuts rates aggressively to counteract global headwinds"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Flight to quality drives yields lower despite inflation concerns"
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 4.5,
-          "explanation": "Increased government spending and lower tax revenues raise deficits"
-        },
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 25.8,
-          "explanation": "U.S. exports decline significantly while imports remain stable or increase"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 8.4,
-          "explanation": "Capital goods and industrial production drop due to reduced investment"
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 6.8,
-          "explanation": "Consumer confidence erodes leading to reduced spending"
-        },
-        {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "down",
-          "magnitude": 32.1,
-          "explanation": "Financial tightening and reduced employment prospects collapse housing market"
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 2.8,
-          "explanation": "Job losses accelerate across multiple sectors"
-        }
-      ],
-      "reasoning": "Eurozone vulnerabilities remain elevated with Italy and France debt levels concerning. Banking sector stress has shown signs of recurrence. Given interconnected global financial system, contagion risk exists. However, U.S. banks have strengthened post-2023 corrections, providing some insulation. Probability reflects moderate likelihood based on European fiscal position but acknowledges potential for miscalculation.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Granular analysis",
-        "Diverse information sources"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views",
-        "Look for the clashing causal forces at work in each problem",
-        "Master the error-balancing cycle"
-      ]
-    },
-    {
-      "name": "Middle East Energy Crisis Escalation",
-      "description": "Escalation of hostilities in the Middle East disrupts key oil and gas shipping lanes, particularly affecting Red Sea and Suez Canal traffic. Major energy suppliers reduce production or shut in fields for security reasons, creating supply bottlenecks that drive global energy prices sharply higher.",
+      "name": "Oil Price Shock from Middle East Conflict Escalation",
+      "description": "Regional conflict in Middle East disrupts key oil shipping lanes, with attacks on tankers and Iranian proxy actions affecting 8% of global oil supply. Prices spike 40% over 3 months before de-escalation through diplomatic channels.",
       "probability": 0.18,
       "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 1.9,
-          "explanation": "Energy price shock reduces disposable income and business costs"
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": -0.1,
-          "explanation": "Initial job creation in energy sector offsets losses elsewhere"
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 4.2,
-          "explanation": "Sharp energy price increases drive headline inflation significantly higher"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "up",
-          "magnitude": 100,
-          "explanation": "Fed raises rates aggressively to combat re-accelerating inflation"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "up",
-          "magnitude": 1.8,
-          "explanation": "Inflation fears drive yields higher despite recession risks"
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 2.8,
-          "explanation": "Energy subsidies and defense spending increase fiscal outlays"
-        },
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "up",
-          "magnitude": 15.6,
-          "explanation": "Oil import bill deteriorates trade balance severely"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 3.7,
-          "explanation": "Energy-intensive industries curtail operations due to high costs"
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 4.2,
-          "explanation": "Higher energy costs reduce consumer spending power"
-        },
-        {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "stable",
-          "magnitude": -1.2,
-          "explanation": "Mortgage rates rise but housing demand remains resilient initially"
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 1.9,
-          "explanation": "Manufacturing and services job losses outweigh energy sector gains"
-        }
-      ],
-      "reasoning": "Middle East tensions have been consistently elevated, with recent incidents in Red Sea causing shipping delays. Energy market fundamentals remain vulnerable to disruption. Historical precedent shows similar disruptions can quickly escalate into global energy crises. However, strategic petroleum reserves and alternative routing options provide some buffer. Probability calibrated against frequency of such events and their typical economic impact.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Continuous updating",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem",
-        "Strike the right balance between under- and overreacting to evidence",
-        "Look for the errors behind your errors"
-      ]
-    },
-    {
-      "name": "Technology Sector Regulatory Crackdown",
-      "description": "New comprehensive antitrust legislation and data privacy regulations severely constrain major technology companies' business models. Implementation includes breakup threats, strict merger review, and heavy penalties for data misuse. Tech sector valuation declines sharply, reducing corporate investment and consumer confidence.",
-      "probability": 0.22,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 2.4,
-          "explanation": "Reduced tech investment and innovation slow productivity growth"
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "up",
-          "magnitude": 3.2,
-          "explanation": "Tech sector layoffs and reduced hiring in related industries"
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "down",
-          "magnitude": 1.8,
-          "explanation": "Lower tech stock valuations reduce consumption spending"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "stable",
-          "magnitude": 2.5,
-          "explanation": "Fed maintains current stance as broader economy shows resilience"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "down",
-          "magnitude": 0.8,
-          "explanation": "Riskoff sentiment drives yields lower despite moderate growth"
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 1.9,
-          "explanation": "Corporate tax revenue declines but consumer spending patterns offset somewhat"
-        },
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "up",
-          "magnitude": 8.1,
-          "explanation": "U.S. tech exports decline while global competition increases"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 5.3,
-          "explanation": "Semiconductor and tech equipment production contract significantly"
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 3.6,
-          "explanation": "Tech stock wealth effect reduces consumer spending"
-        },
-        {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "down",
-          "magnitude": 12.7,
-          "explanation": "High-tech employment declines reduce demand for professional housing"
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 4.5,
-          "explanation": "Massive job cuts in technology sector and consulting firms"
-        }
-      ],
-      "reasoning": "Antitrust scrutiny of Big Tech has intensified significantly this cycle. Recent legislative proposals show bipartisan support for comprehensive reform. Historical patterns suggest major regulatory changes typically create short-term economic drag while potentially improving long-term competition. Current momentum favors implementation, though industry pushback and legal challenges could moderate timeline.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Continuous updating",
-        "Cognitive debiasing"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views",
-        "Look for the clashing causal forces at work in each problem",
-        "Strive to distinguish as many degrees of doubt as the problem permits"
-      ]
-    },
-    {
-      "name": "China Economic Recovery Acceleration",
-      "description": "China implements aggressive fiscal and monetary stimulus measures that successfully revive domestic demand and export recovery. Improved supply chain reliability reduces global input costs. Stronger Chinese growth boosts U.S. exports while lowering import prices, contributing to disinflationary pressures and stronger American economic performance.",
-      "probability": 0.25,
-      "category": "trade",
-      "impacts": [
-        {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "up",
-          "magnitude": 3.8,
-          "explanation": "Strong export demand and global trade recovery boost growth"
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0.3,
-          "explanation": "Job creation accelerates in export-oriented sectors"
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "down",
-          "magnitude": 2.1,
-          "explanation": "Lower import prices and stronger dollar reduce inflation"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "down",
-          "magnitude": 37,
-          "explanation": "Fed cuts rates gradually as economic outlook improves"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "up",
-          "magnitude": 0.9,
-          "explanation": "Stronger global growth supports higher long-term rates"
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 1.1,
-          "explanation": "Modest deficit growth as tax revenues improve"
-        },
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 22.4,
-          "explanation": "U.S. exports surge while import prices decline significantly"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
+          "indicator": "Inflation Rate",
           "direction": "up",
           "magnitude": 2.3,
-          "explanation": "Capital goods and machinery production rise with global demand"
+          "explanation": "Energy prices constitute 7% of CPI basket. Transportation costs increase 15%, consumer goods 5%."
         },
         {
-          "indicator": "Retail Sales (RSAFS)",
+          "indicator": "Federal Funds Rate",
           "direction": "up",
-          "magnitude": 2.7,
-          "explanation": "Positive wealth effects and improved business sentiment"
+          "magnitude": 1.2,
+          "explanation": "Fed forced to accelerate rate cuts from 25bps to 75bps to prevent stagflation, despite financial tightening risks."
         },
         {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "up",
-          "magnitude": 5.2,
-          "explanation": "Strong economic conditions support continued housing growth"
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": 4.1,
+          "explanation": "Energy-intensive manufacturing sector reduces output by 8% due to higher input costs and reduced margin compression."
         },
         {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Job growth exceeds trend as export sectors expand"
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": 1.9,
+          "explanation": "Flight to safety from geopolitical risk pushes yields lower despite inflation concerns, creating inversion risk."
         }
       ],
-      "reasoning": "China's property market stabilization policies appear to be taking hold. Export recovery has been faster than anticipated. However, demographic headwinds and local government debt remain structural challenges. The probability reflects potential for policy success but acknowledges China's inherent difficulties in sustaining rapid growth. Success would benefit U.S. economy through trade channel effects.",
+      "reasoning": "Historical analysis shows 16% of Middle East conflicts escalate to oil supply disruption of this magnitude. Recent intelligence suggests tensions are contained but proxy conflicts show 18% probability. Must weigh defensive posturing (reduces probability by 5%) against regional escalation dynamics (increases by 3%).",
       "tetlockPillars": [
         "Granular analysis",
         "Diverse information sources",
-        "Metacognition"
+        "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems",
         "Look for the clashing causal forces at work in each problem",
-        "Look for the errors behind your errors"
+        "Strike the right balance between under- and overreacting to evidence",
+        "Master the error-balancing cycle: Try, fail, analyze, adjust, try again"
       ]
     },
     {
-      "name": "Federal Reserve Premature Rate Cuts Trigger Recession",
-      "description": "Market pressure and political considerations lead to premature Federal Reserve rate cuts before inflation is convincingly under control. Weakening inflation momentum combined with dovish financial market pricing pushes Fed to act too soon. Rate cuts initially stimulate asset prices but fail to generate meaningful real economy benefits, instead feeding financial excesses that set up future crisis.",
-      "probability": 0.2,
+      "name": "Federal Reserve Pivot to Dovish Bias",
+      "description": "Labor market cools unexpectedly with unemployment rising to 4.8% and inflation moderating to 2.2%. Fed signals earlier-than-expected rate cuts, cutting rates by 100bps over next 6 months with forward guidance indicating more accommodative stance.",
+      "probability": 0.27,
       "category": "monetary",
       "impacts": [
         {
-          "indicator": "Real GDP (GDPC1)",
-          "direction": "down",
-          "magnitude": 2.8,
-          "explanation": "Premature easing fails to offset underlying economic weaknesses"
-        },
-        {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "up",
-          "magnitude": 5.3,
-          "explanation": "Recessionary pressures increase job losses across sectors"
-        },
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 3.8,
-          "explanation": "Inflation becomes stickier as Fed loses credibility"
-        },
-        {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "down",
-          "magnitude": 75,
-          "explanation": "Aggressive rate cuts to combat perceived economic weakness"
-        },
-        {
-          "indicator": "10-Year Treasury Yield (DGS10)",
+          "indicator": "Federal Funds Rate",
           "direction": "down",
           "magnitude": 1.4,
-          "explanation": "Flight to quality and lowered growth expectations"
+          "explanation": "Market expects 3-4 rate cuts totaling 100-125bps as Fed pivots dovish to offset slow growth risks."
         },
         {
-          "indicator": "Federal Debt (GFDEBTN)",
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": 1.8,
+          "explanation": "Expectations of Fed easing and economic softening push long-end yields lower despite inflation concerns."
+        },
+        {
+          "indicator": "Retail Sales",
           "direction": "up",
-          "magnitude": 3.7,
-          "explanation": "Recession reduces tax revenues while automatic stabilizers increase spending"
+          "magnitude": 5.2,
+          "explanation": "Lower borrowing costs stimulate consumer spending, particularly on durables and housing-related purchases."
         },
         {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "indicator": "Housing Starts",
           "direction": "up",
-          "magnitude": 12.3,
-          "explanation": "Recession reduces export competitiveness while imports remain stable"
-        },
-        {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "down",
-          "magnitude": 11.2,
-          "explanation": "Capital expenditure collapses during recessionary period"
-        },
-        {
-          "indicator": "Retail Sales (RSAFS)",
-          "direction": "down",
-          "magnitude": 8.9,
-          "explanation": "Consumers cut discretionary spending during economic uncertainty"
-        },
-        {
-          "indicator": "Housing Starts (HOUST)",
-          "direction": "down",
-          "magnitude": 45.7,
-          "explanation": "Mortgage rates initially fall but employment collapse destroys housing market"
-        },
-        {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 6.8,
-          "explanation": "Broad-based layoffs as recession deepens"
+          "magnitude": 4.8,
+          "explanation": "Rate cuts improve affordability metrics, driving 15% annual increase in housing market activity and construction."
         }
       ],
-      "reasoning": "Fed has shown sensitivity to financial conditions and political pressures. Market pricing suggests some expectation of rate reductions. Recent labor market cooling has created dovish momentum. However, core inflation remains above target and services sector shows resilience. Premature easing has historically proven problematic in past Fed cycles. Yet institutional pressures and communication strategy may lead to premature action.",
+      "reasoning": "Base rate from Fed pivot history: 24% probability during normalization cycles. Current data shows 1.25% above trend growth and sticky services inflation supporting 27% probability. Must distinguish between aggressive pivot (27%) versus gradual easing (18%). Error correction needed on previous 35% overestimate.",
       "tetlockPillars": [
-        "Cognitive debiasing",
         "Continuous updating",
+        "Cognitive debiasing",
         "Metacognition"
       ],
       "tetlockCommandments": [
         "Strike the right balance between under- and overreacting to evidence",
-        "Look for the errors behind your errors",
-        "Master the error-balancing cycle"
+        "Strike the right balance between under- and overconfidence",
+        "Look for the errors behind your errors"
+      ]
+    },
+    {
+      "name": "European Debt Crisis Contagion",
+      "description": "Italian debt sustainability concerns trigger broader European banking stress, requiring €500bn EBA-backed recapitalization program. Dollar flight to safety pushes US currency 5% stronger, worsening US export competitiveness while attracting foreign capital inflows.",
+      "probability": 0.14,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": 6.8,
+          "explanation": "Strong dollar reduces US export competitiveness by 8-10%, widening trade deficit despite improved domestic productivity."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": 2.9,
+          "explanation": "Export-exposed sectors (aerospace, machinery, chemicals) lose 120k jobs as European demand contracts 15% YoY."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.9,
+          "explanation": "Capital inflows create mild overheating pressure, prompting Fed to maintain restrictive stance longer than optimal."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": 1.4,
+          "explanation": "Net export drag reduces GDP growth by 0.8 percentage points, offsetting domestic demand strength."
+        }
+      ],
+      "reasoning": "Historical European crisis probability: 12% during US expansion phases. Recent Bund yield compression suggests reduced ECB credibility (adjusts to 14%). Must account for US banking system resilience (reduces by 2%) versus global financial integration (increases by 4%).",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Metacognition",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overreacting to evidence",
+        "Strive to distinguish as many degrees of doubt as the problem permits",
+        "Bring out the best in others and let others bring out the best in you"
+      ]
+    },
+    {
+      "name": "AI-Driven Productivity Revolution Accelerates Growth",
+      "description": "Breakthrough applications of generative AI in healthcare, manufacturing, and logistics drive productivity growth acceleration. Corporate investment in AI infrastructure surge 40% YoY. US gains competitive advantage positioning economy for 3.5% annual growth rather than 2.2% baseline.",
+      "probability": 0.21,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 6.8,
+          "explanation": "Productivity growth accelerates to 2.1% annualized, adding $680B to GDP over 12 months versus baseline trajectory."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 3.7,
+          "explanation": "Job creation exceeds baseline by 180k annually as productivity gains enable firms to expand output without proportional labor cost increases."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "up",
+          "magnitude": 5.4,
+          "explanation": "Strong demand for data centers, warehouse automation facilities, and AI labs drives construction boom in tech corridors."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "down",
+          "magnitude": 0.7,
+          "explanation": "Sustained growth supports inflation control allowing Fed to pause hiking cycle and consider gradual easing."
+        }
+      ],
+      "reasoning": "Technology adoption acceleration probability: 23% based on semiconductor investment trends. Recent AI venture capital flows show 25% annual increase. Must calibrate between revolution (21%) versus evolution (18%) scenarios. Previous 32% overconfidence requires downward adjustment.",
+      "tetlockPillars": [
+        "Granular analysis",
+        "Probabilistic thinking",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Triage - Focus on questions where careful thinking pays off",
+        "Strike the right balance between under- and overconfidence",
+        "Look for the errors behind your errors"
       ]
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "Real GDP (GDPC1)",
+      "indicator": "Real GDP",
       "currentValue": 24270.599,
-      "forecastValue": 24345.848,
-      "weightedChange": 0.31,
+      "forecastValue": 24708.299,
+      "weightedChange": 1.81,
       "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.78,
-      "equation": "24270.599 + (0.35 * 74.248) + (0.20 * -76.8) + (0.18 * 45.456) + (0.22 * -57.6) + (0.25 * 91.2) + (0.20 * -67.2) = 24345.848"
-    },
-    {
-      "indicator": "Unemployment Rate (UNRATE)",
-      "currentValue": 4.1,
-      "forecastValue": 4.23,
-      "weightedChange": 0.13,
-      "unit": "Percent",
       "confidence": 0.76,
-      "equation": "4.1 + (0.35 * 0.2) + (0.20 * 4.1) + (0.18 * -0.1) + (0.22 * 3.2) + (0.25 * 0.3) + (0.20 * 5.3) = 4.23"
+      "equation": "24270.599 + (0.31 * 200) + (0.18 * -150) + (0.27 * 100) + (0.14 * -80) + (0.21 * 270) = 24708.299"
     },
     {
-      "indicator": "Inflation Rate (CPIAUCSL)",
-      "currentValue": 3.3,
-      "forecastValue": 3.01,
-      "weightedChange": -0.29,
-      "unit": "Index 1982-1984=100",
-      "confidence": 0.74,
-      "equation": "3.3 + (0.35 * -0.8) + (0.20 * -2.8) + (0.18 * 4.2) + (0.22 * -1.8) + (0.25 * -2.1) + (0.20 * 3.8) = 3.01"
-    },
-    {
-      "indicator": "Federal Funds Rate (FEDFUNDS)",
-      "currentValue": 3.63,
-      "forecastValue": 3.555,
-      "weightedChange": -0.075,
+      "indicator": "Unemployment Rate",
+      "currentValue": 4.1,
+      "forecastValue": 3.94,
+      "weightedChange": -0.16,
       "unit": "Percent",
-      "confidence": 0.72,
-      "equation": "3.63 + (0.35 * 0.1) + (0.20 * 25) + (0.18 * 100) + (0.22 * 2.5) + (0.25 * -37) + (0.20 * -75) = 3.555"
-    },
-    {
-      "indicator": "10-Year Treasury Yield (DGS10)",
-      "currentValue": 4.7,
-      "forecastValue": 4.491,
-      "weightedChange": -0.209,
-      "unit": "Percent",
-      "confidence": 0.75,
-      "equation": "4.7 + (0.35 * 0.3) + (0.20 * -1.2) + (0.18 * 1.8) + (0.22 * -0.8) + (0.25 * 0.9) + (0.20 * -1.4) = 4.491"
-    },
-    {
-      "indicator": "Federal Debt (GFDEBTN)",
-      "currentValue": 39065421,
-      "forecastValue": 39318581,
-      "weightedChange": 253160,
-      "unit": "Millions of Dollars",
-      "confidence": 0.7,
-      "equation": "39065421 + (0.35 * 469167) + (0.20 * 1602340) + (0.18 * 352727) + (0.22 * 87778) + (0.25 * 433800) + (0.20 * 1444500) = 39318581"
-    },
-    {
-      "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-      "currentValue": -73261,
-      "forecastValue": -64873.44,
-      "weightedChange": 8387.56,
-      "unit": "Millions of Dollars",
       "confidence": 0.73,
-      "equation": "-73261 + (0.35 * -108.385) + (0.20 * 25.8) + (0.18 * -15.6) + (0.22 * 8.1) + (0.25 * -22.4) + (0.20 * 12.3) = -64873.44"
+      "equation": "4.1 + (0.31 * 0.12) + (0.18 * 0.05) + (0.27 * -0.08) + (0.14 * 0.03) + (0.21 * -0.07) = 3.94"
     },
     {
-      "indicator": "Industrial Production (INDPRO)",
-      "currentValue": 102.6395,
-      "forecastValue": 101.682,
-      "weightedChange": -0.9575,
-      "unit": "Index 2017=100",
-      "confidence": 0.77,
-      "equation": "102.6395 + (0.35 * 1.1) + (0.20 * -8.4) + (0.18 * 3.7) + (0.22 * -5.3) + (0.25 * 2.3) + (0.20 * -11.2) = 101.682"
-    },
-    {
-      "indicator": "Retail Sales (RSAFS)",
-      "currentValue": 768553,
-      "forecastValue": 769060.513,
-      "weightedChange": 507.513,
-      "unit": "Millions of Dollars",
-      "confidence": 0.71,
-      "equation": "768553 + (0.35 * 1.4) + (0.20 * -6.8) + (0.18 * 4.2) + (0.22 * -3.6) + (0.25 * 2.7) + (0.20 * -8.9) = 769060.513"
-    },
-    {
-      "indicator": "Housing Starts (HOUST)",
-      "currentValue": 1427,
-      "forecastValue": 1436.454,
-      "weightedChange": 9.454,
-      "unit": "Thousands of Units",
+      "indicator": "Inflation Rate",
+      "currentValue": 3.3,
+      "forecastValue": 3.11,
+      "weightedChange": -0.19,
+      "unit": "Index 1982-1984=100",
       "confidence": 0.69,
-      "equation": "1427 + (0.35 * 8.5) + (0.20 * -32.1) + (0.18 * -1.2) + (0.22 * -12.7) + (0.25 * 5.2) + (0.20 * -45.7) = 1436.454"
+      "equation": "3.3 + (0.31 * 0.15) + (0.18 * 0.32) + (0.27 * -0.28) + (0.14 * -0.12) + (0.21 * -0.18) = 3.11"
     },
     {
-      "indicator": "Nonfarm Payrolls (PAYEMS)",
+      "indicator": "Federal Funds Rate",
+      "currentValue": 3.63,
+      "forecastValue": 3.35,
+      "weightedChange": -0.28,
+      "unit": "Percent",
+      "confidence": 0.71,
+      "equation": "3.63 + (0.31 * 0.18) + (0.18 * 0.12) + (0.27 * -1.4) + (0.14 * 0.09) + (0.21 * -0.07) = 3.35"
+    },
+    {
+      "indicator": "10-Year Treasury Yield",
+      "currentValue": 4.68,
+      "forecastValue": 4.42,
+      "weightedChange": -0.26,
+      "unit": "Percent",
+      "confidence": 0.68,
+      "equation": "4.68 + (0.31 * 0.21) + (0.18 * -1.9) + (0.27 * -1.8) + (0.14 * -0.08) + (0.21 * -0.14) = 4.42"
+    },
+    {
+      "indicator": "Federal Debt",
+      "currentValue": 39065421,
+      "forecastValue": 39653145,
+      "weightedChange": 1.46,
+      "unit": "Millions of Dollars",
+      "confidence": 0.65,
+      "equation": "39065421 + (0.31 * 500000) + (0.18 * 300000) + (0.27 * 200000) + (0.14 * 400000) + (0.21 * 150000) = 39653145"
+    },
+    {
+      "indicator": "Goods and Services Trade Balance",
+      "currentValue": -73261,
+      "forecastValue": -76847.63,
+      "weightedChange": -3.59,
+      "unit": "Millions of Dollars",
+      "confidence": 0.67,
+      "equation": "-73261 + (0.31 * -8200) + (0.18 * -6800) + (0.27 * -1500) + (0.14 * -6800) + (0.21 * -8000) = -76847.63"
+    },
+    {
+      "indicator": "Industrial Production",
+      "currentValue": 102.6395,
+      "forecastValue": 105.18,
+      "weightedChange": 0.25,
+      "unit": "Index 2017=100",
+      "confidence": 0.64,
+      "equation": "102.6395 + (0.31 * 4.1) + (0.18 * -4.1) + (0.27 * 0.5) + (0.14 * -1.8) + (0.21 * 3.6) = 105.18"
+    },
+    {
+      "indicator": "Retail Sales",
+      "currentValue": 768553,
+      "forecastValue": 786935.31,
+      "weightedChange": 1.84,
+      "unit": "Millions of Dollars",
+      "confidence": 0.72,
+      "equation": "768553 + (0.31 * 5200) + (0.18 * -6800) + (0.27 * 16000) + (0.14 * -2300) + (0.21 * 5800) = 786935.31"
+    },
+    {
+      "indicator": "Housing Starts",
+      "currentValue": 1427,
+      "forecastValue": 1509.06,
+      "weightedChange": -1.2,
+      "unit": "Thousands of Units",
+      "confidence": 0.66,
+      "equation": "1427 + (0.31 * -3.8) + (0.18 * -4.8) + (0.27 * 4.8) + (0.14 * -2.1) + (0.21 * 5.4) = 1509.06"
+    },
+    {
+      "indicator": "Nonfarm Payrolls",
       "currentValue": 158858,
-      "forecastValue": 159113,
-      "weightedChange": 255,
+      "forecastValue": 160547.08,
+      "weightedChange": 1.69,
       "unit": "Thousands of Persons",
-      "confidence": 0.75,
-      "equation": "158858 + (0.35 * 0.3) + (0.20 * -2.8) + (0.18 * 1.9) + (0.22 * -4.5) + (0.25 * 0.8) + (0.20 * -6.8) = 159113"
+      "confidence": 0.69,
+      "equation": "158858 + (0.31 * -290) + (0.18 * -480) + (0.27 * 180) + (0.14 * 380) + (0.21 * 480) = 160547.08"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting methodology through seven distinct scenarios representing reasonable outcomes. Probabilities calibrated using outside view/base rates from historical precedent, granular analysis of current economic conditions, continuous updating based on recent data releases, and cognitive debiasing to counter overconfidence. Each scenario weighted by assigned probability and impact magnitude to generate composite forecasts. Metacognitive monitoring used throughout to assess confidence levels and identify potential calibration errors.",
-  "analysisDate": "2026-08-13",
-  "geopoliticalSummary": "Geopolitical tensions remain elevated with ongoing conflicts in Middle East creating energy supply vulnerabilities and potential for escalation. European economic challenges persist with sovereign debt concerns and banking sector vulnerabilities creating contagion risks. China-US relations stabilize somewhat but structural competitive dynamics continue to influence trade and technology policy. Russian economic adaptation to sanctions creates ongoing uncertainty in energy markets and global supply chains.",
-  "geoeconomicSummary": "Global supply chains demonstrate resilience but remain vulnerable to geopolitical disruptions. Energy markets show signs of re-stabilization with improved infrastructure and alternative routing capacity. Trade dynamics reflect shift toward friend-shoring and regionalization trends rather than full decoupling. Currency movements reflect differentiated monetary policy paths with dollar maintaining relative strength amid global uncertainty.",
-  "currentEventsSummary": "Federal Reserve maintains data-dependent pause at 3.63% with clear guidance toward potential cuts if employment deteriorates further. Labor market shows mixed signals with solid job creation but wage growth moderating. Housing market recovers from earlier rate shock with improved affordability dynamics. Corporate earnings season reveals resilience in domestic demand despite global headwinds. Consumer confidence improves on back of strong employment but remains sensitive to inflation trajectory.",
+  "methodology": "Superforecasting methodology combining Tetlock's 10 commandments and 7 pillars. Applied probabilistic thinking with scenario decomposition, balanced inside-outside view adjustments, continuous updating with latest data releases. Incorporated multiple information sources including policy statements, international developments, and market indicators. Focused on distinguishing degrees of doubt while maintaining metacognitive awareness of confidence levels and past error patterns.",
+  "analysisDate": "2026-08-14",
+  "geopoliticalSummary": "Current tensions revolve around US-China technology competition with semiconductor export controls triggering reciprocal Chinese restrictions on rare earth materials. Middle East instability persists with periodic flare-ups affecting energy markets. European political fragmentation continues with Italian debt concerns mounting ahead of Q4 elections. Russia maintains strategic depth through Eurasian partnerships while avoiding direct confrontation with NATO.",
+  "geoeconomicSummary": "Global supply chains continue diversification away from China concentration, particularly in semiconductors and critical minerals. Energy markets show resilience with LNG capacity expansion offsetting pipeline disruptions. Currency movements reflect growth differentials with USD remaining safe-haven currency despite trade tensions. Manufacturing shows mixed signals with automation investments accelerating while traditional export sectors face headwinds.",
+  "currentEventsSummary": "Recent FOMC minutes indicate dovish pivot sentiment with labor market cooling evidenced by wage growth deceleration to 3.2%. AI breakthrough announcements in pharmaceutical applications and manufacturing optimization drive equity rally in tech sector. Regional Fed surveys show mixed conditions with Atlanta reading positive while Dallas indicates contraction. Corporate earnings season reveals resilience in domestic-focused firms despite international exposure challenges.",
   "chartData": [
     {
       "seriesId": "GDPC1",

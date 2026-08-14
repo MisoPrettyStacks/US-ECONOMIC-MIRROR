@@ -85,10 +85,10 @@
       "name": "Retail Sales",
       "unit": "Millions of Dollars",
       "category": "Consumer",
-      "value": 768553,
-      "previousValue": 766876,
-      "percentChange": 0.21867942144492722,
-      "date": "2026-06-01"
+      "value": 763602,
+      "previousValue": 768072,
+      "percentChange": -0.581976689685342,
+      "date": "2026-07-01"
     },
     {
       "seriesId": "HOUST",
@@ -111,5 +111,5 @@
       "date": "2026-07-01"
     }
   ],
-  "lastRefresh": "2026-08-14T12:34:23.414Z"
+  "lastRefresh": "2026-08-14T18:37:26.086Z"
 }

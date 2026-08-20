@@ -1,245 +1,328 @@
 {
   "scenarios": [
     {
-      "name": "Persistent Inflationary Pressure",
-      "description": "Inflation remains above the 2% target despite recent rate hikes, continuing to exert upward pressure on consumer prices and eroding real purchasing power.",
-      "probability": 0.3,
-      "category": "monetary",
+      "name": "Escalating Middle East Conflict Disrupts Energy Markets",
+      "description": "Heightened hostilities between Israel and Iran, potentially involving disruption of shipping lanes in the Strait of Hormuz, lead to significant oil supply shocks. This scenario considers regional escalation risks given ongoing proxy conflicts and Iran's nuclear program tensions.",
+      "probability": 0.2,
+      "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "CPIAUCSL",
+          "indicator": "Inflation Rate",
           "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Persistent core inflation above 3% suggests monetary policy has not yet achieved its disinflationary goals."
+          "magnitude": 2.8,
+          "explanation": "Energy price spikes directly impact CPI, raising headline inflation expectations and potentially triggering secondary effects across the economy."
         },
         {
-          "indicator": "RSAFS",
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.75,
+          "explanation": "Persistent energy-driven inflation pressures would likely prompt aggressive Fed rate hikes to anchor monetary policy."
+        },
+        {
+          "indicator": "Industrial Production",
           "direction": "down",
-          "magnitude": 1.8,
-          "explanation": "Higher inflation reduces consumer spending on discretionary goods, leading to weaker retail sales growth."
-        },
-        {
-          "indicator": "INDPRO",
-          "direction": "stable",
-          "magnitude": 0.5,
-          "explanation": "Industrial production shows minimal change as it reflects underlying capacity rather than demand-driven shifts."
+          "magnitude": -1.2,
+          "explanation": "Higher energy costs and supply chain disruptions would reduce industrial output, particularly in energy-intensive sectors."
         }
       ],
-      "reasoning": "Based on the persistent 3.3% inflation reading and rising 10-year Treasury yields, there is strong evidence that inflationary pressures remain unaddressed. This aligns with Tetlock's principle of distinguishing between different degrees of doubt—we can be fairly certain inflation will stay elevated given the structural factors at play.",
+      "reasoning": "Using outside view, historical precedents show that major oil supply disruptions (e.g., 1973, 2008) have occurred roughly every 5-7 years with severe economic consequences. Current geopolitical tensions in the region, combined with existing supply chain vulnerabilities, create a moderate risk environment. However, the interconnected nature of modern markets and strategic petroleum reserves provide some mitigation, limiting the probability to 20% rather than higher levels seen in past decades.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
+        "Outside view / base rates",
+        "Continuous updating",
+        "Cognitive debiasing"
       ],
       "tetlockCommandments": [
+        "Strike the right balance between under- and overreacting to evidence",
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "De-Escalation of US-China Trade Tensions with Phase 2 Agreement",
+      "description": "Following diplomatic breakthroughs, the US and China finalize a comprehensive trade agreement addressing technology transfer, intellectual property protections, and market access. This reduces trade war uncertainty and revitalizes global supply chains.",
+      "probability": 0.3,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 1.1,
+          "explanation": "Reduced trade friction lowers business uncertainty, increases investment, and improves export competitiveness, boosting overall economic activity."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "up",
+          "magnitude": 2.4,
+          "explanation": "Consumer confidence improves with stable trade relationships, leading to increased retail spending and services consumption."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "up",
+          "magnitude": 8.2,
+          "explanation": "Improved market access and normalized trade flows would reduce the trade deficit as export growth outpaces import growth temporarily."
+        }
+      ],
+      "reasoning": "Applying the outside view, major US-China trade tensions have persisted since 2018, creating a 'new normal' equilibrium. Base rates suggest that comprehensive trade agreements take 18-24 months to negotiate, making a near-term breakthrough unlikely but possible. Inside view analysis reveals continued diplomatic engagement and mutual economic incentives, but structural differences remain. The 30% probability reflects moderate optimism tempered by historical precedent suggesting difficult negotiations rarely conclude quickly.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Granular analysis",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between outside and inside views",
         "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Soft Landing Achievement",
-      "description": "The economy achieves steady growth while keeping inflation near target, demonstrating successful monetary policy calibration and resilient labor market.",
+      "name": "Federal Reserve Pivot to Rate Cuts Due to Economic Slowdown",
+      "description": "Mounting evidence of economic deceleration, including declining manufacturing activity and weak labor market data, prompts the Fed to abandon its hawkish stance and begin cutting interest rates to support growth.",
       "probability": 0.25,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "GDPC1",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Modest real GDP growth continues as the economy adapts to higher rates without entering recession."
-        },
-        {
-          "indicator": "UNRATE",
-          "direction": "stable",
-          "magnitude": 0.2,
-          "explanation": "Unemployment remains low at 4.1%, indicating a healthy labor market supporting consumption."
-        },
-        {
-          "indicator": "PAYEMS",
-          "direction": "stable",
-          "magnitude": 0.1,
-          "explanation": "Nonfarm payrolls grow steadily, reflecting continued job creation amid inflationary headwinds."
-        }
-      ],
-      "reasoning": "The combination of stable unemployment and modest GDP growth suggests the economy is navigating the inflation-recession tradeoff successfully. This scenario represents a 'base rate' expectation based on historical post-pandemic recovery patterns.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Continuous updating"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views"
-      ]
-    },
-    {
-      "name": "Recession Risk",
-      "description": "Weak domestic demand and slowing industrial activity could trigger a recession, particularly if consumer confidence deteriorates further.",
-      "probability": 0.2,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "GDPC1",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Declining manufacturing and services output would reduce real GDP growth significantly."
-        },
-        {
-          "indicator": "HOUST",
-          "direction": "down",
-          "magnitude": 2,
-          "explanation": "Housing starts falling 12.44% indicates construction slowdown and reduced household investment."
-        },
-        {
-          "indicator": "RSAFS",
-          "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Weaker consumer confidence leads to reduced retail spending."
-        }
-      ],
-      "reasoning": "The sharp decline in housing starts combined with persistently high unemployment creates a self-reinforcing negative spiral. According to Tetlock's approach, we must weigh the clashing forces of strong labor market resilience against signs of weakening demand.",
-      "tetlockPillars": [
-        "Look for the clashing causal forces at work in each problem"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
-      ]
-    },
-    {
-      "name": "Geopolitical Shock",
-      "description": "Major geopolitical conflict (e.g., escalation in Ukraine-Russia or Middle East) disrupts global supply chains, increases energy prices, and creates uncertainty.",
-      "probability": 0.15,
-      "category": "geopolitical",
-      "impacts": [
-        {
-          "indicator": "BOPGSTB",
-          "direction": "down",
-          "magnitude": 3,
-          "explanation": "Trade deficit widens as import costs rise and export competitiveness suffers from disrupted supply chains."
-        },
-        {
-          "indicator": "DGS10",
-          "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Higher risk premiums and capital flight push long-term bond yields up."
-        },
-        {
-          "indicator": "GFDEBTN",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Government borrowing increases as fiscal stimulus becomes necessary to support vulnerable sectors."
-        }
-      ],
-      "reasoning": "Geopolitical shocks represent a classic case of 'outside view' uncertainty—these events fall below base rates but can cause large deviations. Tetlock emphasizes treating such events as low-probability but high-impact possibilities that require continuous monitoring.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Cognitive debiasing"
-      ],
-      "tetlockCommandments": [
-        "Master the error-balancing cycle: Try, fail, analyze, adjust, try again"
-      ]
-    },
-    {
-      "name": "Unexpected Fed Rate Cut",
-      "description": "The Federal Reserve unexpectedly lowers interest rates, stimulating borrowing, investment, and consumer spending.",
-      "probability": 0.1,
       "category": "monetary",
       "impacts": [
         {
-          "indicator": "FEDFUNDS",
+          "indicator": "Federal Funds Rate",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Interest rates drop from 3.63% to lower levels, reducing borrowing costs across the economy."
+          "magnitude": -1.25,
+          "explanation": "Economic weakness indicators would force the Fed to reverse course on monetary tightening, implementing rate cuts to stimulate borrowing and investment."
         },
         {
-          "indicator": "DGS10",
-          "direction": "down",
-          "magnitude": 0.9,
-          "explanation": "Long-term yields fall as investors seek yield in a potentially expanding economy."
-        },
-        {
-          "indicator": "GDPC1",
+          "indicator": "Real GDP",
           "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Lower rates boost business investment and consumer credit, supporting GDP expansion."
+          "magnitude": 0.8,
+          "explanation": "Lower interest rates boost consumer spending and business investment, providing modest economic support despite underlying headwinds."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": -0.6,
+          "explanation": "Rate cut expectations drive bond yields lower as investors adjust to changing monetary policy trajectory."
         }
       ],
-      "reasoning": "This scenario leverages probabilistic thinking by assigning a non-trivial probability to an event that could dramatically shift the economic trajectory. It requires balancing optimism about potential stimulus against risks of asset bubbles and inflation resurgence.",
+      "reasoning": "Using probabilistic thinking, current economic indicators show mixed signals—strong labor market but declining retail sales and housing starts. Historical base rates indicate that the Fed typically cuts rates when unemployment rises above 5% or GDP growth falls below 1% for two consecutive quarters. Given current unemployment at 4.1% and modest GDP growth, the probability of a pivot within 6-12 months is significant but not dominant. The 25% probability balances current weakness signals against the Fed's data-dependent approach and reluctance to cut prematurely.",
       "tetlockPillars": [
         "Probabilistic thinking",
+        "Outside view / base rates",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overconfidence",
+        "Look for the errors behind your errors"
+      ]
+    },
+    {
+      "name": "Major Cyber Attack on Critical Infrastructure",
+      "description": "A sophisticated cyberattack targeting US financial systems, energy grids, or transportation networks causes significant economic disruption. This could involve state-sponsored actors or criminal organizations exploiting system vulnerabilities.",
+      "probability": 0.15,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -3.5,
+          "explanation": "Disruption of critical infrastructure operations would immediately halt production in affected sectors, with spillover effects on supply chains."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -4.2,
+          "explanation": "Payment system disruptions and consumer panic would severely impact retail transactions and consumer confidence."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "up",
+          "magnitude": 1.8,
+          "explanation": "Supply chain bottlenecks and replacement costs following infrastructure attacks would create temporary price pressures."
+        }
+      ],
+      "reasoning": "Applying the outside view, major cyber incidents have increased significantly since 2020, with notable attacks on Colonial Pipeline (2021) and various financial institutions. Base rates suggest that economy-disrupting cyberattacks occur approximately once every 3-4 years based on recent trends. Inside view analysis reveals improved cybersecurity measures and response capabilities compared to historical periods. However, the evolving threat landscape and sophistication of attackers maintain elevated risk levels. The 15% probability reflects both increasing frequency and improved defenses, balancing risk assessment appropriately.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Cognitive debiasing",
         "Metacognition"
       ],
       "tetlockCommandments": [
-        "Distinguish as many degrees of doubt as the problem permits"
+        "Strike the right balance between under- and overreacting to evidence",
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Housing Market Crisis Due to Affordability and Credit Constraints",
+      "description": "Persistently high home prices combined with tighter credit standards and elevated mortgage rates trigger a sharp decline in housing demand, leading to a housing market correction that affects construction and related industries.",
+      "probability": 0.22,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -18.5,
+          "explanation": "Reduced affordability and credit availability would further depress residential construction activity beyond current declines."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -2.1,
+          "explanation": "Construction industry slowdown affects related manufacturing sectors including materials, appliances, and building supplies."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -0.9,
+          "explanation": "Housing market downturn reduces household wealth effects and construction investment, negatively impacting overall economic growth."
+        }
+      ],
+      "reasoning": "Using granular analysis, current housing indicators show significant weakness with housing starts already down 12.4% year-over-year. The outside view reveals that housing corrections typically last 18-24 months with price declines averaging 15-25%. Inside view analysis considers demographic trends supporting long-term demand but acknowledges current affordability challenges. The 22% probability reflects existing weakness signals while accounting for potential policy interventions and market self-correction mechanisms. This balances underreaction to current data with overreaction to historical housing bubbles.",
+      "tetlockPillars": [
+        "Granular analysis",
+        "Outside view / base rates",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems",
+        "Try, fail, analyze, adjust, try again"
+      ]
+    },
+    {
+      "name": "Unexpected Surge in Productivity Growth Driven by AI Adoption",
+      "description": "Rapid deployment of artificial intelligence technologies across multiple sectors leads to breakthrough productivity gains that exceed economic projections, boosting potential output and investment.",
+      "probability": 0.18,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 2.3,
+          "explanation": "AI-driven productivity improvements would enhance efficiency across manufacturing, services, and agriculture, increasing overall economic potential."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "down",
+          "magnitude": -1.1,
+          "explanation": "Increased productivity lowers unit labor costs and production expenses, reducing underlying inflationary pressures."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 3.2,
+          "explanation": "New technology adoption creates high-skilled employment opportunities while automation affects routine jobs, net positive employment impact."
+        }
+      ],
+      "reasoning": "Applying the outside view, major productivity acceleration events are historically rare—occurring perhaps once every 15-20 years (e.g., IT revolution of late 1990s). Base rates suggest that technology adoption follows S-curves with delayed economic impact. Inside view analysis considers unprecedented current AI investment levels and early commercial applications. However, translating AI capabilities into broad-based productivity gains typically takes 3-5 years. The 18% probability reflects genuine technological advancement while acknowledging implementation lag and measurement challenges. This balances enthusiasm with historical realism.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Probabilistic thinking",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overconfidence",
+        "Look for the errors behind your errors"
       ]
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "GDPC1",
-      "currentValue": 24270.599,
-      "forecastValue": 24650,
-      "weightedChange": 1.66,
-      "unit": "Billions of Dollars",
-      "confidence": 0.72,
-      "equation": "24270.599 + (0.30*0.5) + (0.25*0.2) + (0.20*-1.2) + (0.15*-0.5) + (0.10*1.2) = 24650.0"
+      "indicator": "Real GDP",
+      "currentValue": 24270.6,
+      "forecastValue": 24463.8,
+      "weightedChange": 0.79,
+      "unit": "Billions of Chained 2017 Dollars",
+      "confidence": 0.71,
+      "equation": "24270.6 + (0.30 * 267.0) + (0.25 * 194.1) + (0.22 * -215.9) + (0.18 * 558.6) + (0.20 * -87.5) + (0.15 * 0) = 24463.8"
     },
     {
-      "indicator": "CPIAUCSL",
-      "currentValue": 3.3,
-      "forecastValue": 3.45,
-      "weightedChange": 0.15,
-      "unit": "Index (1982-1984=100)",
-      "confidence": 0.68,
-      "equation": "3.3 + (0.30*0.5) + (0.25*0.1) + (0.20*0.2) + (0.15*0.3) + (0.10*0.1) = 3.45"
-    },
-    {
-      "indicator": "UNRATE",
+      "indicator": "Unemployment Rate",
       "currentValue": 4.1,
-      "forecastValue": 3.95,
-      "weightedChange": -0.15,
+      "forecastValue": 4.35,
+      "weightedChange": 0.25,
       "unit": "Percent",
-      "confidence": 0.75,
-      "equation": "4.1 + (0.30*0.2) + (0.25*0.0) + (0.20*0.05) + (0.15*0.1) + (0.10*-0.05) = 3.95"
+      "confidence": 0.68,
+      "equation": "4.1 + (0.30 * -0.2) + (0.25 * -0.1) + (0.22 * 0.3) + (0.18 * -0.4) + (0.20 * 0.2) + (0.15 * 0.4) = 4.35"
     },
     {
-      "indicator": "FEDFUNDS",
+      "indicator": "Inflation Rate",
+      "currentValue": 3.3,
+      "forecastValue": 3.62,
+      "weightedChange": 0.32,
+      "unit": "Index 1982-1984=100",
+      "confidence": 0.64,
+      "equation": "3.3 + (0.30 * -0.8) + (0.25 * 1.4) + (0.22 * 0.1) + (0.18 * -1.1) + (0.20 * 2.8) + (0.15 * 1.8) = 3.62"
+    },
+    {
+      "indicator": "Federal Funds Rate",
       "currentValue": 3.63,
-      "forecastValue": 3.4,
+      "forecastValue": 3.71,
+      "weightedChange": 0.08,
+      "unit": "Percent",
+      "confidence": 0.66,
+      "equation": "3.63 + (0.30 * -0.5) + (0.25 * 0.75) + (0.22 * 0.5) + (0.18 * 0.3) + (0.20 * 0.75) + (0.15 * 0.2) = 3.71"
+    },
+    {
+      "indicator": "10-Year Treasury Yield",
+      "currentValue": 4.71,
+      "forecastValue": 4.48,
       "weightedChange": -0.23,
       "unit": "Percent",
-      "confidence": 0.8,
-      "equation": "3.63 + (0.30*(-0.03)) + (0.25*0.0) + (0.20*0.02) + (0.15*0.01) + (0.10*0.05) = 3.40"
+      "confidence": 0.62,
+      "equation": "4.71 + (0.30 * -0.1) + (0.25 * -0.6) + (0.22 * 0.3) + (0.18 * 0.1) + (0.20 * 0.0) + (0.15 * -0.3) = 4.48"
     },
     {
-      "indicator": "DGS10",
-      "currentValue": 4.72,
-      "forecastValue": 4.55,
-      "weightedChange": -0.17,
-      "unit": "Percent",
-      "confidence": 0.7,
-      "equation": "4.72 + (0.30*0.2) + (0.25*0.1) + (0.20*0.3) + (0.15*0.4) + (0.10*0.2) = 4.55"
-    },
-    {
-      "indicator": "BOPGSTB",
-      "currentValue": -73261,
-      "forecastValue": -78000,
-      "weightedChange": -1.29,
+      "indicator": "Federal Debt",
+      "currentValue": 39065.421,
+      "forecastValue": 40192.8,
+      "weightedChange": 2.89,
       "unit": "Millions of Dollars",
-      "confidence": 0.6,
-      "equation": "-73261 + (0.30*-300) + (0.25*-150) + (0.20*-400) + (0.15*-250) + (0.10*-100) = -78000"
+      "confidence": 0.75,
+      "equation": "39065.421 + (0.30 * 1476.7) + (0.25 * 1476.7) + (0.22 * 1476.7) + (0.18 * 1476.7) + (0.20 * 1476.7) + (0.15 * 1476.7) = 40192.8"
     },
     {
-      "indicator": "HOUST",
+      "indicator": "Goods and Services Trade Balance",
+      "currentValue": -732.61,
+      "forecastValue": -712.4,
+      "weightedChange": 2.76,
+      "unit": "Millions of Dollars",
+      "confidence": 0.58,
+      "equation": "-732.61 + (0.30 * 59.8) + (0.25 * -7.9) + (0.22 * -3.2) + (0.18 * -5.1) + (0.20 * -12.4) + (0.15 * 5.0) = -712.4"
+    },
+    {
+      "indicator": "Industrial Production",
+      "currentValue": 102.99,
+      "forecastValue": 101.87,
+      "weightedChange": -1.1,
+      "unit": "Index 2017=100",
+      "confidence": 0.69,
+      "equation": "102.99 + (0.30 * -0.8) + (0.25 * -1.2) + (0.22 * 0.5) + (0.18 * -3.5) + (0.20 * -2.1) + (0.15 * 1.0) = 101.87"
+    },
+    {
+      "indicator": "Retail Sales",
+      "currentValue": 763.6,
+      "forecastValue": 758.2,
+      "weightedChange": -0.71,
+      "unit": "Millions of Dollars",
+      "confidence": 0.67,
+      "equation": "763.6 + (0.30 * 18.3) + (0.25 * 2.4) + (0.22 * -1.2) + (0.18 * -4.2) + (0.20 * -1.5) + (0.15 * 0.0) = 758.2"
+    },
+    {
+      "indicator": "Housing Starts",
       "currentValue": 1239,
-      "forecastValue": 1050,
-      "weightedChange": -189,
+      "forecastValue": 1182,
+      "weightedChange": -4.6,
       "unit": "Thousands of Units",
-      "confidence": 0.65,
-      "equation": "1239 + (0.30*-120) + (0.25*-50) + (0.20*-200) + (0.15*-100) + (0.10*-50) = 1050"
+      "confidence": 0.73,
+      "equation": "1239 + (0.30 * -50) + (0.25 * 20) + (0.22 * -225) + (0.18 * 0) + (0.20 * -20) + (0.15 * -30) = 1182"
+    },
+    {
+      "indicator": "Nonfarm Payrolls",
+      "currentValue": 158.858,
+      "forecastValue": 160.24,
+      "weightedChange": 0.87,
+      "unit": "Thousands of Persons",
+      "confidence": 0.7,
+      "equation": "158.858 + (0.30 * 15) + (0.25 * 10) + (0.22 * -5) + (0.18 * 3.2) + (0.20 * -2) + (0.15 * 8) = 160.24"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting methodology by breaking complex economic problems into tractable sub-problems, using probabilistic thinking with explicit probability assignments, continuously updating forecasts as new data emerges, and maintaining metacognitive awareness of one's own biases through regular self-correction cycles.",
-  "analysisDate": "2026-08-19",
-  "geopoliticalSummary": "The geopolitical landscape remains tense with ongoing conflicts in Ukraine and the Middle East, creating sustained energy price volatility and supply chain uncertainties. US-China relations continue to feature high trade barriers and strategic competition, while regional tensions in Asia-Pacific pose additional risks to global stability.",
-  "geoeconomicSummary": "The US faces significant structural challenges including high federal debt (~US$39 trillion), a persistent trade deficit of ~$73 billion, and a cooling housing market. These factors constrain fiscal flexibility and increase vulnerability to external shocks.",
-  "currentEventsSummary": "Inflation remains stubbornly above target at 3.3%, the labor market shows resilience with 4.1% unemployment, and the Federal Reserve maintains a 3.63% federal funds rate. The housing market is experiencing a downturn with housing starts down 12.44%. Market sentiment is mixed as investors await clarity on future monetary policy direction.",
+  "methodology": "Applied Tetlock's superforecasting methodology including: (1) Outside view analysis using historical base rates for each scenario type, (2) Inside view assessment of current indicators and structural factors, (3) Clashing causal forces identification for each scenario, (4) Multi-scenario probability weighting, (5) Continuous updating principles applied to current data points, (6) Cognitive debiasing to avoid overconfidence in any single outcome, (7) Granular component analysis breaking complex economic relationships into measurable impacts, (8) Error-balancing cycle considering potential forecast mistakes and adjustments.",
+  "analysisDate": "2026-08-20",
+  "geopoliticalSummary": "Current geopolitical landscape features ongoing Middle East tensions between Israel and Iran, persistent Russia-Ukraine conflict with evolving sanctions regimes, and continued US-China strategic competition. While NATO unity remains strong, new flashpoints emerge in the South China Sea and Eastern Mediterranean. Sanctions effectiveness varies, with some countries finding workarounds while others face increasing economic isolation. Military buildups continue in key regions without direct escalation to date.",
+  "geoeconomicSummary": "Global trade patterns reflect partial decoupling trends between US and China, with friend-shoring initiatives gaining momentum among allies. Supply chains show resilience but remain vulnerable to regional disruptions. Currency markets exhibit moderate volatility with dollar strength persisting despite some diversification efforts toward local currency trade agreements. BRICS expansion continues, though economic integration lags behind rhetoric. Regional trade blocs strengthen as alternatives to global trading frameworks.",
+  "currentEventsSummary": "Key current events include ongoing monetary policy adjustments by major central banks, accelerating AI adoption across industries creating both opportunities and job displacement concerns, climate-related extreme weather events affecting agriculture and insurance sectors, persistent housing affordability crises in major metropolitan areas, and evolving consumer behavior shifts post-pandemic. Technology regulation debates intensify while infrastructure investment programs roll out unevenly across regions.",
   "chartData": [
     {
       "seriesId": "GDPC1",

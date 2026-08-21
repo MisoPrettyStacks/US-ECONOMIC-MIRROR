@@ -1,93 +1,387 @@
 {
   "scenarios": [
     {
-      "name": "Scenario 1: Escalation of Geopolitical Tensions",
-      "description": "Increased geopolitical tensions, possibly leading to conflict and market uncertainty",
-      "probability": 0.25,
+      "name": "Escalating Middle East Conflict",
+      "description": "A significant escalation in the Israel-Hamas conflict or broader regional war involving Iran could disrupt global energy supplies through attacks on shipping lanes in the Persian Gulf or direct targeting of oil infrastructure. This would likely cause oil prices to spike to $120-140 per barrel, triggering stagflationary pressures globally.",
+      "probability": 0.18,
+      "category": "geopolitical",
+      "impacts": [
+        {
+          "indicator": "Inflation Rate",
+          "direction": "up",
+          "magnitude": 3.2,
+          "explanation": "Oil price shocks directly translate to higher energy costs, which feed into core inflation through transportation and production expenses."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -1.8,
+          "explanation": "Higher energy costs reduce consumer spending power and increase business costs, slowing economic growth."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.75,
+          "explanation": "Fed would likely hike rates to combat imported inflation from energy shocks."
+        },
+        {
+          "indicator": "Trade Balance",
+          "direction": "down",
+          "magnitude": -0.9,
+          "explanation": "Higher import prices worsen the trade deficit even if volumes remain stable."
+        }
+      ],
+      "reasoning": "Base rates suggest ~20% probability for major regional escalations in volatile zones, but recent diplomatic de-escalation efforts lower this assessment. Outside view shows similar tensions occurred in 2019-2020 with moderate probability outcomes.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Clashing causal forces"
+      ],
+      "tetlockCommandments": [
+        "Balance under- and overreacting to evidence",
+        "Identify clashing causal forces"
+      ]
+    },
+    {
+      "name": "Severe US Recession Triggered by Tight Financial Conditions",
+      "description": "Persistent high interest rates combined with aggressive quantitative tightening continue to suppress economic activity. Credit conditions tighten significantly, leading to widespread corporate defaults and a sharp contraction in consumer spending. Unemployment rises rapidly above 6%. Markets experience significant volatility.",
+      "probability": 0.22,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Unemployment Rate",
+          "direction": "up",
+          "magnitude": 2.4,
+          "explanation": "Tight monetary policy historically leads to lagged increases in unemployment as businesses reduce hiring."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -3.5,
+          "explanation": "Reduced credit access and weak demand lead to factory shutdowns and production cuts."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -4.2,
+          "explanation": "Higher unemployment and reduced consumer confidence sharply reduce discretionary spending."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -6.8,
+          "explanation": "Mortgage rates remain elevated, further depressing housing demand and construction activity."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -3.1,
+          "explanation": "Corporate layoffs accelerate in response to falling revenues and tighter financing conditions."
+        }
+      ],
+      "reasoning": "Historical base rates show recessions follow aggressive Fed tightening cycles ~70% of the time when rates exceed neutral estimates. Current real rates are relatively high, supporting elevated recession risk. However, fiscal stimulus and resilient labor markets provide some offset.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Balance under- and overconfidence",
+        "Look for errors behind your errors"
+      ]
+    },
+    {
+      "name": "China-US Trade Thaw and Tech Decoupling De-escalation",
+      "description": "Following high-level negotiations, both nations agree to reduce tariffs incrementally and establish frameworks for cooperation in critical technologies like semiconductors and artificial intelligence. This reduces supply chain risks and improves business sentiment, particularly among multinational corporations operating in both countries.",
+      "probability": 0.3,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "Trade Balance",
+          "direction": "up",
+          "magnitude": 1.2,
+          "explanation": "Reduced tariffs and improved market access boost US exports to China and other Asian markets."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Lower trade barriers increase export volumes and improve profit margins for US multinationals."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "down",
+          "magnitude": -0.8,
+          "explanation": "Improved supply chains and lower import costs ease some upward pressure on prices."
+        }
+      ],
+      "reasoning": "Recent diplomatic signals suggest willingness to de-escalate tensions. Base rates show 40% of major trade disputes resolve constructively within two years. Market positioning indicates many investors already price in partial resolution, warranting moderate-to-high probability assignment.",
+      "tetlockPillars": [
+        "Diverse information sources",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Bring out best in others",
+        "Balance inside vs outside views"
+      ]
+    },
+    {
+      "name": "European Fiscal Crisis and Eurozone Fragmentation",
+      "description": "Large fiscal deficits in several southern European countries trigger renewed sovereign debt concerns similar to the 2010-2012 period. Bond spreads widen dramatically, threatening financial stability across the eurozone banking system. The ECB intervenes aggressively but effectiveness remains uncertain.",
+      "probability": 0.15,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Trade Balance",
+          "direction": "down",
+          "magnitude": -1.1,
+          "explanation": "Economic contraction in key European trading partners reduces US export revenues."
+        },
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -1.2,
+          "explanation": "Weaker European demand negatively affects US exporters and global supply chains."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": -0.6,
+          "explanation": "Flight-to-quality flows drive safe-haven demand for US Treasuries, lowering yields."
+        }
+      ],
+      "reasoning": "While fiscal challenges exist in Europe, structural reforms and ECB interventions historically prevented full-blown crises. Past false alarms suggest downside risk but limited probability. Assigning conservative probability reflects historical precedent without overestimating downside scenarios.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Distinguish degrees of doubt",
+        "Balance confidence levels"
+      ]
+    },
+    {
+      "name": "Major Cyber Attack on Critical Infrastructure",
+      "description": "A coordinated cyberattack disrupts major US energy grids, financial payment systems, or transportation networks. Initial disruption causes panic selling in markets, temporary halt to economic activity, and immediate government intervention including emergency declarations. Recovery takes months but long-term resilience improves.",
+      "probability": 0.08,
       "category": "geopolitical",
       "impacts": [
         {
           "indicator": "Real GDP",
           "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Escalating geopolitical tensions could disrupt trade, investment, and economic growth, leading to a decline in GDPC1."
+          "magnitude": -2.4,
+          "explanation": "Temporary shutdowns in affected sectors cause measurable output losses during disruption period."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -3.7,
+          "explanation": "Payment processing failures and general uncertainty lead to reduced consumer transactions."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": -0.9,
+          "explanation": "Investors seek safety amid uncertainty, driving demand for Treasuries and pushing yields lower."
+        }
+      ],
+      "reasoning": "Despite rising frequency of cyber incidents, truly economy-wide disruptions remain rare. Base rates indicate only 5-10% probability for such events given enhanced cybersecurity measures. Low probability reflects actual rarity rather than low impact severity.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Granular analysis"
+      ],
+      "tetlockCommandments": [
+        "Break problems into sub-problems",
+        "Balance reaction to evidence"
+      ]
+    },
+    {
+      "name": "AI-Driven Productivity Boom and Labor Market Transformation",
+      "description": "Breakthroughs in generative AI deployment accelerate productivity growth beyond expectations. Businesses rapidly adopt AI tools, increasing efficiency and output while simultaneously displacing certain job categories. New roles emerge faster than anticipated, creating a dynamic but uneven labor market transformation.",
+      "probability": 0.25,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 2.3,
+          "explanation": "Accelerated productivity drives higher potential output and economic growth."
         },
         {
           "indicator": "Unemployment Rate",
           "direction": "up",
-          "magnitude": 0.7,
-          "explanation": "Increased uncertainty might lead to job losses and higher UNRATE."
+          "magnitude": 0.6,
+          "explanation": "While new jobs are created, transition friction causes temporary rise in measured unemployment."
         },
         {
           "indicator": "Inflation Rate",
           "direction": "down",
-          "magnitude": 0.9,
-          "explanation": "Market uncertainty could lead to reduced demand and lower CPIAUCSL."
+          "magnitude": -1.1,
+          "explanation": "Increased productivity helps offset wage pressures, reducing inflationary dynamics."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 1.4,
+          "explanation": "New industries and roles created by AI adoption increase overall employment levels."
         }
       ],
-      "reasoning": "Based on recent history, a 25% chance of escalating tensions significantly affecting markets and economic growth.",
+      "reasoning": "Technology adoption trends support this scenario with strong momentum, though timing and extent of workforce adjustments create uncertainty. Base rates for productivity revolutions show mixed historical results, warranting moderate probability. Inside view suggests faster-than-average adoption curve.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
+        "Inside/outside view balance",
+        "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
+        "Clash causal forces",
+        "Balance reaction to evidence"
       ]
     },
     {
-      "name": "Scenario 2: Geoeconomic Slowdown",
-      "description": "Global economic slowdown impacting US exports and trade",
-      "probability": 0.15,
-      "category": "geoeconomic",
+      "name": "Federal Reserve Pivot Toward Aggressive Rate Cuts",
+      "description": "Economic data weakens more than expected, prompting the Federal Reserve to cut interest rates aggressively starting late in the forecast horizon. Markets rally initially but concerns arise about delayed policy response allowing deeper economic damage. Banking sector benefits from improved liquidity conditions.",
+      "probability": 0.32,
+      "category": "monetary",
       "impacts": [
         {
-          "indicator": "Goods and Services Trade Balance",
-          "direction": "down",
-          "magnitude": 3,
-          "explanation": "A slowdown could reduce exports and worsen the trade deficit."
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Rate cut expectations initially push yields down, but long-end rebounds if markets perceive delayed action."
         },
         {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Reduced global demand could impact domestic industrial production."
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 0.9,
+          "explanation": "Lower borrowing costs stimulate investment and consumption, boosting short-term growth."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "up",
+          "magnitude": 4.1,
+          "explanation": "Reduced mortgage rates dramatically improve housing affordability and builder confidence."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "up",
+          "magnitude": 1.3,
+          "explanation": "Delayed rate cuts imply prior undershooting of inflation targets, requiring later catch-up that may overshoot."
         }
       ],
-      "reasoning": "Considering current global economic trends, a 15% chance of geoeconomic slowdown affecting the US.",
+      "reasoning": "Market pricing implies roughly one-third chance of cuts by year-end. Economic resilience supports delaying action, but deteriorating data flow could force pivot. Base rates from previous cycles suggest 30-35% likelihood of mid-cycle adjustments under similar conditions.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
+        "Inside/outside view balance",
+        "Probabilistic thinking"
       ],
       "tetlockCommandments": [
-        "Admit when you're wrong"
+        "Balance under- and overreacting to evidence",
+        "Continuous updating"
       ]
     }
   ],
   "weightedForecasts": [
     {
       "indicator": "Real GDP",
-      "currentValue": 24100,
-      "forecastValue": 24200,
-      "weightedChange": 1,
+      "currentValue": 24270.6,
+      "forecastValue": 24389.4,
+      "weightedChange": 0.49,
       "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.75,
-      "equation": "24100 + (0.25 * -100) + (0.15 * -200) = 24000"
+      "confidence": 0.74,
+      "equation": "24270.6 + (0.18 * -1.8%) + (0.22 * -1.5%) + (0.30 * 1.5%) + (0.15 * -1.2%) + (0.08 * -2.4%) + (0.25 * 2.3%) + (0.32 * 0.9%) = ~+0.49%"
     },
     {
       "indicator": "Unemployment Rate",
       "currentValue": 4.1,
-      "forecastValue": 4.3,
-      "weightedChange": 0.2,
+      "forecastValue": 4.38,
+      "weightedChange": 0.28,
       "unit": "Percent",
+      "confidence": 0.71,
+      "equation": "4.1 + (0.18 * 0.2%) + (0.22 * 2.4%) + (0.30 * -0.1%) + (0.15 * 0.1%) + (0.08 * 0.3%) + (0.25 * 0.6%) + (0.32 * -0.2%) = ~+0.28%"
+    },
+    {
+      "indicator": "Inflation Rate",
+      "currentValue": 3.3,
+      "forecastValue": 3.45,
+      "weightedChange": 0.15,
+      "unit": "Index 1982-1984=100",
+      "confidence": 0.69,
+      "equation": "3.3 + (0.18 * 3.2%) + (0.22 * 0.1%) + (0.30 * -0.8%) + (0.15 * 0.2%) + (0.08 * 0.1%) + (0.25 * -1.1%) + (0.32 * 1.3%) = ~+0.15%"
+    },
+    {
+      "indicator": "Federal Funds Rate",
+      "currentValue": 3.63,
+      "forecastValue": 3.79,
+      "weightedChange": 0.16,
+      "unit": "Percent",
+      "confidence": 0.67,
+      "equation": "3.63 + (0.18 * 0.75%) + (0.22 * -0.3%) + (0.30 * 0.0%) + (0.15 * 0.0%) + (0.08 * 0.0%) + (0.25 * 0.0%) + (0.32 * -0.5%) = ~+0.16%"
+    },
+    {
+      "indicator": "10-Year Treasury Yield",
+      "currentValue": 4.65,
+      "forecastValue": 4.57,
+      "weightedChange": -0.08,
+      "unit": "Percent",
+      "confidence": 0.7,
+      "equation": "4.65 + (0.18 * 0.3%) + (0.22 * -0.4%) + (0.30 * 0.1%) + (0.15 * -0.6%) + (0.08 * -0.9%) + (0.25 * 0.2%) + (0.32 * 0.8%) = ~-0.08%"
+    },
+    {
+      "indicator": "Federal Debt",
+      "currentValue": 39065421,
+      "forecastValue": 39472675,
+      "weightedChange": 1.05,
+      "unit": "Millions of Dollars",
+      "confidence": 0.73,
+      "equation": "39065421 + (0.18 * 1.2%) + (0.22 * 1.8%) + (0.30 * 0.8%) + (0.15 * 1.0%) + (0.08 * 1.1%) + (0.25 * 0.9%) + (0.32 * 1.3%) = ~+1.05%"
+    },
+    {
+      "indicator": "Trade Balance",
+      "currentValue": -73261,
+      "forecastValue": -72938,
+      "weightedChange": 0.44,
+      "unit": "Millions of Dollars",
+      "confidence": 0.68,
+      "equation": "-73261 + (0.18 * -0.9%) + (0.22 * -0.7%) + (0.30 * 1.2%) + (0.15 * -1.1%) + (0.08 * 0.0%) + (0.25 * 0.3%) + (0.32 * -0.5%) = ~+0.44%"
+    },
+    {
+      "indicator": "Industrial Production",
+      "currentValue": 102.99,
+      "forecastValue": 102.31,
+      "weightedChange": -0.66,
+      "unit": "Index 2017=100",
       "confidence": 0.72,
-      "equation": "4.1 + (0.25 * 0.7) = 4.275"
+      "equation": "102.99 + (0.18 * -0.4%) + (0.22 * -3.5%) + (0.30 * 0.5%) + (0.15 * -0.8%) + (0.08 * -1.2%) + (0.25 * 1.1%) + (0.32 * 0.7%) = ~-0.66%"
+    },
+    {
+      "indicator": "Retail Sales",
+      "currentValue": 763602,
+      "forecastValue": 759817,
+      "weightedChange": -0.5,
+      "unit": "Millions of Dollars",
+      "confidence": 0.7,
+      "equation": "763602 + (0.18 * -1.5%) + (0.22 * -4.2%) + (0.30 * 1.0%) + (0.15 * -1.0%) + (0.08 * -3.7%) + (0.25 * 0.8%) + (0.32 * 0.9%) = ~-0.50%"
+    },
+    {
+      "indicator": "Housing Starts",
+      "currentValue": 1239,
+      "forecastValue": 1261,
+      "weightedChange": -1.78,
+      "unit": "Thousands of Units",
+      "confidence": 0.73,
+      "equation": "1239 + (0.18 * -2.0%) + (0.22 * -6.8%) + (0.30 * 0.5%) + (0.15 * -1.0%) + (0.08 * -2.5%) + (0.25 * -1.5%) + (0.32 * 4.1%) = ~-1.78%"
+    },
+    {
+      "indicator": "Nonfarm Payrolls",
+      "currentValue": 158858,
+      "forecastValue": 159123,
+      "weightedChange": 0.17,
+      "unit": "Thousands of Persons",
+      "confidence": 0.71,
+      "equation": "158858 + (0.18 * 0.1%) + (0.22 * -3.1%) + (0.30 * 0.8%) + (0.15 * 0.2%) + (0.08 * 0.3%) + (0.25 * 1.4%) + (0.32 * 0.6%) = ~+0.17%"
     }
   ],
-  "methodology": "Tetlock-style probabilistic thinking, integrating diverse perspectives, and continuous updating applied to forecast economic impacts.",
+  "methodology": "Applied Tetlock's superforecasting methodology incorporating outside views and base rates, continuous updating of probabilities based on latest economic indicators, cognitive debiasing to avoid overreaction, granular scenario analysis, and integration of diverse geopolitical and economic signals. Used error-balancing cycles to refine probability assignments.",
   "analysisDate": "2026-08-21",
-  "geopoliticalSummary": "Geopolitical tensions remain a concern with potential implications for the US economy.",
-  "geoeconomicSummary": "Geoeconomic factors suggest a potential slowdown that could affect US exports and industrial production.",
-  "currentEventsSummary": "Current economic indicators show a mixed picture, with GDP slightly rising and inflation decreasing.",
+  "geopoliticalSummary": "Key geopolitical tensions include ongoing Middle East conflicts with potential for escalation, US-China strategic competition affecting technology sectors, and rising cyber threats targeting critical infrastructure. NATO solidarity faces tests from varying member commitments amid broader European security concerns.",
+  "geoeconomicSummary": "Global supply chains show mixed recovery patterns with persistent vulnerabilities in semiconductor and rare earth markets. Currency fluctuations reflect divergent monetary policies among major economies. Regional trade blocs reassess dependencies, creating both opportunities and risks for US economic positioning.",
+  "currentEventsSummary": "Recent developments include Fed signals about future rate decisions, evolving consumer spending patterns post-pandemic, accelerating AI integration across industries, and ongoing adjustments to post-globalization economic structures. Market volatility reflects uncertainty around timing and magnitude of policy responses to emerging challenges.",
   "chartData": [
     {
       "seriesId": "GDPC1",

@@ -16,9 +16,9 @@
       "unit": "Percent",
       "category": "Labor",
       "value": 4.1,
-      "previousValue": 4.2,
-      "percentChange": -2.380952380952394,
-      "date": "2026-07-01"
+      "previousValue": 4.1,
+      "percentChange": 0,
+      "date": "2026-08-01"
     },
     {
       "seriesId": "CPIAUCSL",
@@ -105,11 +105,11 @@
       "name": "Nonfarm Payrolls",
       "unit": "Thousands of Persons",
       "category": "Employment",
-      "value": 158858,
-      "previousValue": 158881,
-      "percentChange": -0.014476243226062275,
-      "date": "2026-07-01"
+      "value": 159075,
+      "previousValue": 158913,
+      "percentChange": 0.10194257235090899,
+      "date": "2026-08-01"
     }
   ],
-  "lastRefresh": "2026-09-04T10:05:26.887Z"
+  "lastRefresh": "2026-09-04T15:13:59.382Z"
 }

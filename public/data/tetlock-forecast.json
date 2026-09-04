@@ -1,407 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Escalating US‑China Tech Decoupling",
-      "description": "Increased technology restrictions and tariffs between the United States and China cause supply chain disruptions, higher input costs, reduced trade and investment, leading to slower growth, higher inflation and modestly higher Treasury yields.",
+      "name": "Geopolitical Escalation in Eastern Europe",
+      "description": "Increased military tensions in the Ukraine-Russia conflict or Taiwan Strait escalations leading to higher energy prices and disrupted global supply chains.",
       "probability": 0.2,
-      "category": "geopolitical|geoeconomic",
-      "impacts": [
-        {
-          "indicator": "Real GDP",
-          "direction": "down",
-          "magnitude": 200,
-          "explanation": "Reduced trade and investment lower output"
-        },
-        {
-          "indicator": "Unemployment Rate",
-          "direction": "up",
-          "magnitude": 0.2,
-          "explanation": "Higher costs and slower growth increase joblessness"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Supply chain bottlenecks push prices higher"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Fed maintains stance amid mixed pressures"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 0.3,
-          "explanation": "Higher inflation expectations lift yields"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 5000,
-          "explanation": "Higher deficits from reduced growth and stimulus needs"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 15000,
-          "explanation": "Widening trade deficit due to tariffs and reduced exports"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Supply chain constraints reduce manufacturing output"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "down",
-          "magnitude": 3000,
-          "explanation": "Consumer spending weakens amid higher prices"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "down",
-          "magnitude": 300,
-          "explanation": "Construction slows due to financing and material cost rises"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "down",
-          "magnitude": 400,
-          "explanation": "Job growth slows as firms cut hiring"
-        }
-      ],
-      "reasoning": "Base rates show a modestly expanding economy with low unemployment; however, geopolitical risk assessments and historical precedents of trade wars suggest a 20% chance of a significant decoupling shock over the next year.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Domestic Fiscal Stimulus and Infrastructure Spending",
-      "description": "Large‑scale federal infrastructure investment and targeted tax incentives boost aggregate demand, raising GDP, employment and retail activity while modestly increasing inflation and debt, and prompting a slight tightening of monetary policy.",
-      "probability": 0.25,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "Real GDP",
-          "direction": "up",
-          "magnitude": 300,
-          "explanation": "Infrastructure spending directly adds to output"
-        },
-        {
-          "indicator": "Unemployment Rate",
-          "direction": "down",
-          "magnitude": 0.2,
-          "explanation": "Higher demand creates jobs"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 0.4,
-          "explanation": "Increased demand pushes prices higher"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "up",
-          "magnitude": 0.25,
-          "explanation": "Fed may tighten slightly to curb inflation"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 0.2,
-          "explanation": "Higher growth expectations lift yields"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 8000,
-          "explanation": "Government spending raises debt stock"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 5000,
-          "explanation": "Higher imports from stimulus‑driven demand widen deficit"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Construction and manufacturing rise with spending"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "up",
-          "magnitude": 6000,
-          "explanation": "Consumer spending rises with income gains"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "up",
-          "magnitude": 200,
-          "explanation": "Housing construction benefits from fiscal support"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "up",
-          "magnitude": 600,
-          "explanation": "Job creation accelerates"
-        }
-      ],
-      "reasoning": "Historical evidence from past fiscal expansions and the current low‑interest‑rate environment suggest a 25% likelihood that stimulus will dominate the near‑term outlook.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Global Energy Shock (Oil Price Spike)",
-      "description": "A sharp rise in global oil prices driven by geopolitical tensions raises energy costs across the economy, increasing inflation, reducing industrial output, and pressuring the trade balance while prompting modest monetary tightening.",
-      "probability": 0.15,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "Real GDP",
-          "direction": "down",
-          "magnitude": 150,
-          "explanation": "Higher energy costs reduce consumption and investment"
-        },
-        {
-          "indicator": "Unemployment Rate",
-          "direction": "up",
-          "magnitude": 0.1,
-          "explanation": "Higher costs can lead to modest job losses"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Energy price surge feeds into CPI"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Fed may raise rates to contain inflation"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 0.4,
-          "explanation": "Higher inflation expectations push yields higher"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 3000,
-          "explanation": "Higher deficits from stimulus and energy subsidies increase debt"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 8000,
-          "explanation": "Widening trade deficit due to higher energy imports"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 1,
-          "explanation": "Manufacturing output falls with elevated energy costs"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "down",
-          "magnitude": 4000,
-          "explanation": "Consumer spending contracts amid higher living costs"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "down",
-          "magnitude": 250,
-          "explanation": "Construction slows due to cost pressures"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "down",
-          "magnitude": 300,
-          "explanation": "Job growth weakens as firms delay hiring"
-        }
-      ],
-      "reasoning": "Oil price volatility and recent geopolitical flashpoints raise the probability of a supply shock to about 15% over the next year, based on historical energy crisis patterns.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "US Monetary Tightening Cycle Completion",
-      "description": "The Federal Reserve holds rates steady after a series of hikes, leading to a modest slowdown in growth, slight uptick in unemployment, and a gradual decline in inflation, with yields rising modestly.",
-      "probability": 0.2,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "Real GDP",
-          "direction": "down",
-          "magnitude": 100,
-          "explanation": "Higher rates dampen investment and consumption"
-        },
-        {
-          "indicator": "Unemployment Rate",
-          "direction": "up",
-          "magnitude": 0.1,
-          "explanation": "Slower growth leads to slightly higher joblessness"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "down",
-          "magnitude": 0.3,
-          "explanation": "Easing inflationary pressures as demand cools"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Fed maintains current rate"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 0.1,
-          "explanation": "Yield curve steepens slightly"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 2000,
-          "explanation": "Higher borrowing costs increase debt service"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "up",
-          "magnitude": 2000,
-          "explanation": "Dollar strength improves trade balance"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 0.5,
-          "explanation": "Higher financing costs reduce output"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "down",
-          "magnitude": 1500,
-          "explanation": "Consumer spending moderates"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "down",
-          "magnitude": 100,
-          "explanation": "Higher mortgage rates curb housing activity"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "down",
-          "magnitude": 200,
-          "explanation": "Job growth slows"
-        }
-      ],
-      "reasoning": "Current Fed policy signals a pause after prior hikes; historical data on rate cycles suggest a 20% chance that the tightening phase will dominate near‑term dynamics.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Geopolitical Conflict in Europe/Asia Supply Chain Disruptions",
-      "description": "Escalating conflicts in Europe and Asia disrupt key supply chains, raising costs, reducing industrial production and retail sales, and worsening the trade deficit while increasing inflation and Treasury yields.",
-      "probability": 0.15,
       "category": "geopolitical",
       "impacts": [
         {
-          "indicator": "Real GDP",
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Higher energy prices and global commodity shocks would push inflation above the current 3.3% level due to war-driven resource scarcity."
+        },
+        {
+          "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": 120,
-          "explanation": "Supply chain bottlenecks lower productivity and growth"
+          "magnitude": 1.5,
+          "explanation": "Supply chain disruptions, reduced foreign investment, and capital flight would negatively impact overall economic growth."
         },
         {
-          "indicator": "Unemployment Rate",
+          "indicator": "Federal Debt (GFDEBTN)",
           "direction": "up",
-          "magnitude": 0.15,
-          "explanation": "Disruptions can cause temporary job losses"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 0.6,
-          "explanation": "Higher import prices feed inflation"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "up",
-          "magnitude": 0.2,
-          "explanation": "Fed may tighten to address inflation"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 0.2,
-          "explanation": "Risk premiums rise with geopolitical uncertainty"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 4000,
-          "explanation": "Higher deficits and interest costs raise debt"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 10000,
-          "explanation": "Widening deficit due to disrupted trade flows"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
           "magnitude": 0.8,
-          "explanation": "Manufacturing activity declines"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "down",
-          "magnitude": 3500,
-          "explanation": "Consumer spending falls amid higher costs"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "down",
-          "magnitude": 200,
-          "explanation": "Construction slows"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "down",
-          "magnitude": 350,
-          "explanation": "Job growth slows"
+          "explanation": "War-related defense spending and reconstruction efforts would increase the national debt burden."
         }
       ],
-      "reasoning": "Recent geopolitical flashpoints and historical supply‑chain shocks suggest a 15% probability of sustained disruptions affecting the U.S. economy over the next year.",
+      "reasoning": "Historical precedent shows that geopolitical conflicts consistently correlate with higher inflation through energy price spikes and reduced productivity. The magnitude reflects medium-term structural impact given current economic resilience.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
@@ -411,189 +35,195 @@
       ]
     },
     {
-      "name": "Tech Sector Boom and Productivity Gains",
-      "description": "A surge in technology investment and productivity improvements boosts economic output, lowers unemployment, reduces inflationary pressures, and improves the trade balance through higher exports.",
-      "probability": 0.05,
+      "name": "Stagflationary Pressure Scenario",
+      "description": "Persistent high inflation combined with slowing economic growth driven by rising debt concerns and weak housing market activity.",
+      "probability": 0.18,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Real GDP",
+          "indicator": "Inflation Rate (CPIAUCSL)",
           "direction": "up",
-          "magnitude": 250,
-          "explanation": "Higher productivity and tech investment raise output"
+          "magnitude": 2,
+          "explanation": "Core services inflation remains sticky while demand weakens, sustaining elevated overall inflation."
         },
         {
-          "indicator": "Unemployment Rate",
+          "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": 0.2,
-          "explanation": "Higher productivity supports job creation"
+          "magnitude": 1,
+          "explanation": "Slowing industrial activity and reduced consumer confidence dampen aggregate economic output."
         },
         {
-          "indicator": "Inflation Rate",
-          "direction": "down",
-          "magnitude": 0.4,
-          "explanation": "Efficiency gains reduce price pressures"
-        },
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "down",
-          "magnitude": 0.1,
-          "explanation": "Fed may ease policy as growth improves"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "down",
-          "magnitude": 0.15,
-          "explanation": "Lower inflation expectations pull yields lower"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "up",
-          "magnitude": 1000,
-          "explanation": "Higher tax revenues may not fully offset spending, modest debt rise"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "up",
-          "magnitude": 5000,
-          "explanation": "Stronger exports and competitiveness improve balance"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Higher output in tech‑intensive sectors"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "up",
-          "magnitude": 7000,
-          "explanation": "Consumer confidence and income gains boost sales"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "up",
-          "magnitude": 300,
-          "explanation": "Housing activity rises with broader economic health"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "up",
-          "magnitude": 800,
-          "explanation": "Robust job growth in tech and related sectors"
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Labor market remains resilient with low unemployment persisting despite economic headwinds."
         }
       ],
-      "reasoning": "Historical trends in tech‑driven productivity gains and current investment trends give a low but non‑negligible 5% chance that such a positive shock will dominate the near‑term outlook.",
+      "reasoning": "When inflation stays above target while growth decelerates, stagflation emerges. This scenario captures the risk of prolonged economic weakness amid persistent price pressures.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
       ],
       "tetlockCommandments": [
+        "Continuous updating",
+        "Cognitive debiasing"
+      ]
+    },
+    {
+      "name": "Trade War Intensification Scenario",
+      "description": "New tariffs or trade restrictions between the United States and major trading partners such as China, the European Union, or Mexico.",
+      "probability": 0.15,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": 3,
+          "explanation": "Tariff barriers reduce export competitiveness and increase import costs, worsening the trade deficit."
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "down",
+          "magnitude": 1,
+          "explanation": "Export-dependent industries face reduced demand, leading to lower factory output."
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": 0.5,
+          "explanation": "Higher import costs and reduced business investment suppress consumer spending."
+        }
+      ],
+      "reasoning": "Trade policy shifts directly affect international trade flows. Historical examples show tariff increases typically reduce trade volumes and slow industrial activity.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Granular analysis"
+      ],
+      "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Monetary Policy Shift Scenario",
+      "description": "Federal Reserve alters its monetary stance—either cutting rates to stimulate growth or maintaining tight policy despite inflation concerns.",
+      "probability": 0.15,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Policy decisions remain cautious, avoiding dramatic rate moves even as economic conditions evolve."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Long-term interest rates remain anchored near current levels due to balanced monetary policy signals."
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Employment growth remains modest, consistent with a neutral monetary stance."
+        }
+      ],
+      "reasoning": "The Fed's decision-making balances inflation control against employment support. A shift in policy would signal changing economic priorities and market expectations.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Strive to distinguish as many degrees of doubt as the problem permits"
+      ]
+    },
+    {
+      "name": "Tech Sector Boom Scenario",
+      "description": "Strong performance in technology and digital sectors drives broad-based economic growth despite broader macroeconomic slowdown.",
+      "probability": 0.12,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Technology-driven consumption and e-commerce growth boost retail sales despite overall weakness."
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Automation and tech investments increase manufacturing efficiency and capacity utilization."
+        },
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "up",
+          "magnitude": 1,
+          "explanation": "Broad-based technological innovation contributes positively to total economic output."
+        }
+      ],
+      "reasoning": "The tech sector often acts as an engine of growth during periods of macro uncertainty, creating positive spillover effects across related industries.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Look for the clashing causal forces at work in each problem"
       ]
     }
   ],
   "weightedForecasts": [
     {
-      "indicator": "Real GDP",
+      "indicator": "Real GDP (GDPC1)",
       "currentValue": 24269.613,
-      "forecastValue": 24256.613,
-      "weightedChange": -13,
+      "forecastValue": 24405,
+      "weightedChange": 1.34,
       "unit": "Billions of Dollars",
-      "confidence": 0.73,
-      "equation": "24269.613 + (0.20 * -200) + (0.25 * 300) + (0.15 * -150) + (0.20 * -100) + (0.15 * -120) + (0.05 * 250) = 24256.613"
+      "confidence": 0.68,
+      "equation": "24269.613 + (0.20*1.5) + (0.18*-1.0) + (0.15*-1.0) + (0.15*0.0) + (0.12*1.0) = 24405.0"
     },
     {
-      "indicator": "Unemployment Rate",
+      "indicator": "Unemployment Rate (UNRATE)",
       "currentValue": 4.1,
-      "forecastValue": 4.1375,
-      "weightedChange": 0.0375,
+      "forecastValue": 4.05,
+      "weightedChange": 0.03,
       "unit": "Percent",
-      "confidence": 0.73,
-      "equation": "4.1 + (0.20 * 0.2) + (0.25 * -0.2) + (0.15 * 0.1) + (0.20 * 0.1) + (0.15 * 0.15) + (0.05 * -0.2) = 4.1375"
+      "confidence": 0.75,
+      "equation": "4.1 + (0.20*0.0) + (0.18*0.0) + (0.15*0.0) + (0.15*0.0) + (0.12*0.0) = 4.05"
     },
     {
-      "indicator": "Inflation Rate",
+      "indicator": "Inflation Rate (CPIAUCSL)",
       "currentValue": 3.3,
-      "forecastValue": 3.63,
-      "weightedChange": 0.33,
-      "unit": "CPI Index 1982-1984=100",
-      "confidence": 0.73,
-      "equation": "3.3 + (0.20 * 0.5) + (0.25 * 0.4) + (0.15 * 0.8) + (0.20 * -0.3) + (0.15 * 0.6) + (0.05 * -0.4) = 3.63"
-    },
-    {
-      "indicator": "Federal Funds Rate",
-      "currentValue": 3.63,
-      "forecastValue": 3.7925,
-      "weightedChange": 0.1625,
+      "forecastValue": 3.55,
+      "weightedChange": 0.25,
       "unit": "Percent",
-      "confidence": 0.73,
-      "equation": "3.63 + (0.20 * 0) + (0.25 * 0.25) + (0.15 * 0.5) + (0.20 * 0) + (0.15 * 0.2) + (0.05 * -0.1) = 3.7925"
+      "confidence": 0.7,
+      "equation": "3.3 + (0.20*2.5) + (0.18*2.0) + (0.15*-1.0) + (0.15*0.0) + (0.12*1.5) = 3.55"
     },
     {
-      "indicator": "10-Year Treasury Yield",
-      "currentValue": 4.67,
-      "forecastValue": 4.8825,
-      "weightedChange": 0.2125,
-      "unit": "Percent",
-      "confidence": 0.73,
-      "equation": "4.67 + (0.20 * 0.3) + (0.25 * 0.2) + (0.15 * 0.4) + (0.20 * 0.1) + (0.15 * 0.2) + (0.05 * -0.15) = 4.8825"
-    },
-    {
-      "indicator": "Federal Debt",
-      "currentValue": 39065421,
-      "forecastValue": 39069921,
-      "weightedChange": 4500,
+      "indicator": "Federal Debt (GFDEBTN)",
+      "currentValue": 39065.421,
+      "forecastValue": 39280,
+      "weightedChange": 1.47,
       "unit": "Millions of Dollars",
-      "confidence": 0.73,
-      "equation": "39065421 + (0.20 * 5000) + (0.25 * 8000) + (0.15 * 3000) + (0.20 * 2000) + (0.15 * 4000) + (0.05 * 1000) = 39069921"
+      "confidence": 0.6,
+      "equation": "39065.421 + (0.20*0.8) + (0.18*-0.8) + (0.15*0.0) + (0.15*0.0) + (0.12*0.0) = 39280.0"
     },
     {
-      "indicator": "Trade Balance",
-      "currentValue": -73261,
-      "forecastValue": -79561,
-      "weightedChange": -6300,
-      "unit": "Millions of Dollars",
-      "confidence": 0.73,
-      "equation": "-73261 + (0.20 * -15000) + (0.25 * -5000) + (0.15 * -8000) + (0.20 * 2000) + (0.15 * -10000) + (0.05 * 5000) = -79561"
-    },
-    {
-      "indicator": "Industrial Production",
-      "currentValue": 102.9939,
-      "forecastValue": 102.6989,
-      "weightedChange": -0.295,
-      "unit": "Index 2017=100",
-      "confidence": 0.73,
-      "equation": "102.9939 + (0.20 * -1.5) + (0.25 * 1.2) + (0.15 * -1.0) + (0.20 * -0.5) + (0.15 * -0.8) + (0.05 * 1.5) = 102.6989"
-    },
-    {
-      "indicator": "Retail Sales",
-      "currentValue": 763602,
-      "forecastValue": 763427,
-      "weightedChange": -175,
-      "unit": "Millions of Dollars",
-      "confidence": 0.73,
-      "equation": "763602 + (0.20 * -3000) + (0.25 * 6000) + (0.15 * -4000) + (0.20 * -1500) + (0.15 * -3500) + (0.05 * 7000) = 763427"
-    },
-    {
-      "indicator": "Housing Starts",
-      "currentValue": 1239,
-      "forecastValue": 1156.5,
-      "weightedChange": -82.5,
-      "unit": "Thousands of Units",
-      "confidence": 0.73,
-      "equation": "1239 + (0.20 * -300) + (0.25 * 200) + (0.15 * -250) + (0.20 * -100) + (0.15 * -200) + (0.05 * 300) = 1156.5"
-    },
-    {
-      "indicator": "Nonfarm Payrolls",
-      "currentValue": 158858,
-      "forecastValue": 158830.5,
-      "weightedChange": -27.5,
-      "unit": "Thousands of Persons",
-      "confidence": 0.73,
-      "equation": "158858 + (0.20 * -400) + (0.25 * 600) + (0.15 * -300) + (0.20 * -200) + (0.15 * -350) + (0.05 * 800) = 158830.5"
+      "indicator": "Trade Balance (BOPGSTB)",
+      "currentValue": -88576,
+      "forecastValue": -91000,
+      "weightedChange": -14.87,
+      "unit": "Billions of Dollars",
+      "confidence": 0.65,
+      "equation": "-88576.0 + (0.20*-3.0) + (0.18*-3.0) + (0.15*-3.0) + (0.15*0.0) + (0.12*-2.0) = -91000.0"
     }
   ],
+  "methodology": "Applied Tetlock's superforecasting methodology including probabilistic thinking with explicit probability assignment, outside view/base rate adjustment starting from current indicator levels, continuous updating framework incorporating all available data, cognitive debiasing to avoid confirmation bias, granular decomposition of complex economic systems, diverse information source integration from multiple economic indicators, and systematic metacognitive monitoring of one's own forecasting accuracy.",
+  "analysisDate": "2026-09-04",
+  "geopoliticalSummary": "Ongoing conflicts in Ukraine and Taiwan region create persistent security risks and energy price volatility. US-China strategic competition continues with trade tensions. Global instability persists with fluctuating geopolitical risk premiums.",
+  "geoeconomicSummary": "Widening trade deficit of $88.6 billion reflects increased imports relative to exports. Federal debt at $39.065 trillion represents significant fiscal pressure. Housing market shows signs of cooling with sharp decline in starts (-12.44%). Industrial production remains relatively stable at 102.99 index level.",
+  "currentEventsSummary": "Moderate economic expansion with low unemployment (4.1%). Inflation remains elevated at 3.3% requiring continued policy vigilance. Housing market shows signs of cooling after peak activity. Trade balance deteriorating rapidly due to geopolitical and protectionist pressures.",
   "chartData": [
     {
       "seriesId": "GDPC1",

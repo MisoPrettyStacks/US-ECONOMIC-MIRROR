@@ -1,0 +1,7 @@
+{
+  "failedAt": "2026-09-04T10:07:27.564Z",
+  "message": "Expected property name or '}' in JSON at position 2",
+  "openaiBaseUrl": "https://openrouter.ai/api/v1",
+  "openaiModel": "openrouter/free",
+  "hasApiKey": true
+}

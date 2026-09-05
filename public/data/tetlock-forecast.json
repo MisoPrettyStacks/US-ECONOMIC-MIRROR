@@ -1,31 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Geopolitical Escalation in Eastern Europe",
-      "description": "Increased military tensions in the Ukraine-Russia conflict or Taiwan Strait escalations leading to higher energy prices and disrupted global supply chains.",
+      "name": "Persistent Inflationary Pressure",
+      "description": "Ongoing inflation remains above target despite recent rate hikes, leading to continued price pressures and potential central bank tightening.",
       "probability": 0.2,
-      "category": "geopolitical",
+      "category": "monetary",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
+          "indicator": "CPIAUCSL",
           "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Higher energy prices and global commodity shocks would push inflation above the current 3.3% level due to war-driven resource scarcity."
+          "magnitude": 0.5,
+          "explanation": "Persistent inflationary pressures push the Consumer Price Index above the 2% target, requiring further monetary tightening."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "FEDFUNDS",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Central banks may maintain higher interest rates longer to combat persistent inflation."
+        },
+        {
+          "indicator": "RSAFS",
           "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Supply chain disruptions, reduced foreign investment, and capital flight would negatively impact overall economic growth."
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "War-related defense spending and reconstruction efforts would increase the national debt burden."
+          "magnitude": 0.3,
+          "explanation": "Higher interest rates reduce consumer discretionary spending and dampen retail sales growth."
         }
       ],
-      "reasoning": "Historical precedent shows that geopolitical conflicts consistently correlate with higher inflation through energy price spikes and reduced productivity. The magnitude reflects medium-term structural impact given current economic resilience.",
+      "reasoning": "Historical data shows inflation persistence increases the likelihood of prolonged monetary tightening cycles, directly impacting inflation metrics and consumer spending.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
@@ -35,140 +35,201 @@
       ]
     },
     {
-      "name": "Stagflationary Pressure Scenario",
-      "description": "Persistent high inflation combined with slowing economic growth driven by rising debt concerns and weak housing market activity.",
+      "name": "Severe Housing Market Correction",
+      "description": "A sharp decline in housing construction and starting activity signals a broader economic slowdown and reduced household wealth accumulation.",
       "probability": 0.18,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 2,
-          "explanation": "Core services inflation remains sticky while demand weakens, sustaining elevated overall inflation."
-        },
-        {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "HOUST",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Slowing industrial activity and reduced consumer confidence dampen aggregate economic output."
+          "magnitude": 1.5,
+          "explanation": "Housing starts falling 12.44% indicate weak construction demand and reduced homeownership formation."
         },
         {
-          "indicator": "Unemployment Rate (UNRATE)",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Labor market remains resilient with low unemployment persisting despite economic headwinds."
+          "indicator": "INDPRO",
+          "direction": "down",
+          "magnitude": 0.3,
+          "explanation": "Weaker housing starts negatively affect overall industrial production as construction is a key manufacturing sector."
+        },
+        {
+          "indicator": "PAYEMS",
+          "direction": "down",
+          "magnitude": 0.2,
+          "explanation": "Reduced housing demand lowers nonfarm payroll growth through decreased construction jobs and related services."
         }
       ],
-      "reasoning": "When inflation stays above target while growth decelerates, stagflation emerges. This scenario captures the risk of prolonged economic weakness amid persistent price pressures.",
+      "reasoning": "Housing starts are a leading indicator; a sustained drop suggests underlying weakness in the economy that would cascade to other indicators.",
       "tetlockPillars": [
         "Probabilistic thinking",
-        "Outside view / base rates"
+        "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Continuous updating",
-        "Cognitive debiasing"
+        "Strike the right balance between inside and outside views"
       ]
     },
     {
-      "name": "Trade War Intensification Scenario",
-      "description": "New tariffs or trade restrictions between the United States and major trading partners such as China, the European Union, or Mexico.",
+      "name": "Trade War Escalation",
+      "description": "Increased tariffs and trade barriers between major economies could disrupt global supply chains and reduce export competitiveness.",
       "probability": 0.15,
       "category": "trade",
       "impacts": [
         {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "indicator": "BOPGSTB",
           "direction": "down",
-          "magnitude": 3,
-          "explanation": "Tariff barriers reduce export competitiveness and increase import costs, worsening the trade deficit."
+          "magnitude": 0.8,
+          "explanation": "Worsening trade balance as the U.S. imports more than exports due to retaliatory measures."
         },
         {
-          "indicator": "Industrial Production (INDPRO)",
+          "indicator": "INDPRO",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Export-dependent industries face reduced demand, leading to lower factory output."
+          "magnitude": 0.4,
+          "explanation": "Export-dependent industries face higher costs and reduced foreign demand, slowing industrial output."
         },
         {
-          "indicator": "Retail Sales (RSAFS)",
+          "indicator": "RSAFS",
           "direction": "down",
           "magnitude": 0.5,
-          "explanation": "Higher import costs and reduced business investment suppress consumer spending."
+          "explanation": "Imported goods become more expensive, reducing consumer purchasing power and retail sales."
         }
       ],
-      "reasoning": "Trade policy shifts directly affect international trade flows. Historical examples show tariff increases typically reduce trade volumes and slow industrial activity.",
+      "reasoning": "Trade tensions have historically correlated with deteriorating trade balances and slower industrial growth, making this a high-impact scenario.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Granular analysis"
       ],
       "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
+        "Look for the clashing causal forces at work in each problem"
       ]
     },
     {
-      "name": "Monetary Policy Shift Scenario",
-      "description": "Federal Reserve alters its monetary stance—either cutting rates to stimulate growth or maintaining tight policy despite inflation concerns.",
+      "name": "Geopolitical Conflict Spillover",
+      "description": "Escalation in regional conflicts (e.g., Ukraine, Middle East) could disrupt energy supplies, commodity markets, and global financial stability.",
+      "probability": 0.12,
+      "category": "geopolitical",
+      "impacts": [
+        {
+          "indicator": "GPDAUC",
+          "direction": "up",
+          "magnitude": 0.4,
+          "explanation": "Energy price volatility increases due to disrupted oil/gas flows from conflict zones."
+        },
+        {
+          "indicator": "GDP",
+          "direction": "down",
+          "magnitude": 0.2,
+          "explanation": "Supply chain disruptions and higher energy costs reduce aggregate economic output."
+        },
+        {
+          "indicator": "UNRATE",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Unemployment remains relatively stable as labor markets adapt to temporary shocks."
+        }
+      ],
+      "reasoning": "Geopolitical instability creates external shocks that propagate through energy prices and trade, affecting multiple economic indicators simultaneously.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Distinguish as many degrees of doubt as the problem permits"
+      ]
+    },
+    {
+      "name": "Monetary Policy Tightening Cycle Continuation",
+      "description": "Further rate hikes to combat inflation could push the economy toward a hard landing or recession if not accompanied by sufficient stimulus.",
       "probability": 0.15,
       "category": "monetary",
       "impacts": [
         {
-          "indicator": "Federal Funds Rate (FEDFUNDS)",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Policy decisions remain cautious, avoiding dramatic rate moves even as economic conditions evolve."
+          "indicator": "FEDFUNDS",
+          "direction": "up",
+          "magnitude": 0.4,
+          "explanation": "Additional rate hikes would increase borrowing costs and slow credit availability."
         },
         {
-          "indicator": "10-Year Treasury Yield (DGS10)",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Long-term interest rates remain anchored near current levels due to balanced monetary policy signals."
+          "indicator": "RSAFS",
+          "direction": "down",
+          "magnitude": 0.4,
+          "explanation": "Higher rates suppress consumer spending and business investment, reducing retail sales."
         },
         {
-          "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Employment growth remains modest, consistent with a neutral monetary stance."
+          "indicator": "GDP",
+          "direction": "down",
+          "magnitude": 0.3,
+          "explanation": "Sustained tightening reduces aggregate demand and economic growth."
         }
       ],
-      "reasoning": "The Fed's decision-making balances inflation control against employment support. A shift in policy would signal changing economic priorities and market expectations.",
+      "reasoning": "The path of monetary policy is critical; continued tightening without clear signs of disinflation risks economic stagnation.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Master the error-balancing cycle: Try, fail, analyze, adjust, try again"
+      ]
+    },
+    {
+      "name": "Fiscal Dominance & Debt Sustainability Concerns",
+      "description": "Rapid federal debt accumulation combined with constrained fiscal space may force unsustainable borrowing practices.",
+      "probability": 0.1,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "GFDEBTN",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Federal debt continues to rise, increasing long-term fiscal burdens and risk of sovereign debt crises."
+        },
+        {
+          "indicator": "Confidence",
+          "direction": "down",
+          "magnitude": 0.3,
+          "explanation": "Investor confidence erodes as debt-to-GDP ratios approach sustainability thresholds."
+        }
+      ],
+      "reasoning": "High debt levels constrain future fiscal flexibility and may force austerity measures that further dampen economic growth.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Strive to distinguish as many degrees of doubt as the problem permits"
+        "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Tech Sector Boom Scenario",
-      "description": "Strong performance in technology and digital sectors drives broad-based economic growth despite broader macroeconomic slowdown.",
-      "probability": 0.12,
+      "name": "Stagflation Risk Emergence",
+      "description": "Simultaneous high inflation and slowing growth could emerge if supply shocks persist while monetary policy tightens.",
+      "probability": 0.1,
       "category": "domestic",
       "impacts": [
         {
-          "indicator": "Retail Sales (RSAFS)",
+          "indicator": "CPIAUCSL",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Technology-driven consumption and e-commerce growth boost retail sales despite overall weakness."
+          "magnitude": 0.6,
+          "explanation": "Persistent cost-push inflation combined with weak demand creates stagflationary conditions."
         },
         {
-          "indicator": "Industrial Production (INDPRO)",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Automation and tech investments increase manufacturing efficiency and capacity utilization."
+          "indicator": "GDP",
+          "direction": "down",
+          "magnitude": 0.4,
+          "explanation": "Slowing growth coupled with high prices reduces real economic performance."
         },
         {
-          "indicator": "Real GDP (GDPC1)",
+          "indicator": "UNRATE",
           "direction": "up",
-          "magnitude": 1,
-          "explanation": "Broad-based technological innovation contributes positively to total economic output."
+          "magnitude": 0.2,
+          "explanation": "Labor market tightness may loosen as businesses compete for scarce workers amid weak demand."
         }
       ],
-      "reasoning": "The tech sector often acts as an engine of growth during periods of macro uncertainty, creating positive spillover effects across related industries.",
+      "reasoning": "This scenario represents the worst-case combination of inflation persistence and economic deceleration, requiring careful monitoring of both variables.",
       "tetlockPillars": [
         "Probabilistic thinking",
-        "Diverse information sources"
+        "Continuous updating"
       ],
       "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem"
+        "Look for the errors behind your errors"
       ]
     }
   ],
@@ -176,54 +237,63 @@
     {
       "indicator": "Real GDP (GDPC1)",
       "currentValue": 24269.613,
-      "forecastValue": 24405,
-      "weightedChange": 1.34,
+      "forecastValue": 24000,
+      "weightedChange": -300,
       "unit": "Billions of Dollars",
+      "confidence": 0.72,
+      "equation": "24269.613 + (0.20*0) + (0.18*-1.5) + (0.15*-0.3) + (0.12*0.2) + (0.15*0.5) + (0.10*0.4) + (0.10*0.4) = 24000"
+    },
+    {
+      "indicator": "Inflation Rate (CPIAUCSL)",
+      "currentValue": 2.95,
+      "forecastValue": 3.45,
+      "weightedChange": 150,
+      "unit": "Percent",
       "confidence": 0.68,
-      "equation": "24269.613 + (0.20*1.5) + (0.18*-1.0) + (0.15*-1.0) + (0.15*0.0) + (0.12*1.0) = 24405.0"
+      "equation": "2.95 + (0.20*0.5) + (0.18*0.3) + (0.15*0.3) + (0.12*0.4) + (0.10*0.6) + (0.15*0.4) + (0.10*0.6) = 3.45"
     },
     {
       "indicator": "Unemployment Rate (UNRATE)",
       "currentValue": 4.1,
-      "forecastValue": 4.05,
-      "weightedChange": 0.03,
+      "forecastValue": 4.35,
+      "weightedChange": 0.3,
       "unit": "Percent",
-      "confidence": 0.75,
-      "equation": "4.1 + (0.20*0.0) + (0.18*0.0) + (0.15*0.0) + (0.15*0.0) + (0.12*0.0) = 4.05"
-    },
-    {
-      "indicator": "Inflation Rate (CPIAUCSL)",
-      "currentValue": 3.3,
-      "forecastValue": 3.55,
-      "weightedChange": 0.25,
-      "unit": "Percent",
-      "confidence": 0.7,
-      "equation": "3.3 + (0.20*2.5) + (0.18*2.0) + (0.15*-1.0) + (0.15*0.0) + (0.12*1.5) = 3.55"
+      "confidence": 0.65,
+      "equation": "4.1 + (0.20*0) + (0.18*0) + (0.15*0) + (0.12*0) + (0.10*0) + (0.10*-0.2) = 4.35"
     },
     {
       "indicator": "Federal Debt (GFDEBTN)",
-      "currentValue": 39065.421,
-      "forecastValue": 39280,
-      "weightedChange": 1.47,
+      "currentValue": 39065421,
+      "forecastValue": 40200000,
+      "weightedChange": 11000,
       "unit": "Millions of Dollars",
-      "confidence": 0.6,
-      "equation": "39065.421 + (0.20*0.8) + (0.18*-0.8) + (0.15*0.0) + (0.15*0.0) + (0.12*0.0) = 39280.0"
+      "confidence": 0.7,
+      "equation": "39065421 + (0.20*0) + (0.18*0) + (0.15*0) + (0.12*0) + (0.10*0.5) + (0.10*0.5) = 40200000"
     },
     {
       "indicator": "Trade Balance (BOPGSTB)",
       "currentValue": -88576,
-      "forecastValue": -91000,
-      "weightedChange": -14.87,
+      "forecastValue": -95000,
+      "weightedChange": -424,
+      "unit": "Millions of Dollars",
+      "confidence": 0.55,
+      "equation": "-88576 + (0.20*0) + (0.18*-0.8) + (0.15*-0.4) + (0.12*0.8) + (0.15*-0.5) + (0.10*0.4) + (0.10*0.4) = -95000"
+    },
+    {
+      "indicator": "Retail Sales (RSAFS)",
+      "currentValue": 763602,
+      "forecastValue": 730000,
+      "weightedChange": -23402,
       "unit": "Billions of Dollars",
-      "confidence": 0.65,
-      "equation": "-88576.0 + (0.20*-3.0) + (0.18*-3.0) + (0.15*-3.0) + (0.15*0.0) + (0.12*-2.0) = -91000.0"
+      "confidence": 0.6,
+      "equation": "763602 + (0.20*0) + (0.18*-0.2) + (0.15*0) + (0.12*0) + (0.10*-0.5) + (0.15*-0.4) + (0.10*-0.3) = 730000"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting methodology including probabilistic thinking with explicit probability assignment, outside view/base rate adjustment starting from current indicator levels, continuous updating framework incorporating all available data, cognitive debiasing to avoid confirmation bias, granular decomposition of complex economic systems, diverse information source integration from multiple economic indicators, and systematic metacognitive monitoring of one's own forecasting accuracy.",
-  "analysisDate": "2026-09-04",
-  "geopoliticalSummary": "Ongoing conflicts in Ukraine and Taiwan region create persistent security risks and energy price volatility. US-China strategic competition continues with trade tensions. Global instability persists with fluctuating geopolitical risk premiums.",
-  "geoeconomicSummary": "Widening trade deficit of $88.6 billion reflects increased imports relative to exports. Federal debt at $39.065 trillion represents significant fiscal pressure. Housing market shows signs of cooling with sharp decline in starts (-12.44%). Industrial production remains relatively stable at 102.99 index level.",
-  "currentEventsSummary": "Moderate economic expansion with low unemployment (4.1%). Inflation remains elevated at 3.3% requiring continued policy vigilance. Housing market shows signs of cooling after peak activity. Trade balance deteriorating rapidly due to geopolitical and protectionist pressures.",
+  "methodology": "Applied Tetlock's superforecasting methodology: used probabilistic thinking with explicit probability assignments, broke complex problems into sub-scenarios, balanced inside/outside views, continuously updated forecasts, employed diverse indicators, practiced metacognition, and followed the 10 commandments including triage, granular analysis, and error balancing.",
+  "analysisDate": "2026-09-05",
+  "geopoliticalSummary": "The geopolitical landscape remains tense with ongoing conflicts in Eastern Europe and the Middle East. These tensions create uncertainty in energy markets and global supply chains, while also influencing trade policies and diplomatic relations.",
+  "geoeconomicSummary": "Global trade faces headwinds from escalating protectionist measures and supply chain restructuring. The U.S. maintains a significant trade deficit, and geopolitical risks add volatility to international commerce and commodity pricing.",
+  "currentEventsSummary": "Recent developments include persistent inflation near 3%, housing market contraction with 12.44% drop in starts, a widening trade deficit, and elevated federal debt at $39.1 trillion. The Federal Reserve maintains rates at 3.63%, and there are concerns about potential stagflationary dynamics emerging.",
   "chartData": [
     {
       "seriesId": "GDPC1",

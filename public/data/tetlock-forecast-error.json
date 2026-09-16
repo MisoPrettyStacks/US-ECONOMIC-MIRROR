@@ -1,0 +1,7 @@
+{
+  "failedAt": "2026-09-16T15:39:53.740Z",
+  "message": "Unexpected token 'W', \"We need to\"... is not valid JSON",
+  "openaiBaseUrl": "https://openrouter.ai/api/v1",
+  "openaiModel": "openrouter/free",
+  "hasApiKey": true
+}

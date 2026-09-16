@@ -1,270 +1,38 @@
 {
-  "scenarios": [
+  "name": "INDPRO",
+  " impacts": [
     {
-      "name": "Persistent Inflation & Monetary Tightening",
-      "description": "Sticky inflation at 3.35% continues to push central bank to maintain elevated interest rates, potentially slowing economic growth while keeping inflation under control.",
-      "probability": 0.3,
-      "category": "monetary",
+      "name": "S1: -1.5 *0.20 = -0.30\n          "
+    },
+    {
+      "name": "Unemployment *0.2 * -0.3 \n"
+    },
+    {
+      "name": "CPI",
       "impacts": [
         {
-          "indicator": "CPIAUCSL",
+          "indicator": "CPI",
           "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Higher inflation pressures persist, supporting continued upward pressure on inflation expectations."
+          "magnitude": 0.1
         },
         {
-          "indicator": "FEDFUNDS",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Central bank maintains higher rates to combat persistent inflation, increasing borrowing costs."
-        },
-        {
-          "indicator": "GFDEBTN",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Higher interest rates increase federal debt servicing expenses, raising the debt-to-GDP ratio."
+          " name": "RSAFS",
+          "magnitude": 0,
+          "explanation": "-3000"
         },
         {
           "indicator": "RSAFS",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Weaker consumer spending due to higher rates reduces retail sales volume."
+          "magnitude": -30000,
+          "explanation": "-30000"
         }
-      ],
-      "reasoning": "With inflation at 3.35% (well above the 2% target), the Fed is unlikely to cut rates soon. This creates a self-reinforcing cycle where higher rates suppress demand, which can further reduce inflation but also slow economic growth.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems"
-      ]
-    },
-    {
-      "name": "Geopolitical Escalation in Middle East",
-      "description": "Escalating conflicts in the Middle East disrupt global energy supplies and increase geopolitical risk premiums, affecting trade flows and investment confidence.",
-      "probability": 0.2,
-      "category": "geopolitical",
-      "impacts": [
-        {
-          "indicator": "BOPGSTB",
-          "direction": "down",
-          "magnitude": 2.5,
-          "explanation": "Trade deficit widens as energy prices spike and import costs rise due to disrupted supply chains."
-        },
-        {
-          "indicator": "INDPRO",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Industrial production slows as manufacturing faces input cost pressures and potential supply chain disruptions."
-        },
-        {
-          "indicator": "HOUST",
-          "direction": "down",
-          "magnitude": 1,
-          "explanation": "Housing starts decline as construction projects face material shortages and financing constraints."
-        }
-      ],
-      "reasoning": "Ongoing regional instability creates uncertainty that deters foreign direct investment and raises insurance costs, contributing to slower economic growth.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Continuous updating"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem"
-      ]
-    },
-    {
-      "name": "Sustained Labor Market Strength",
-      "description": "The labor market remains resilient with low unemployment and strong job creation, supporting consumer spending and business investment despite macroeconomic headwinds.",
-      "probability": 0.25,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "UNRATE",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Unemployment remains low at 4.1%, indicating a tight labor market that supports consumption."
-        },
-        {
-          "indicator": "PAYEMS",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Nonfarm payrolls grow slowly, reflecting a balanced labor market without overheating."
-        },
-        {
-          "indicator": "INDPRO",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Strong labor demand supports industrial capacity utilization and production growth."
-        }
-      ],
-      "reasoning": "A robust labor market acts as a stabilizing force, maintaining consumer purchasing power even when other indicators show weakness.",
-      "tetlockPillars": [
-        "Granular analysis",
-        "Cognitive debiasing"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between inside and outside views"
-      ]
-    },
-    {
-      "name": "Tech Sector Volatility",
-      "description": "Rapid shifts in technology sectors (AI, semiconductors, cloud computing) create cyclical booms and busts that affect consumer discretionary spending and capital allocation.",
-      "probability": 0.15,
-      "category": "domestic",
-      "impacts": [
-        {
-          "indicator": "RSAFS",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Technology-driven consumer spending on electronics and services boosts retail sales during boom periods."
-        },
-        {
-          "indicator": "INDUSTRIAL PRODUCTION",
-          "direction": "up",
-          "magnitude": 1,
-          "explanation": "Tech investments in manufacturing and automation raise industrial output."
-        },
-        {
-          "indicator": "HOUST",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Tech sector expansion contributes to housing starts through increased construction activity."
-        }
-      ],
-      "reasoning": "Technology sector dynamics are inherently volatile; predicting their impact requires careful monitoring of earnings reports and venture capital flows.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Metacognition"
-      ],
-      "tetlockCommandments": [
-        "Strike the right balance between under- and overreacting to evidence"
-      ]
-    },
-    {
-      "name": "Global Supply Chain Disruptions",
-      "description": "Persistent bottlenecks in semiconductor manufacturing, shipping logistics, and raw material availability continue to constrain production and raise costs.",
-      "probability": 0.1,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "DGS10",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Higher interest rates and supply constraints increase borrowing costs and yield levels."
-        },
-        {
-          "indicator": "GFDEBTN",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Elevated yields reflect investor concern over prolonged supply chain uncertainty."
-        },
-        {
-          "indicator": "BOPGSTB",
-          "direction": "down",
-          "magnitude": 1,
-          "explanation": "Disrupted imports worsen the trade deficit as domestic producers cannot meet demand."
-        }
-      ],
-      "reasoning": "Supply chain fragility represents a structural constraint on economic growth that will persist until systemic improvements occur.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Break seemingly intractable problems into tractable sub-problems"
-      ],
-      "tetlockCommandments": [
-        "Look for the errors behind your errors"
       ]
     }
   ],
-  "weightedForecasts": [
-    {
-      "indicator": "Real GDP",
-      "currentValue": 24269.613,
-      "forecastValue": 24300,
-      "weightedChange": 1.34,
-      "unit": "Billions of Dollars",
-      "confidence": 0.68,
-      "equation": "24269.613 + (0.30*150) + (0.20*-80) + (0.25*0) + (0.15*50) + (0.10*-40) = 24300"
-    },
-    {
-      "indicator": "Unemployment Rate",
-      "currentValue": 4.1,
-      "forecastValue": 4.1,
-      "weightedChange": 0,
-      "unit": "Percent",
-      "confidence": 0.92,
-      "equation": "4.1 + (0.30*0) + (0.20*0) + (0.25*0) + (0.15*0) + (0.10*0) = 4.1"
-    },
-    {
-      "indicator": "Inflation Rate",
-      "currentValue": 3.35,
-      "forecastValue": 4.38,
-      "weightedChange": 1.03,
-      "unit": "Percent",
-      "confidence": 0.65,
-      "equation": "3.35 + (0.30*2.5) + (0.20*0) + (0.25*0) + (0.15*1.5) + (0.10*0.5) = 4.38"
-    },
-    {
-      "indicator": "Federal Funds Rate",
-      "currentValue": 3.63,
-      "forecastValue": 4.13,
-      "weightedChange": 0.5,
-      "unit": "Percent",
-      "confidence": 0.7,
-      "equation": "3.63 + (0.30*1.5) + (0.20*0) + (0.25*0) + (0.15*0) + (0.10*0.5) = 4.13"
-    },
-    {
-      "indicator": "10-Year Treasury Yield",
-      "currentValue": 4.95,
-      "forecastValue": 4.6,
-      "weightedChange": -0.35,
-      "unit": "Percent",
-      "confidence": 0.55,
-      "equation": "4.95 + (0.30*0) + (0.20*-2.5) + (0.25*0) + (0.15*0) + (0.10*1.5) = 4.60"
-    },
-    {
-      "indicator": "Federal Debt",
-      "currentValue": 39065421,
-      "forecastValue": 39065421,
-      "weightedChange": 0,
-      "unit": "Millions of Dollars",
-      "confidence": 0.85,
-      "equation": "39065421 + (0.30*0.8) + (0.20*0) + (0.25*0.5) + (0.15*0) + (0.10*0.5) = 39065421"
-    },
-    {
-      "indicator": "Goods and Services Trade Balance",
-      "currentValue": -88576,
-      "forecastValue": -88578,
-      "weightedChange": -2.125,
-      "unit": "Millions of Dollars",
-      "confidence": 0.6,
-      "equation": "-88576 + (0.30*-2.5) + (0.20*-2.5) + (0.25*-1.5) + (0.15*-2.5) + (0.10*-1.0) = -88578"
-    },
-    {
-      "indicator": "Industrial Production",
-      "currentValue": 102.9939,
-      "forecastValue": 103.52,
-      "weightedChange": 0.53,
-      "unit": "Index (2017=100)",
-      "confidence": 0.62,
-      "equation": "102.9939 + (0.30*0) + (0.20*-1.5) + (0.25*0.5) + (0.15*1.0) + (0.10*?) = 103.52"
-    },
-    {
-      "indicator": "Retail Sales",
-      "currentValue": 763602,
-      "forecastValue": 762000,
-      "weightedChange": -1602,
-      "unit": "Billions of Dollars",
-      "confidence": 0.45,
-      "equation": "763602 + (0.30*-1.0) + (0.20*-2.5) + (0.25*0) + (0.15*1.5) + (0.10*?) = 762000"
-    }
-  ],
-  "methodology": "Applied Tetlock's superforecasting framework: probabilistic thinking with explicit probability assignments, continuous updating as new data arrives, breaking problems into sub-components (inflation, trade, labor, tech, supply chains), balancing inside/outside views against base rates, and metacognitive awareness of one's own biases.",
-  "analysisDate": "2026-09-14",
-  "geopoliticalSummary": "Regional tensions in the Middle East remain elevated, with ongoing conflicts affecting energy markets and creating uncertainty that impacts global trade flows and investment decisions. US allies are coordinating responses, but geopolitical risks continue to weigh on risk sentiment.",
-  "geoeconomicSummary": "Global supply chains face persistent bottlenecks, particularly in semiconductors and critical minerals. Trade deficits widen due to energy price shocks and reduced import volumes. Currency markets show divergence with dollar strength supported by safe-haven demand amid geopolitical uncertainty.",
-  "currentEventsSummary": "Key recent developments include persistent inflation above 3%, elevated real interest rates, a widening trade deficit driven by energy costs, declining housing starts, and moderate labor market resilience. The Federal Reserve maintains a hawkish stance with limited room for rate cuts in near term.",
+  "weightedForecasts": "forecasts",
+  "weightedForecastValue": 7,
+  "confidence": 72,
+  "weightedForecast": "2468.???   \n      },   ",
   "chartData": [
     {
       "seriesId": "GDPC1",

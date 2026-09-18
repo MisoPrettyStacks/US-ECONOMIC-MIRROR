@@ -1,38 +1,434 @@
 {
-  "name": "INDPRO",
-  " impacts": [
+  "scenarios": [
     {
-      "name": "S1: -1.5 *0.20 = -0.30\n          "
-    },
-    {
-      "name": "Unemployment *0.2 * -0.3 \n"
-    },
-    {
-      "name": "CPI",
+      "name": "Fed pauses rate cuts amid sticky inflation",
+      "description": "With CPI inflation at 3.35% and 10-year yields at 5.01%, the Fed pauses or slows its rate cut cycle, keeping the Fed Funds Rate elevated around 3.5-3.75% for longer than markets expect. This scenario reflects concerns that inflation remains persistent above the 2% target, and further easing risks re-accelerating price growth.",
+      "probability": 0.3,
+      "category": "monetary",
       "impacts": [
         {
-          "indicator": "CPI",
-          "direction": "up",
-          "magnitude": 0.1
-        },
-        {
-          " name": "RSAFS",
-          "magnitude": 0,
-          "explanation": "-3000"
-        },
-        {
-          "indicator": "RSAFS",
+          "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": -30000,
-          "explanation": "-30000"
+          "magnitude": -0.5,
+          "explanation": "Higher rates for longer dampen investment and consumer spending, slowing GDP growth"
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Tighter monetary conditions slow hiring, pushing unemployment modestly higher"
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Maintaining restrictive rates gradually brings inflation down, though slowly"
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Fed holds rate steady at approximately 3.63%"
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Persistent inflation expectations and fiscal concerns keep long-end yields elevated"
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Higher interest costs increase debt servicing burden, accelerating debt accumulation"
+        },
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Modest impact on trade balance from rate-driven dollar strength"
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Higher borrowing costs reduce industrial investment and output"
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": -0.8,
+          "explanation": "Higher rates suppress consumer credit and spending growth"
+        },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "down",
+          "magnitude": -3,
+          "explanation": "Mortgage rates remain elevated at ~7%+, further depressing housing starts"
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": -0.15,
+          "explanation": "Slower hiring reduces payroll growth to near stagnation"
         }
+      ],
+      "reasoning": "Base rate analysis: In periods where inflation remains above 3% while the Fed is already at a moderate rate level, the probability of a pause or slow-cut trajectory is historically around 30-35%. The current 5.01% 10-year yield signals market expectation of persistently higher rates. Inside view: sticky services inflation, fiscal deficit concerns, and a still-tight labor market (4.1% unemployment) all support a hawkish hold. However, political pressure and debt servicing costs create counterforces. Weighted at 30% reflecting moderate-high likelihood.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between inside and outside views",
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Escalation in Middle East conflict disrupts oil supply",
+      "description": "Geopolitical tensions in the Middle East escalate, leading to disrupted oil shipping through the Strait of Hormuz or significant production cuts. Oil prices spike 30-50%, creating a supply-side inflation shock and dampening consumer spending globally.",
+      "probability": 0.15,
+      "category": "geopolitical",
+      "impacts": [
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "down",
+          "magnitude": -1,
+          "explanation": "Oil price shock acts as a tax on consumers and businesses, reducing GDP growth by ~1 percentage point"
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "up",
+          "magnitude": 0.4,
+          "explanation": "Energy-intensive sectors lay off workers; broader economic slowdown increases unemployment"
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Oil price spike feeds through to transportation, manufacturing, and food costs, pushing CPI up significantly"
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "up",
+          "magnitude": 0.25,
+          "explanation": "Fed may need to hold or raise rates to combat inflationary pressure from supply shock"
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Inflation premium increases long-end yields"
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 1.8,
+          "explanation": "Economic slowdown reduces tax revenues while mandatory spending continues"
+        },
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "down",
+          "magnitude": -10,
+          "explanation": "Higher oil import costs widen the trade deficit substantially"
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "down",
+          "magnitude": -1.5,
+          "explanation": "Energy cost spike reduces industrial output, particularly in energy-intensive sectors"
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": -2,
+          "explanation": "Higher gas prices divert consumer spending away from retail goods"
+        },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "down",
+          "magnitude": -5,
+          "explanation": "Construction costs rise with energy prices; higher yields suppress housing further"
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Economic contraction leads to job losses across multiple sectors"
+        }
+      ],
+      "reasoning": "Outside view: Historical base rate for significant Middle East escalation disrupting oil supply over any 6-12 month window is approximately 12-18%. The region remains volatile with multiple flashpoints. Inside view: Current diplomatic efforts and alternative supply routes provide some mitigation, but the concentration of global oil infrastructure in the region creates vulnerability. Clashing forces: de-escalation diplomacy vs. entrenched regional rivalries. Assigned 15% probability, slightly above base rate due to current tensions.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates",
+        "Continuous updating"
+      ],
+      "tetlockCommandments": [
+        "Triage - Focus on questions where careful thinking pays off",
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "U.S.-China trade tensions escalate with new tariffs",
+      "description": "The U.S. imposes additional tariffs on Chinese goods, or China retaliates with export controls on critical minerals (rare earths, gallium, germanium). Trade tensions escalate beyond current levels, disrupting supply chains and raising costs for U.S. manufacturers.",
+      "probability": 0.2,
+      "category": "trade",
+      "impacts": [
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "down",
+          "magnitude": -0.7,
+          "explanation": "Tariffs raise input costs, reduce trade volumes, and disrupt supply chains, lowering GDP growth"
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "up",
+          "magnitude": 0.2,
+          "explanation": "Manufacturing and export-dependent sectors see modest job losses"
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Tariffs pass through to consumer prices; supply chain disruptions add cost pressures"
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Fed faces conflicting pressures: inflation up (hawkish) but growth down (dovish), likely holds"
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "up",
+          "magnitude": 0.2,
+          "explanation": "Inflation concerns push yields slightly higher, but growth concerns partially offset"
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Slower growth reduces revenue; tariff revenue partially offsets but is insufficient"
+        },
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "up",
+          "magnitude": 5,
+          "explanation": "Reduced imports from China narrow trade deficit somewhat, though higher costs partially offset"
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "down",
+          "magnitude": -1,
+          "explanation": "Supply chain disruptions and higher input costs reduce industrial output"
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": -1,
+          "explanation": "Higher prices for imported goods reduce real retail sales volume"
+        },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "stable",
+          "magnitude": -1,
+          "explanation": "Modest impact from higher construction material costs (lumber, steel from tariffs)"
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": -0.1,
+          "explanation": "Modest job losses in trade-exposed sectors"
+        }
+      ],
+      "reasoning": "Base rate: U.S.-China trade escalation over 6-12 months given current political dynamics is approximately 20-25%. Inside view: The trade deficit has widened significantly (+24.44%), creating political pressure for action. Both countries have demonstrated willingness to use trade as a geopolitical tool. However, both sides also face economic costs from escalation, creating a deterrent. Clashing forces: geopolitical competition/national security concerns vs. economic interdependence and inflation concerns. Assigned 20% probability.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates",
+        "Granular analysis",
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems",
+        "Look for the clashing causal forces at work in each problem"
+      ]
+    },
+    {
+      "name": "Soft landing achieved with orderly disinflation",
+      "description": "The economy achieves a soft landing as inflation gradually declines toward 2.5-3.0% without a significant recession. The Fed continues gradual rate cuts, GDP growth stabilizes at 1.5-2.0% annualized, and the labor market remains resilient. Consumer spending holds up and housing gradually recovers as mortgage rates ease.",
+      "probability": 0.25,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "up",
+          "magnitude": 1,
+          "explanation": "Gradual rate cuts stimulate investment and consumption; GDP growth accelerates to ~2% annualized"
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Labor market remains resilient; unemployment stays near 4.0-4.2%"
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "down",
+          "magnitude": -0.8,
+          "explanation": "Disinflation continues as supply chains normalize and demand moderates; CPI declines toward 2.5-3.0%"
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Fed cuts rates gradually by 50bps over 6-12 months as inflation eases"
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Declining inflation and rate cuts push long-end yields modestly lower"
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 1.2,
+          "explanation": "Debt continues to grow but at a slightly slower pace due to better growth and lower rates"
+        },
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Trade balance remains roughly stable as domestic and foreign demand balance out"
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Lower rates and stable demand support modest industrial production growth"
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Consumer confidence improves with lower inflation and stable employment; retail sales grow"
+        },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "up",
+          "magnitude": 5,
+          "explanation": "Declining mortgage rates stimulate housing construction; starts recover toward 1350K"
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "up",
+          "magnitude": 0.15,
+          "explanation": "Moderate job growth continues at ~100-150K/month"
+        }
+      ],
+      "reasoning": "Outside view: Historical base rate for soft landing when inflation is declining from 3-4% toward target, with unemployment below 4.5% and GDP still growing, is approximately 25-30%. Inside view: Current indicators show GDP growth (+0.37%), stable unemployment (4.1%), and still-positive retail sales (+1.24%) and payrolls (+0.1%). The Fed has already cut to 3.63%, providing some accommodation. However, the high 10-year yield (5.01%) and elevated debt levels pose risks. Clashing forces: accommodative monetary policy vs. fiscal sustainability concerns and potential inflation stickiness. Assigned 25% probability, reflecting moderate optimism tempered by risks.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates",
+        "Cognitive debiasing",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Strike the right balance between under- and overconfidence",
+        "Strike the right balance between inside and outside views"
+      ]
+    },
+    {
+      "name": "Fiscal crisis triggered by debt sustainability concerns",
+      "description": "Growing concerns about U.S. fiscal sustainability—driven by the $39 trillion federal debt and rising interest costs—trigger a market reaction. A failed Treasury auction or credit rating downgrade causes a sharp spike in yields, a sell-off in risk assets, and potential fiscal austerity measures.",
+      "probability": 0.1,
+      "category": "domestic",
+      "impacts": [
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "down",
+          "magnitude": -1.5,
+          "explanation": "Sharp yield spike causes financial tightening equivalent to 100+bps rate hike; GDP contracts"
+        },
+        {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "up",
+          "magnitude": 0.6,
+          "explanation": "Financial stress and potential austerity lead to significant job losses"
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Demand destruction from financial tightening reduces inflation, despite initial cost-push from weak dollar"
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Fed may cut rates to counter financial instability, despite inflation concerns"
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "up",
+          "magnitude": 1,
+          "explanation": "Fiscal concerns cause a term premium spike; yields jump to 5.5-6.0%"
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "up",
+          "magnitude": 2.5,
+          "explanation": "Higher interest costs dramatically accelerate debt accumulation; potential austerity slows but insufficient"
+        },
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "up",
+          "magnitude": 8,
+          "explanation": "Weak dollar and reduced domestic demand narrow trade deficit"
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "down",
+          "magnitude": -2,
+          "explanation": "Financial stress and high borrowing costs severely depress industrial activity"
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "down",
+          "magnitude": -3,
+          "explanation": "Consumer confidence collapses; wealth effect from asset sell-off reduces spending sharply"
+        },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "down",
+          "magnitude": -10,
+          "explanation": "Mortgage rates spike to 8%+; housing starts collapse below 1100K"
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Broad-based job losses as recession takes hold"
+        }
+      ],
+      "reasoning": "Outside view: Base rate for a fiscal crisis/bond market event in a 6-12 month window for a major reserve currency issuer is historically very low (~5-8%). However, the U.S. debt-to-GDP ratio and interest costs as share of revenue are at post-WWII highs. Inside view: The 10-year yield at 5.01% already signals elevated concern. A failed auction or rating downgrade could be a trigger. Clashing forces: reserve currency status provides a buffer vs. unsustainable fiscal trajectory. Assigned 10% probability—above pure base rate due to deteriorating fiscal metrics, but tempered by dollar's reserve status and institutional safeguards.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates",
+        "Granular analysis",
+        "Metacognition"
+      ],
+      "tetlockCommandments": [
+        "Strive to distinguish as many degrees of doubt as the problem permits",
+        "Look for the errors behind your errors"
       ]
     }
   ],
-  "weightedForecasts": "forecasts",
-  "weightedForecastValue": 7,
-  "confidence": 72,
-  "weightedForecast": "2468.???   \n      },   ",
+  "methodology": "Applied Tetlock's superforecasting methodology: (1) Triaged to identify high-impact, tractable scenarios. (2) Decomposed the macroeconomic outlook into distinct causal scenarios. (3) Combined outside-view base rates with inside-view analysis of current indicators. (4) Identified clashing causal forces in each scenario. (5) Assigned granular probabilities summing to 1.0 across exhaustive scenarios. (6) Weighted indicator impacts by scenario probabilities to produce composite forecasts. (7) Applied cognitive debiasing by considering base rates before adjusting for current conditions, and metacognition to check for overconfidence in tail-risk scenarios.",
+  "analysisDate": "2026-09-18",
+  "geopoliticalSummary": "The geopolitical landscape in late 2026 remains volatile. Middle East tensions persist with multiple flashpoints including Iran's nuclear program, ongoing regional proxy conflicts, and maritime security concerns in the Strait of Hormuz. U.S.-China strategic competition continues across technology, trade, and military domains, with both sides implementing selective economic measures. The Russia-Ukraine conflict remains unresolved, maintaining pressure on global energy and food markets. North Korean provocations and Taiwan Strait tensions add additional risk layers. These factors collectively contribute to elevated uncertainty in commodity markets and supply chain planning.",
+  "geoeconomicSummary": "Global trade patterns are restructuring amid ongoing U.S.-China decoupling efforts, with nearshoring to Mexico and Southeast Asia accelerating. The U.S. trade deficit has widened significantly (+24.44%), reflecting strong domestic demand and currency effects. The dollar remains strong despite Fed rate cuts, supported by safe-haven flows and relatively higher U.S. yields. Global supply chains continue to diversify but face cost pressures from redundancy and reshoring. Emerging market central banks are navigating divergent monetary policy paths, with some easing while others fight persistent inflation. Global debt levels remain elevated, constraining fiscal responses to potential shocks.",
+  "currentEventsSummary": "Key current events shaping the economic outlook include: (1) The Fed maintaining rates at 3.63% amid above-target inflation (3.35% CPI), with markets divided on the path forward. (2) The 10-year Treasury yield at 5.01% signaling persistent fiscal and inflation concerns. (3) Federal debt exceeding $39 trillion with interest costs consuming a growing share of federal revenue. (4) Housing starts declining (-2.6%) as mortgage rates remain elevated near 7%. (5) Retail sales showing resilience (+1.24%) suggesting consumer spending is holding despite headwinds. (6) Industrial production essentially flat (+0.02%), indicating manufacturing stagnation. (7) The labor market showing signs of cooling with payrolls growing only 0.1% and unemployment at 4.1%. (8) A 24.44% widening of the trade deficit, potentially fueling protectionist sentiment.",
   "chartData": [
     {
       "seriesId": "GDPC1",

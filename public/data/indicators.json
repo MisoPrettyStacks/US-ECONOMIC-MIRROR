@@ -46,9 +46,9 @@
       "unit": "Percent",
       "category": "Interest Rates",
       "value": 4.96,
-      "previousValue": 5.01,
-      "percentChange": -0.9980039920159646,
-      "date": "2026-09-21"
+      "previousValue": 4.96,
+      "percentChange": 0,
+      "date": "2026-09-22"
     },
     {
       "seriesId": "GFDEBTN",
@@ -111,5 +111,5 @@
       "date": "2026-08-01"
     }
   ],
-  "lastRefresh": "2026-09-23T15:38:23.345Z"
+  "lastRefresh": "2026-09-23T20:44:54.452Z"
 }

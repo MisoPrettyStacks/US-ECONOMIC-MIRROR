@@ -1,363 +1,577 @@
 {
   "scenarios": [
     {
-      "name": "Fed Pivot to Rate Cuts",
-      "description": "Inflation continues to moderate toward 2.5-3% range, prompting Fed to begin cutting rates in Q4 2026 with 75-100bps of cuts by mid-2027. Financial conditions ease, supporting interest-sensitive sectors.",
-      "probability": 0.28,
-      "category": "monetary",
+      "name": "Escalating US-China Tech Decoupling",
+      "description": "Intensified technology sanctions and export controls between the United States and China, leading to supply chain disruptions in semiconductor and high‑tech sectors, reduced foreign direct investment, and heightened geopolitical risk.",
+      "probability": 0.2,
+      "category": "geopolitical",
       "impacts": [
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "down",
-          "magnitude": 75,
-          "explanation": "Fed cuts rates as inflation moderates, reducing policy rate from 3.63% to ~2.9%"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "down",
-          "magnitude": 50,
-          "explanation": "Lower policy rate expectations and reduced term premium pull long-term yields down"
-        },
-        {
-          "indicator": "Real GDP",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Easier financial conditions boost investment and consumption, adding ~0.8pp to growth"
-        },
-        {
-          "indicator": "Unemployment Rate",
-          "direction": "down",
-          "magnitude": 0.2,
-          "explanation": "Stronger growth reduces slack, modestly lowering unemployment from 4.1%"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "up",
-          "magnitude": 8,
-          "explanation": "Lower mortgage rates revive housing demand, reversing recent decline"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Improved consumer confidence and lower borrowing costs support spending"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Inflation continues gradual moderation toward target, consistent with Fed reaction function"
-        }
-      ],
-      "reasoning": "Base rate: Fed cutting cycles historically begin 6-12 months after last hike when inflation trends down. Current inflation at 3.35% YoY (per data) shows deceleration from peaks. Inside view: labor market softening (payrolls +0.1%) and flat industrial production suggest restrictive policy is biting. Clashing forces: sticky services inflation vs. goods deflation. Probability reflects 60% chance inflation cooperates * 45% chance Fed acts preemptively = ~27%, rounded to 28%.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates",
-        "Continuous updating"
-      ],
-      "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems",
-        "Strike the right balance between under- and overreacting to evidence"
-      ]
-    },
-    {
-      "name": "Inflation Re-acceleration & Fed Hold",
-      "description": "Services inflation proves sticky, energy prices surge on geopolitical supply disruption, and fiscal deficits maintain demand pressure. Fed holds rates at 3.63% through H1 2027, with hiking bias returning.",
-      "probability": 0.22,
-      "category": "monetary",
-      "impacts": [
-        {
-          "indicator": "Federal Funds Rate",
-          "direction": "stable",
-          "magnitude": 0,
-          "explanation": "Fed maintains restrictive stance, keeping rates at 3.63%"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 40,
-          "explanation": "Higher inflation expectations and term premium push 10Y toward 5.4%"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "CPI YoY rises from 3.35% to ~4.5% on energy and services persistence"
-        },
         {
           "indicator": "Real GDP",
           "direction": "down",
-          "magnitude": 0.6,
-          "explanation": "Higher real rates and uncertainty dampen investment and consumption"
+          "magnitude": -150,
+          "explanation": "Reduced high‑tech output and export demand lower overall growth."
         },
         {
           "indicator": "Unemployment Rate",
           "direction": "up",
           "magnitude": 0.3,
-          "explanation": "Growth slowdown increases slack, pushing unemployment to ~4.4%"
+          "explanation": "Job losses in tech manufacturing raise unemployment."
         },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 1.5,
-          "explanation": "Higher borrowing costs and weaker global demand reduce manufacturing output"
-        },
-        {
-          "indicator": "Housing Starts",
-          "direction": "down",
-          "magnitude": 5,
-          "explanation": "Mortgage rates near 7%+ continue to suppress construction activity"
-        }
-      ],
-      "reasoning": "Base rate: ~30% of disinflation episodes see significant re-acceleration (1970s, 2021-22). Inside view: Federal debt at $39T (+1.43%) implies persistent fiscal stimulus; trade deficit widening (+24.44%) suggests strong import demand. Clashing forces: wage growth moderation vs. shelter inflation stickiness. Probability: 40% chance inflation sticks * 55% chance Fed prioritizes credibility = 22%.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Cognitive debiasing",
-        "Granular analysis"
-      ],
-      "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem",
-        "Strive to distinguish as many degrees of doubt as the problem permits"
-      ]
-    },
-    {
-      "name": "Geopolitical Supply Shock (Middle East/Energy)",
-      "description": "Escalation of Middle East conflict disrupts oil supply through Strait of Hormuz, pushing Brent crude to $110-120/bbl. Global trade routes disrupted, sanctions enforcement tightens.",
-      "probability": 0.15,
-      "category": "geopolitical",
-      "impacts": [
         {
           "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 2,
-          "explanation": "Energy price spike feeds through to headline CPI and core via transportation/input costs"
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Lower demand for imported tech goods reduces price pressures."
         },
         {
-          "indicator": "Real GDP",
+          "indicator": "Federal Funds Rate",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Terms-of-trade shock reduces real income; uncertainty freezes capex"
+          "magnitude": -0.25,
+          "explanation": "Fed may cut rates to support growth amid slowdown."
         },
         {
           "indicator": "10-Year Treasury Yield",
-          "direction": "up",
-          "magnitude": 30,
-          "explanation": "Inflation expectations spike; flight-to-safety partially offsets via lower real rates"
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Flight to safety lowers yields."
         },
         {
-          "indicator": "Trade Balance",
+          "indicator": "Federal Debt",
+          "direction": "up",
+          "magnitude": 30000,
+          "explanation": "Increased borrowing to finance defense and stimulus."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
           "direction": "down",
-          "magnitude": 15,
-          "explanation": "Higher energy import bill widens goods deficit significantly"
+          "magnitude": -30000,
+          "explanation": "Widening trade deficit due to reduced exports."
         },
         {
           "indicator": "Industrial Production",
           "direction": "down",
-          "magnitude": 3,
-          "explanation": "Energy-intensive manufacturing curtails output; supply chain disruptions"
+          "magnitude": -5,
+          "explanation": "Lower manufacturing activity."
         },
         {
           "indicator": "Retail Sales",
           "direction": "down",
-          "magnitude": 2,
-          "explanation": "Gasoline price surge crowds out discretionary spending"
+          "magnitude": -5000,
+          "explanation": "Consumer confidence drops."
         },
         {
-          "indicator": "Federal Funds Rate",
-          "direction": "up",
-          "magnitude": 25,
-          "explanation": "Fed hikes 25bps to anchor expectations despite growth hit"
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -50,
+          "explanation": "Housing market slows."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -30,
+          "explanation": "Job cuts in tech sector."
         }
       ],
-      "reasoning": "Base rate: Major Middle East oil supply disruptions ~15% per decade (1973, 1979, 1990, 2019). Inside view: Current regional tensions elevated but spare capacity exists (OPEC+ cuts). Clashing forces: US strategic petroleum reserve depletion vs. non-OPEC supply growth. Probability reflects 35% escalation risk * 40% significant supply loss = 14%, rounded to 15%.",
+      "reasoning": "High probability of continued tech conflict given current sanctions trends; outside view uses historical impact of trade wars on GDP and employment; probabilistic thinking sets 20% chance of a sharp decoupling.",
       "tetlockPillars": [
-        "Outside view / base rates",
-        "Diverse information sources",
-        "Probabilistic thinking"
+        "Probabilistic thinking",
+        "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Triage - Focus on questions where careful thinking pays off",
-        "Look for the errors behind your errors"
+        "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "AI-Driven Productivity Boom",
-      "description": "Generative AI adoption accelerates across services sectors, delivering measurable productivity gains of 1.5-2% annually. Investment in data centers and semiconductors surges, boosting potential growth.",
-      "probability": 0.18,
+      "name": "Domestic Fiscal Stimulus and Infrastructure Boom",
+      "description": "Congressional passage of a large infrastructure and clean energy package, boosting public spending and private investment, raising aggregate demand.",
+      "probability": 0.15,
       "category": "domestic",
       "impacts": [
         {
           "indicator": "Real GDP",
           "direction": "up",
-          "magnitude": 1.2,
-          "explanation": "Productivity surge lifts potential growth; capex boom adds to demand"
+          "magnitude": 200,
+          "explanation": "Higher government spending and private investment raise growth."
         },
         {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "up",
-          "magnitude": 0.5,
-          "explanation": "Strong labor demand in tech and AI-adjacent sectors; net job creation despite automation"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Semiconductor and equipment manufacturing ramps up significantly"
+          "indicator": "Unemployment Rate",
+          "direction": "down",
+          "magnitude": -0.2,
+          "explanation": "More jobs created."
         },
         {
           "indicator": "Inflation Rate",
-          "direction": "down",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Higher demand pushes prices."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
           "magnitude": 0.5,
-          "explanation": "Productivity gains reduce unit labor costs, easing services inflation"
+          "explanation": "Fed may tighten to curb inflation."
         },
         {
           "indicator": "10-Year Treasury Yield",
           "direction": "up",
-          "magnitude": 20,
-          "explanation": "Higher potential growth raises neutral rate (r*) and term premium"
+          "magnitude": 0.4,
+          "explanation": "Higher yields from increased borrowing."
+        },
+        {
+          "indicator": "Federal Debt",
+          "direction": "up",
+          "magnitude": 50000,
+          "explanation": "Increased debt from stimulus."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "up",
+          "magnitude": 10000,
+          "explanation": "Export boost from infrastructure projects."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "up",
+          "magnitude": 8,
+          "explanation": "More manufacturing activity."
         },
         {
           "indicator": "Retail Sales",
           "direction": "up",
+          "magnitude": 8000,
+          "explanation": "Higher consumer spending."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "up",
+          "magnitude": 30,
+          "explanation": "Increased construction demand."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 20,
+          "explanation": "Job creation."
+        }
+      ],
+      "reasoning": "Base rate of fiscal stimulus historically raises GDP by 0.5‑1% and reduces unemployment; inside view sees current political momentum for infrastructure, giving 15% probability.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Global Inflation Persistence and Monetary Tightening",
+      "description": "Inflation remains above target despite modest CPI changes, prompting the Federal Reserve to keep rates high or raise them further, tightening financial conditions.",
+      "probability": 0.25,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -100,
+          "explanation": "Higher borrowing costs reduce consumption and investment."
+        },
+        {
+          "indicator": "Unemployment Rate",
+          "direction": "up",
+          "magnitude": 0.2,
+          "explanation": "Slower growth leads to higher unemployment."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "down",
+          "magnitude": -0.5,
+          "explanation": "Tight policy eventually lowers price growth."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Fed raises rate to 4.0%."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 0.6,
+          "explanation": "Yields rise with rate expectations."
+        },
+        {
+          "indicator": "Federal Debt",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Debt service costs increase but total debt unchanged."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": -15000,
+          "explanation": "Stronger dollar reduces export competitiveness."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -3,
+          "explanation": "Reduced manufacturing activity."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -4000,
+          "explanation": "Higher rates dampen spending."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -40,
+          "explanation": "Higher mortgage rates suppress housing market."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -15,
+          "explanation": "Job growth slows."
+        }
+      ],
+      "reasoning": "Current inflation trajectory and Fed stance suggest a 25% chance that inflation persistence leads to further tightening; outside view uses past episodes of stagflation.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Supply Chain Re‑configuration and Commodity Shock",
+      "description": "Persistent disruptions in global supply chains, combined with a sharp rise in oil and food commodity prices, raise production costs and erode consumer purchasing power.",
+      "probability": 0.15,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -80,
+          "explanation": "Higher input costs reduce output."
+        },
+        {
+          "indicator": "Unemployment Rate",
+          "direction": "up",
+          "magnitude": 0.1,
+          "explanation": "Sectoral job losses in energy‑intensive industries."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "up",
           "magnitude": 1,
-          "explanation": "Real wage growth from productivity supports consumption"
+          "explanation": "Higher commodity prices feed into CPI."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.25,
+          "explanation": "Fed may respond to inflation."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Higher inflation expectations push yields up."
+        },
+        {
+          "indicator": "Federal Debt",
+          "direction": "up",
+          "magnitude": 20000,
+          "explanation": "Higher debt service costs."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": -10000,
+          "explanation": "Import bill rises."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -2,
+          "explanation": "Manufacturing constrained."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -3000,
+          "explanation": "Consumers face higher prices."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -20,
+          "explanation": "Costlier construction materials."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -10,
+          "explanation": "Slower hiring."
+        }
+      ],
+      "reasoning": "Outside view of commodity price spikes historically correlates with recession risk; inside view sees current geopolitical tensions in energy markets, giving 15% probability.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Geopolitical Conflict in Eastern Europe Escalates",
+      "description": "The Russia‑Ukraine war expands into broader Eastern European conflict, causing energy supply shocks, sanctions, and increased defense spending.",
+      "probability": 0.2,
+      "category": "geopolitical",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "down",
+          "magnitude": -120,
+          "explanation": "Energy price spikes and trade disruptions lower growth."
+        },
+        {
+          "indicator": "Unemployment Rate",
+          "direction": "up",
+          "magnitude": 0.15,
+          "explanation": "Job losses in energy and related sectors."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "up",
+          "magnitude": 0.9,
+          "explanation": "Higher energy costs raise CPI."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "up",
+          "magnitude": 0.3,
+          "explanation": "Fed may hike to 4.0%."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "up",
+          "magnitude": 0.5,
+          "explanation": "Risk premium rises."
+        },
+        {
+          "indicator": "Federal Debt",
+          "direction": "up",
+          "magnitude": 25000,
+          "explanation": "Increased defense outlays increase debt."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": -20000,
+          "explanation": "Widening deficit due to energy imports."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -4,
+          "explanation": "Manufacturing affected by energy constraints."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -3500,
+          "explanation": "Consumer spending constrained."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -30,
+          "explanation": "Higher costs and uncertainty reduce construction."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -12,
+          "explanation": "Job cuts in energy and related industries."
+        }
+      ],
+      "reasoning": "Historical base rates show that major geopolitical shocks often cause 0.5‑1% GDP contraction; given current escalation risk, 20% probability assigned.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Strong US Dollar and Export Recovery",
+      "description": "The US dollar appreciably strengthens due to global risk aversion, making US exports more competitive and boosting trade surplus, while also lowering import prices and inflation.",
+      "probability": 0.15,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Real GDP",
+          "direction": "up",
+          "magnitude": 100,
+          "explanation": "Stronger demand for US goods abroad raises growth."
+        },
+        {
+          "indicator": "Unemployment Rate",
+          "direction": "down",
+          "magnitude": -0.15,
+          "explanation": "Export‑oriented sectors create jobs."
+        },
+        {
+          "indicator": "Inflation Rate",
+          "direction": "down",
+          "magnitude": -0.6,
+          "explanation": "Cheaper imports reduce CPI."
+        },
+        {
+          "indicator": "Federal Funds Rate",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Fed may hold rates steady."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": -0.4,
+          "explanation": "Stronger dollar lowers yields."
         },
         {
           "indicator": "Federal Debt",
           "direction": "down",
-          "magnitude": 0.3,
-          "explanation": "Higher nominal GDP growth improves debt-to-GDP trajectory modestly"
+          "magnitude": -15000,
+          "explanation": "Lower debt service costs."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "up",
+          "magnitude": 25000,
+          "explanation": "Improved trade surplus."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "up",
+          "magnitude": 5,
+          "explanation": "Manufacturing benefits from export demand."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "up",
+          "magnitude": 6000,
+          "explanation": "Higher consumer confidence."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "up",
+          "magnitude": 20,
+          "explanation": "Stronger economy supports housing."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "up",
+          "magnitude": 15,
+          "explanation": "Job gains in export sectors."
         }
       ],
-      "reasoning": "Base rate: General purpose technology booms (electricity, ICT) deliver 0.5-1.5pp productivity lift after 10-15 year lag. AI adoption curve faster. Inside view: Capex intentions surveys at record highs; Nvidia revenue doubling. Clashing forces: Measurement challenges (free digital services) vs. tangible output. Probability: 50% AI delivers as hoped * 35% macro-visible within 12 months = 17.5%, rounded to 18%.",
+      "reasoning": "Outside view of dollar appreciation cycles suggests a 15% chance of a sustained strong dollar; inside view sees current trade dynamics supporting this scenario.",
       "tetlockPillars": [
-        "Granular analysis",
-        "Continuous updating",
-        "Metacognition"
+        "Probabilistic thinking",
+        "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Break seemingly intractable problems into tractable sub-problems",
-        "Strike the right balance between under- and overconfidence"
+        "Break seemingly intractable problems into tractable sub-problems"
       ]
     },
     {
-      "name": "Fiscal Consolidation & Debt Ceiling Crisis",
-      "description": "Debt ceiling standoff in early 2027 leads to government shutdown risk and eventual spending caps agreement. Fiscal impulse turns negative as deficit reduction measures bite.",
+      "name": "Mild Recession with Gradual Recovery",
+      "description": "A mild recession occurs as consumer spending contracts slightly and business investment slows, but the labor market remains resilient, leading to a gradual recovery in the latter half of the year.",
       "probability": 0.1,
       "category": "domestic",
       "impacts": [
         {
           "indicator": "Real GDP",
           "direction": "down",
-          "magnitude": 0.7,
-          "explanation": "Government spending cuts and uncertainty reduce aggregate demand"
-        },
-        {
-          "indicator": "Federal Debt",
-          "direction": "down",
-          "magnitude": 0.5,
-          "explanation": "Deficit reduction slows debt accumulation rate from 1.43% to ~0.9% annualized"
+          "magnitude": -50,
+          "explanation": "Slight contraction in output."
         },
         {
           "indicator": "Unemployment Rate",
           "direction": "up",
-          "magnitude": 0.25,
-          "explanation": "Public sector and contractor layoffs; confidence effects on private hiring"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "down",
-          "magnitude": 15,
-          "explanation": "Lower deficit expectations reduce term premium; flight-to-quality during crisis"
-        },
-        {
-          "indicator": "Retail Sales",
-          "direction": "down",
-          "magnitude": 0.8,
-          "explanation": "Government worker furloughs and contractor payment delays reduce spending"
+          "magnitude": 0.1,
+          "explanation": "Minor rise in unemployment."
         },
         {
           "indicator": "Inflation Rate",
           "direction": "down",
-          "magnitude": 0.3,
-          "explanation": "Demand reduction eases price pressures modestly"
-        },
-        {
-          "indicator": "Trade Balance",
-          "direction": "up",
-          "magnitude": 5,
-          "explanation": "Weaker domestic demand reduces import intensity"
-        }
-      ],
-      "reasoning": "Base rate: Debt ceiling crises occurred in 2011, 2013, 2023 - ~25% chance per Congress. Inside view: Divided government likely post-2026 midterms; debt at 122% GDP creates pressure. Clashing forces: Political brinkmanship vs. market discipline forcing compromise. Probability: 40% divided government * 25% crisis severity = 10%.",
-      "tetlockPillars": [
-        "Outside view / base rates",
-        "Cognitive debiasing",
-        "Diverse information sources"
-      ],
-      "tetlockCommandments": [
-        "Triage - Focus on questions where careful thinking pays off",
-        "Master the error-balancing cycle: Try, fail, analyze, adjust, try again"
-      ]
-    },
-    {
-      "name": "China Hard Landing & Global Trade Fragmentation",
-      "description": "China's property crisis deepens, growth falls to 3.5%, triggering financial stress. Global supply chains fracture further as US/EU impose new tariffs on Chinese EVs, solar, semiconductors. Friend-shoring accelerates.",
-      "probability": 0.07,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "Trade Balance",
-          "direction": "down",
-          "magnitude": 20,
-          "explanation": "US exports to China plummet; supply chain reconfiguration costs raise import prices"
-        },
-        {
-          "indicator": "Industrial Production",
-          "direction": "down",
-          "magnitude": 2,
-          "explanation": "Integrated supply chains disrupted; intermediate goods shortages"
-        },
-        {
-          "indicator": "Inflation Rate",
-          "direction": "up",
-          "magnitude": 0.8,
-          "explanation": "Tariffs and reshoring costs pass through to consumer and producer prices"
-        },
-        {
-          "indicator": "Real GDP",
-          "direction": "down",
-          "magnitude": 0.5,
-          "explanation": "Export drag and supply chain costs offset domestic demand resilience"
-        },
-        {
-          "indicator": "10-Year Treasury Yield",
-          "direction": "down",
-          "magnitude": 25,
-          "explanation": "Global risk-off drives flight to US Treasuries; lower global growth expectations"
-        },
-        {
-          "indicator": "Nonfarm Payrolls",
-          "direction": "down",
-          "magnitude": 0.3,
-          "explanation": "Manufacturing and export-oriented sectors shed jobs"
+          "magnitude": -0.3,
+          "explanation": "Demand weakness eases price pressures."
         },
         {
           "indicator": "Federal Funds Rate",
           "direction": "down",
-          "magnitude": 50,
-          "explanation": "Fed cuts to offset external shock, providing insurance against financial spillovers"
+          "magnitude": -0.25,
+          "explanation": "Fed cuts rates modestly."
+        },
+        {
+          "indicator": "10-Year Treasury Yield",
+          "direction": "down",
+          "magnitude": -0.3,
+          "explanation": "Lower yields."
+        },
+        {
+          "indicator": "Federal Debt",
+          "direction": "stable",
+          "magnitude": 0,
+          "explanation": "Debt unchanged."
+        },
+        {
+          "indicator": "Goods and Services Trade Balance",
+          "direction": "down",
+          "magnitude": -5000,
+          "explanation": "Slight dip in exports."
+        },
+        {
+          "indicator": "Industrial Production",
+          "direction": "down",
+          "magnitude": -1,
+          "explanation": "Reduced activity."
+        },
+        {
+          "indicator": "Retail Sales",
+          "direction": "down",
+          "magnitude": -2000,
+          "explanation": "Weaker consumer spending."
+        },
+        {
+          "indicator": "Housing Starts",
+          "direction": "down",
+          "magnitude": -10,
+          "explanation": "Slow housing market."
+        },
+        {
+          "indicator": "Nonfarm Payrolls",
+          "direction": "down",
+          "magnitude": -8,
+          "explanation": "Small job loss."
         }
       ],
-      "reasoning": "Base rate: Emerging market hard landings ~5% per decade. China-specific: property sector 25% of GDP, unprecedented leverage. Inside view: Policy stimulus failing to revive confidence; youth unemployment hidden. Clashing forces: Chinese stimulus capacity vs. structural headwinds. Probability: 20% hard landing * 35% significant US spillover = 7%.",
+      "reasoning": "Base rate of recessions in the past decade shows a 10% probability of a mild downturn given current consumer confidence trends; inside view sees mixed signals, leading to 10% probability.",
       "tetlockPillars": [
-        "Outside view / base rates",
-        "Granular analysis",
-        "Diverse information sources"
+        "Probabilistic thinking",
+        "Outside view / base rates"
       ],
       "tetlockCommandments": [
-        "Look for the clashing causal forces at work in each problem",
-        "Strive to distinguish as many degrees of doubt as the problem permits"
+        "Break seemingly intractable problems into tractable sub-problems"
       ]
     }
   ],
@@ -365,108 +579,67 @@
     {
       "indicator": "Real GDP",
       "currentValue": 24269.613,
-      "forecastValue": 24485.3,
-      "weightedChange": 0.89,
-      "unit": "Billions of Chained 2017 Dollars",
-      "confidence": 0.68,
-      "equation": "24269.613 + (0.28 * 194.2) + (0.22 * -145.6) + (0.15 * -242.7) + (0.18 * 291.2) + (0.10 * -170.0) + (0.07 * -121.3) = 24485.3"
+      "forecastValue": 24369.613,
+      "weightedChange": 0.35,
+      "unit": "Billions of Dollars",
+      "confidence": 0.72,
+      "equation": "24269.613 + (0.20 * -150) + (0.15 * 200) + (0.25 * -100) + (0.15 * -80) + (0.20 * -120) + (0.15 * 100) + (0.10 * -50) = 24369.613"
     },
     {
       "indicator": "Unemployment Rate",
       "currentValue": 4.1,
-      "forecastValue": 4.08,
-      "weightedChange": -0.02,
+      "forecastValue": 4.25,
+      "weightedChange": 0.15,
       "unit": "Percent",
-      "confidence": 0.62,
-      "equation": "4.1 + (0.28 * -0.2) + (0.22 * 0.3) + (0.15 * 0) + (0.18 * -0.1) + (0.10 * 0.25) + (0.07 * 0.1) = 4.08"
+      "confidence": 0.68,
+      "equation": "4.1 + (0.20 * 0.3) + (0.15 * -0.2) + (0.25 * 0.2) + (0.15 * 0.1) + (0.20 * 0.15) + (0.15 * -0.15) + (0.10 * 0.1) = 4.25"
     },
     {
       "indicator": "Inflation Rate",
       "currentValue": 3.35,
-      "forecastValue": 3.42,
-      "weightedChange": 2.09,
-      "unit": "Index 1982-1984=100 (YoY % change)",
-      "confidence": 0.55,
-      "equation": "3.35 + (0.28 * 0) + (0.22 * 1.2) + (0.15 * 2.0) + (0.18 * -0.5) + (0.10 * -0.3) + (0.07 * 0.8) = 3.42"
+      "forecastValue": 3.4,
+      "weightedChange": 0.05,
+      "unit": "Index 1982-1984=100",
+      "confidence": 0.7,
+      "equation": "3.35 + (0.20 * -0.5) + (0.15 * 0.8) + (0.25 * -0.5) + (0.15 * 1.0) + (0.20 * 0.9) + (0.15 * -0.6) + (0.10 * -0.3) = 3.40"
     },
     {
       "indicator": "Federal Funds Rate",
       "currentValue": 3.63,
-      "forecastValue": 3.37,
-      "weightedChange": -7.16,
-      "unit": "Percent (bps change)",
-      "confidence": 0.7,
-      "equation": "3.63 + (0.28 * -0.75) + (0.22 * 0) + (0.15 * 0.25) + (0.18 * 0) + (0.10 * 0) + (0.07 * -0.50) = 3.37"
+      "forecastValue": 3.78,
+      "weightedChange": 0.15,
+      "unit": "Percent",
+      "confidence": 0.65,
+      "equation": "3.63 + (0.20 * -0.25) + (0.15 * 0.5) + (0.25 * 0.5) + (0.15 * 0.25) + (0.20 * 0.3) + (0.15 * 0) + (0.10 * -0.25) = 3.78"
     },
     {
       "indicator": "10-Year Treasury Yield",
-      "currentValue": 4.96,
-      "forecastValue": 4.95,
-      "weightedChange": -0.2,
+      "currentValue": 5.11,
+      "forecastValue": 5.28,
+      "weightedChange": 0.17,
       "unit": "Percent",
-      "confidence": 0.65,
-      "equation": "4.96 + (0.28 * -0.50) + (0.22 * 0.40) + (0.15 * 0.30) + (0.18 * 0.20) + (0.10 * -0.15) + (0.07 * -0.25) = 4.95"
+      "confidence": 0.66,
+      "equation": "5.11 + (0.20 * -0.3) + (0.15 * 0.4) + (0.25 * 0.6) + (0.15 * 0.5) + (0.20 * 0.5) + (0.15 * -0.4) + (0.10 * -0.3) = 5.28"
     },
     {
       "indicator": "Federal Debt",
       "currentValue": 39065421,
-      "forecastValue": 39532000,
-      "weightedChange": 1.2,
+      "forecastValue": 39095421,
+      "weightedChange": 30000,
       "unit": "Millions of Dollars",
-      "confidence": 0.8,
-      "equation": "39065421 * (1 + 0.012) = 39532000 (weighted average of scenario debt growth rates)"
+      "confidence": 0.71,
+      "equation": "39065421 + (0.20 * 30000) + (0.15 * 50000) + (0.25 * 0) + (0.15 * 20000) + (0.20 * 25000) + (0.15 * -15000) + (0.10 * 0) = 39095421"
     },
     {
       "indicator": "Goods and Services Trade Balance",
       "currentValue": -88576,
-      "forecastValue": -94200,
-      "weightedChange": -6.35,
+      "forecastValue": -73576,
+      "weightedChange": 15000,
       "unit": "Millions of Dollars",
-      "confidence": 0.58,
-      "equation": "-88576 + (0.28 * 0) + (0.22 * 0) + (0.15 * -15000) + (0.18 * 0) + (0.10 * 5000) + (0.07 * -20000) = -94200"
-    },
-    {
-      "indicator": "Industrial Production",
-      "currentValue": 103.0682,
-      "forecastValue": 103.42,
-      "weightedChange": 0.34,
-      "unit": "Index 2017=100",
-      "confidence": 0.6,
-      "equation": "103.0682 + (0.28 * 0.2) + (0.22 * -1.55) + (0.15 * -3.1) + (0.18 * 2.58) + (0.10 * 0) + (0.07 * -2.06) = 103.42"
-    },
-    {
-      "indicator": "Retail Sales",
-      "currentValue": 773947,
-      "forecastValue": 781200,
-      "weightedChange": 0.94,
-      "unit": "Millions of Dollars",
-      "confidence": 0.67,
-      "equation": "773947 + (0.28 * 11609) + (0.22 * 0) + (0.15 * -15479) + (0.18 * 7739) + (0.10 * -6192) + (0.07 * 0) = 781200"
-    },
-    {
-      "indicator": "Housing Starts",
-      "currentValue": 1275,
-      "forecastValue": 1298,
-      "weightedChange": 1.8,
-      "unit": "Thousands of Units",
-      "confidence": 0.63,
-      "equation": "1275 + (0.28 * 102) + (0.22 * -64) + (0.15 * -64) + (0.18 * 0) + (0.10 * 0) + (0.07 * 0) = 1298"
-    },
-    {
-      "indicator": "Nonfarm Payrolls",
-      "currentValue": 159075,
-      "forecastValue": 159350,
-      "weightedChange": 0.17,
-      "unit": "Thousands of Persons",
-      "confidence": 0.7,
-      "equation": "159075 + (0.28 * 159) + (0.22 * 0) + (0.15 * 0) + (0.18 * 795) + (0.10 * -398) + (0.07 * -477) = 159350"
+      "confidence": 0.69,
+      "equation": "-885<unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk><unk>{"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting framework: (1) Established base rates for each scenario using historical frequencies (outside view). (2) Decomposed each scenario into causal sub-mechanisms (granular analysis). (3) Identified clashing forces (e.g., inflation persistence vs. disinflationary productivity). (4) Assigned precise probabilities reflecting degrees of doubt. (5) Weighted scenario impacts by probability to generate forecasts. (6) Calibrated confidence intervals based on scenario dispersion and historical forecast errors. (7) Documented reasoning for auditability and future error analysis.",
-  "analysisDate": "2026-09-23",
-  "geopoliticalSummary": "Elevated tensions in Middle East (Israel-Iran proxy conflict, Red Sea shipping risks), Russia-Ukraine war entering third year with no resolution, China-Taiwan strait tensions managed but fragile. US alliance cohesion strong (NATO expansion, AUKUS, Quad) but Global South non-alignment growing. Sanctions regimes expanding (Russia, Iran, China tech). Geopolitical risk premium embedded in energy and defense spending.",
-  "geoeconomicSummary": "Global trade fragmenting into blocs (friend-shoring, near-shoring). US-China trade at record lows as % of GDP. Supply chains diversifying but not fully resilient. Dollar dominant but facing gradual erosion in settlement (BRICS expansion, bilateral currency agreements). Commodity markets tight with underinvestment in traditional energy and critical minerals. Industrial policy subsidies proliferating (IRA, CHIPS, EU Green Deal).",
-  "currentEventsSummary": "Fed in restrictive hold after 2024-25 hiking cycle; inflation above target but trending down. Labor market cooling gradually (payrolls +0.1%, unemployment 4.1%). Fiscal deficit ~6-7% GDP with debt at 122% GDP. Housing frozen by rate lock-in effect. AI capex boom underway. Consumer resilient but savings depleted. Election year policy uncertainty. Commercial real estate stress concentrated in office.",
   "chartData": [
     {
       "seriesId": "GDPC1",

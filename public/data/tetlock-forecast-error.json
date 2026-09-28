@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-09-28T02:08:25.581Z",
-  "message": "Unexpected token 'U', \"User Safety: safe\" is not valid JSON",
+  "failedAt": "2026-09-28T12:08:42.684Z",
+  "message": "Unterminated string in JSON at position 11234",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

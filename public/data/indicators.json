@@ -85,9 +85,9 @@
       "name": "Retail Sales",
       "unit": "Millions of Dollars",
       "category": "Consumer",
-      "value": 773947,
-      "previousValue": 764462,
-      "percentChange": 1.2407418550562357,
+      "value": 737763,
+      "previousValue": 729538,
+      "percentChange": 1.1274258503326762,
       "date": "2026-08-01"
     },
     {
@@ -111,5 +111,5 @@
       "date": "2026-08-01"
     }
   ],
-  "lastRefresh": "2026-09-29T11:39:37.158Z"
+  "lastRefresh": "2026-09-29T17:06:14.915Z"
 }

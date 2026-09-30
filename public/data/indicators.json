@@ -5,9 +5,9 @@
       "name": "Real GDP",
       "unit": "Billions of Chained 2017 Dollars",
       "category": "Output",
-      "value": 24269.613,
-      "previousValue": 24180.419,
-      "percentChange": 0.36886871149751166,
+      "value": 24408.011,
+      "previousValue": 24274.383,
+      "percentChange": 0.5504897899979455,
       "date": "2026-04-01"
     },
     {
@@ -111,5 +111,5 @@
       "date": "2026-08-01"
     }
   ],
-  "lastRefresh": "2026-09-30T11:26:39.992Z"
+  "lastRefresh": "2026-09-30T17:03:47.301Z"
 }

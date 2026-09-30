@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-09-29T21:34:50.160Z",
-  "message": "Expected double-quoted property name in JSON at position 307",
+  "failedAt": "2026-09-30T02:35:52.057Z",
+  "message": "Unexpected token 'U', \"User Safety: safe\" is not valid JSON",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

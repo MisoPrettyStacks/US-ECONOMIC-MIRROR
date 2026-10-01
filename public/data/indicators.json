@@ -55,10 +55,10 @@
       "name": "Federal Debt",
       "unit": "Millions of Dollars",
       "category": "Fiscal",
-      "value": 39065421,
-      "previousValue": 38514009,
-      "percentChange": 1.431718001623773,
-      "date": "2026-01-01"
+      "value": 39462398,
+      "previousValue": 39065421,
+      "percentChange": 1.0161851321146647,
+      "date": "2026-04-01"
     },
     {
       "seriesId": "BOPGSTB",
@@ -111,5 +111,5 @@
       "date": "2026-08-01"
     }
   ],
-  "lastRefresh": "2026-10-01T11:54:36.423Z"
+  "lastRefresh": "2026-10-01T17:34:24.249Z"
 }

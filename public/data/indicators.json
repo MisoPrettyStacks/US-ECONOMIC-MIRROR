@@ -15,10 +15,10 @@
       "name": "Unemployment Rate",
       "unit": "Percent",
       "category": "Labor",
-      "value": 4.1,
+      "value": 4.2,
       "previousValue": 4.1,
-      "percentChange": 0,
-      "date": "2026-08-01"
+      "percentChange": 2.4390243902439157,
+      "date": "2026-09-01"
     },
     {
       "seriesId": "CPIAUCSL",
@@ -105,11 +105,11 @@
       "name": "Nonfarm Payrolls",
       "unit": "Thousands of Persons",
       "category": "Employment",
-      "value": 159075,
-      "previousValue": 158913,
-      "percentChange": 0.10194257235090899,
-      "date": "2026-08-01"
+      "value": 159044,
+      "previousValue": 159015,
+      "percentChange": 0.01823727321321888,
+      "date": "2026-09-01"
     }
   ],
-  "lastRefresh": "2026-10-02T11:26:12.799Z"
+  "lastRefresh": "2026-10-02T16:53:18.688Z"
 }

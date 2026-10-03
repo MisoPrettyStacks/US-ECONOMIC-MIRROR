@@ -1,0 +1,7 @@
+{
+  "failedAt": "2026-10-03T10:46:10.781Z",
+  "message": "Unexpected token 'H', \"Here's a t\"... is not valid JSON",
+  "openaiBaseUrl": "https://openrouter.ai/api/v1",
+  "openaiModel": "openrouter/free",
+  "hasApiKey": true
+}

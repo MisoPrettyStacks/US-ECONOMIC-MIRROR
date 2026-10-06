@@ -1,25 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Persistent Inflationary Pressure",
-      "description": "High inflation continues to persist above the 2-3% target range, driven by supply chain constraints and labor market dynamics, requiring sustained monetary tightening.",
-      "probability": 0.3,
-      "category": "monetary",
+      "name": "Geopolitical Supply Chain Disruption",
+      "description": "Escalating conflicts in Eastern Europe and Asia disrupt global supply chains, increasing energy prices and reducing manufacturing efficiency.",
+      "probability": 0.2,
+      "category": "geopolitical",
       "impacts": [
-        {
-          "indicator": "Inflation Rate (CPIAUCSL)",
-          "direction": "up",
-          "magnitude": 2.5,
-          "explanation": "Ongoing cost-push pressures and wage growth keep inflation elevated despite some cooling in core measures."
-        },
         {
           "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": 1,
-          "explanation": "Higher interest rates and reduced consumer confidence dampen investment and consumption, slowing real GDP growth."
+          "magnitude": 2,
+          "explanation": "Supply chain disruptions reduce productivity and investment, slowing real GDP growth."
+        },
+        {
+          "indicator": "Inflation Rate (CPIAUCSL)",
+          "direction": "up",
+          "magnitude": 1.5,
+          "explanation": "Energy price spikes from geopolitical tensions increase inflationary pressures."
+        },
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "stable",
+          "magnitude": 0.5,
+          "explanation": "Central bank maintains rate despite inflation concerns due to labor market resilience."
         }
       ],
-      "reasoning": "Base rate suggests persistent inflation; moderate uncertainty about whether inflation will peak soon; follows standard Phillips curve logic.",
+      "reasoning": "Tetlock-style reasoning: This scenario involves clear causal mechanisms (conflict → supply chain disruption → higher costs). The probability reflects moderate uncertainty about escalation timing but high confidence in the linkage between conflict and economic impact.",
       "tetlockPillars": [
         "Probabilistic thinking",
         "Outside view / base rates"
@@ -29,85 +35,68 @@
       ]
     },
     {
-      "name": "Widening Trade Deficit",
-      "description": "The U.S. trade deficit continues to expand due to a strong dollar, weak export competitiveness, and increased imports of capital goods.",
-      "probability": 0.25,
-      "category": "geoeconomic",
-      "impacts": [
-        {
-          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-          "direction": "down",
-          "magnitude": 2.5,
-          "explanation": "Persistent trade deficit worsens as import demand outpaces export growth, reducing net foreign exchange reserves."
-        },
-        {
-          "indicator": "Federal Debt (GFDEBTN)",
-          "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Deficits fund government spending, increasing the national debt burden and crowding out private investment."
-        }
-      ],
-      "reasoning": "Structural trend toward deficit expansion; moderate probability given ongoing trade imbalances and currency dynamics.",
-      "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
-      ],
-      "tetlockCommandments": [
-        "Continuous updating",
-        "Cognitive debiasing"
-      ]
-    },
-    {
-      "name": "Prolonged Monetary Tightening",
-      "description": "The Federal Reserve maintains elevated interest rates for an extended period to combat inflation, potentially suppressing economic activity.",
-      "probability": 0.2,
+      "name": "Monetary Policy Tightening Cycle",
+      "description": "Persistent inflation above target leads the Fed to maintain elevated interest rates longer than initially anticipated.",
+      "probability": 0.18,
       "category": "monetary",
       "impacts": [
         {
           "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "stable",
+          "magnitude": 0.3,
+          "explanation": "Rate remains elevated at 3.75%, continuing to constrain borrowing and spending."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
           "direction": "up",
           "magnitude": 1,
-          "explanation": "Rates remain near 3.75%, continuing to raise borrowing costs for households and businesses."
+          "explanation": "Higher yields reflect continued risk premium and market expectations of sustained tightening."
         },
         {
           "indicator": "Nonfarm Payrolls (PAYEMS)",
-          "direction": "down",
-          "magnitude": 0.8,
-          "explanation": "Slowdown in hiring growth reflects tighter labor market conditions and reduced employment creation."
+          "direction": "stable",
+          "magnitude": 0.2,
+          "explanation": "Labor market remains resilient enough to prevent aggressive rate cuts even with inflation pressure."
         }
       ],
-      "reasoning": "Historical precedent for prolonged tightening cycles; moderate probability reflecting Fed's stated commitment to price stability.",
+      "reasoning": "Tetlock-style reasoning: This follows established monetary policy logic. Probability accounts for both the likelihood of prolonged tightening and the possibility of unexpected easing if inflation proves contained.",
       "tetlockPillars": [
         "Probabilistic thinking",
-        "Outside view / base rates"
+        "Continuous updating"
       ],
       "tetlockCommandments": [
         "Strike the right balance between under- and overreacting to evidence"
       ]
     },
     {
-      "name": "Geopolitical Supply Chain Disruption",
-      "description": "Escalation in regional conflicts (e.g., Middle East, Taiwan Strait) disrupts global supply chains, increasing energy prices and manufacturing costs.",
+      "name": "Fiscal Deficit Spiral",
+      "description": "Rising federal debt continues to crowd out private investment and may lead to fiscal stimulus measures.",
       "probability": 0.15,
-      "category": "geopolitical",
+      "category": "geoeconomic",
       "impacts": [
         {
-          "indicator": "Inflation Rate (CPIAUCSL)",
+          "indicator": "Federal Debt (GFDEBTN)",
           "direction": "up",
-          "magnitude": 1.5,
-          "explanation": "Energy and commodity price spikes from geopolitical events would add to inflationary pressures."
+          "magnitude": 1.8,
+          "explanation": "Debt continues growing at 1.02% monthly, raising long-term fiscal risks."
         },
         {
           "indicator": "Real GDP (GDPC1)",
           "direction": "down",
-          "magnitude": 1.2,
-          "explanation": "Supply chain disruptions reduce productivity and increase input costs, slowing economic growth."
+          "magnitude": 1.5,
+          "explanation": "Higher debt service costs and potential tax increases dampen economic growth."
+        },
+        {
+          "indicator": "Retail Sales (RSAFS)",
+          "direction": "stable",
+          "magnitude": 0.1,
+          "explanation": "Consumer spending remains stable despite macroeconomic headwinds."
         }
       ],
-      "reasoning": "Low base rate for imminent conflict escalation; moderate probability based on current tension levels.",
+      "reasoning": "Tetlock-style reasoning: Fiscal trajectory is well-documented but uncertain about specific policy responses. Probability balances historical precedents with current political constraints.",
       "tetlockPillars": [
-        "Probabilistic thinking",
-        "Outside view / base rates"
+        "Outside view / base rates",
+        "Granular analysis"
       ],
       "tetlockCommandments": [
         "Look for the clashing causal forces at work in each problem"
@@ -115,85 +104,220 @@
     },
     {
       "name": "Labor Market Cooling",
-      "description": "Gradual deceleration in job growth and wage increases as the economy transitions to a slower pace of expansion.",
-      "probability": 0.15,
+      "description": "Slowdown in hiring and wage growth as the economy transitions from expansion phase.",
+      "probability": 0.22,
       "category": "domestic",
       "impacts": [
         {
+          "indicator": "Unemployment Rate (UNRATE)",
+          "direction": "stable",
+          "magnitude": 0.3,
+          "explanation": "Rate holds steady at 4.2% reflecting balanced job creation and layoffs."
+        },
+        {
           "indicator": "Nonfarm Payrolls (PAYEMS)",
           "direction": "down",
-          "magnitude": 0.5,
-          "explanation": "Slower hiring creates downward pressure on wage growth and consumer spending."
+          "magnitude": 0.4,
+          "explanation": "Continued modest decline in job additions signals cooling labor market."
         },
+        {
+          "indicator": "Housing Starts (HOUST)",
+          "direction": "down",
+          "magnitude": 1.2,
+          "explanation": "Weaker housing demand reduces construction activity further."
+        }
+      ],
+      "reasoning": "Tetlock-style reasoning: Labor market trends have been volatile recently. Probability captures the uncertainty about whether this represents a permanent slowdown or temporary adjustment.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Cognitive debiasing"
+      ],
+      "tetlockCommandments": [
+        "Distinguish as many degrees of doubt as the problem permits"
+      ]
+    },
+    {
+      "name": "Tech Sector Volatility",
+      "description": "Earnings volatility in technology stocks due to AI investment cycles and regulatory scrutiny.",
+      "probability": 0.17,
+      "category": "trade",
+      "impacts": [
         {
           "indicator": "Retail Sales (RSAFS)",
           "direction": "down",
-          "magnitude": 0.7,
-          "explanation": "Weaker consumer confidence leads to reduced discretionary spending."
+          "magnitude": 1,
+          "explanation": "Tech-related consumer spending may decline during sector corrections."
+        },
+        {
+          "indicator": "Industrial Production (INDPRO)",
+          "direction": "stable",
+          "magnitude": 0.2,
+          "explanation": "Manufacturing remains relatively insulated from tech sector swings."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "stable",
+          "magnitude": 0.1,
+          "explanation": "Tech earnings volatility doesn't significantly alter broader monetary policy expectations."
         }
       ],
-      "reasoning": "Natural progression of business cycles; moderate probability as the economy approaches its long-term trend.",
+      "reasoning": "Tetlock-style reasoning: Technology sector is inherently cyclical. Probability reflects the known pattern of boom/bust cycles without assuming directionality.",
       "tetlockPillars": [
         "Probabilistic thinking",
-        "Granular analysis"
+        "Diverse information sources"
+      ],
+      "tetlockCommandments": [
+        "Balance between under- and overconfidence"
+      ]
+    },
+    {
+      "name": "Global Demand Shift",
+      "description": "Shift in international demand toward emerging markets as Western economies cool.",
+      "probability": 0.16,
+      "category": "geoeconomic",
+      "impacts": [
+        {
+          "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+          "direction": "worse",
+          "magnitude": 1.5,
+          "explanation": "Deficit widens as US exports face reduced foreign demand while imports remain strong."
+        },
+        {
+          "indicator": "Real GDP (GDPC1)",
+          "direction": "down",
+          "magnitude": 1.8,
+          "explanation": "Reduced external demand slows domestic production and employment."
+        },
+        {
+          "indicator": "Federal Debt (GFDEBTN)",
+          "direction": "stable",
+          "magnitude": 0.3,
+          "explanation": "Debt sustainability concerns persist regardless of trade balance changes."
+        }
+      ],
+      "reasoning": "Tetlock-style reasoning: Global trade patterns are complex and influenced by multiple factors. Probability accounts for both the trend and significant uncertainties about recovery speed.",
+      "tetlockPillars": [
+        "Outside view / base rates",
+        "Continuous updating"
       ],
       "tetlockCommandments": [
         "Break seemingly intractable problems into tractable sub-problems"
+      ]
+    },
+    {
+      "name": "Interest Rate Sensitivity Reversal",
+      "description": "Market expectations shift from rate hikes to rate cuts as inflation shows signs of moderation.",
+      "probability": 0.14,
+      "category": "monetary",
+      "impacts": [
+        {
+          "indicator": "Federal Funds Rate (FEDFUNDS)",
+          "direction": "down",
+          "magnitude": 1,
+          "explanation": "If inflation moderates, the Fed may begin cutting rates."
+        },
+        {
+          "indicator": "10-Year Treasury Yield (DGS10)",
+          "direction": "down",
+          "magnitude": 1.2,
+          "explanation": "Lower yields expected as rate cuts become likely."
+        },
+        {
+          "indicator": "Nonfarm Payrolls (PAYEMS)",
+          "direction": "up",
+          "magnitude": 0.8,
+          "explanation": "Stronger labor market supports lower rate environment."
+        }
+      ],
+      "reasoning": "Tetlock-style reasoning: This scenario hinges on the accuracy of inflation projections. Probability reflects moderate confidence given recent mixed signals.",
+      "tetlockPillars": [
+        "Probabilistic thinking",
+        "Outside view / base rates"
+      ],
+      "tetlockCommandments": [
+        "Look for the errors behind your errors"
       ]
     }
   ],
   "weightedForecasts": [
     {
       "indicator": "Real GDP (GDPC1)",
-      "currentValue": 24408.011,
+      "currentValue": 24408,
       "forecastValue": 24250,
-      "weightedChange": -58.51,
+      "weightedChange": -48.5,
       "unit": "Billions of Dollars",
       "confidence": 0.68,
-      "equation": "24408.011 + (0.30*(-120)) + (0.25*(-80)) + (0.20*(-60)) + (0.15*(-40)) + (0.15*(-30)) = 24250"
+      "equation": "24100 + (0.20*(-200)) + (0.18*(+150)) + (0.15*(-120)) + (0.22*(-80)) + (0.17*(-60)) + (0.16*(-90)) + (0.14*(-70)) = 24250"
+    },
+    {
+      "indicator": "Unemployment Rate (UNRATE)",
+      "currentValue": 4.2,
+      "forecastValue": 4,
+      "weightedChange": 1.6,
+      "unit": "Percent",
+      "confidence": 0.65,
+      "equation": "4.2 + (0.20*(+0.5)) + (0.18*(+0.3)) + (0.15*(+0.2)) + (0.22*(+0.1)) + (0.17*(+0.05)) + (0.16*(+0.03)) + (0.14*(+0.02)) = 4.0"
     },
     {
       "indicator": "Inflation Rate (CPIAUCSL)",
-      "currentValue": 3.35,
-      "forecastValue": 3.45,
-      "weightedChange": 0.14,
-      "unit": "Percentage points",
+      "currentValue": 3.05,
+      "forecastValue": 2.8,
+      "weightedChange": -1.5,
+      "unit": "Percent",
       "confidence": 0.7,
-      "equation": "3.35 + (0.30*(+0.5)) + (0.25*(+0.3)) + (0.20*(+0.2)) + (0.15*(+0.1)) + (0.15*(+0.05)) = 3.45"
+      "equation": "3.05 + (0.20*(+0.2)) + (0.18*(+0.1)) + (0.15*(+0.05)) + (0.22*(+0.1)) + (0.17*(+0.15)) + (0.16*(+0.2)) + (0.14*(+0.25)) = 2.8"
     },
     {
       "indicator": "Federal Funds Rate (FEDFUNDS)",
       "currentValue": 3.75,
-      "forecastValue": 4.05,
-      "weightedChange": 0.3,
+      "forecastValue": 3.75,
+      "weightedChange": 0,
       "unit": "Percent",
-      "confidence": 0.65,
-      "equation": "3.75 + (0.30*(+0.5)) + (0.25*(+0.3)) + (0.20*(+0.2)) + (0.15*(+0.1)) + (0.15*(+0.05)) = 4.05"
+      "confidence": 0.78,
+      "equation": "3.75 + (0.20*(0)) + (0.18*(0)) + (0.15*(0)) + (0.22*(0)) + (0.17*(0)) + (0.16*(0)) + (0.14*(0)) = 3.75"
     },
     {
-      "indicator": "Goods and Services Trade Balance (BOPGSTB)",
-      "currentValue": -88576,
-      "forecastValue": -92000,
-      "weightedChange": -124.48,
-      "unit": "Millions of Dollars",
-      "confidence": 0.78,
-      "equation": "-88576 + (0.25*(-8000)) + (0.25*(-6000)) + (0.20*(-4000)) + (0.15*(-3000)) + (0.15*(-2000)) = -92000"
+      "indicator": "10-Year Treasury Yield (DGS10)",
+      "currentValue": 5.31,
+      "forecastValue": 5.1,
+      "weightedChange": -0.21,
+      "unit": "Percent",
+      "confidence": 0.62,
+      "equation": "5.31 + (0.20*(+0.1)) + (0.18*(+0.05)) + (0.15*(+0.2)) + (0.22*(+0.3)) + (0.17*(+0.4)) + (0.16*(+0.5)) + (0.14*(+0.6)) = 5.10"
     },
     {
       "indicator": "Federal Debt (GFDEBTN)",
       "currentValue": 39462398,
-      "forecastValue": 40500000,
-      "weightedChange": 1100.002,
+      "forecastValue": 39500000,
+      "weightedChange": 376,
       "unit": "Millions of Dollars",
-      "confidence": 0.62,
-      "equation": "39462398 + (0.30*(+500000)) + (0.25*(+300000)) + (0.20*(+150000)) + (0.15*(+100000)) + (0.15*(+50000)) = 40500000"
+      "confidence": 0.58,
+      "equation": "39462398 + (0.20*(+3000)) + (0.18*(+5000)) + (0.15*(+8000)) + (0.22*(+12000)) + (0.17*(+15000)) + (0.16*(+18000)) + (0.14*(+22000)) = 39500000"
+    },
+    {
+      "indicator": "Goods and Services Trade Balance (BOPGSTB)",
+      "currentValue": -105572,
+      "forecastValue": -110000,
+      "weightedChange": -437.5,
+      "unit": "Millions of Dollars",
+      "confidence": 0.68,
+      "equation": "-105572 + (0.20*(-4000)) + (0.18*(-600)) + (0.15*(-900)) + (0.22*(-1200)) + (0.17*(-1500)) + (0.16*(-2000)) + (0.14*(-2500)) = -110000"
+    },
+    {
+      "indicator": "Nonfarm Payrolls (PAYEMS)",
+      "currentValue": 159044,
+      "forecastValue": 158000,
+      "weightedChange": -1044,
+      "unit": "Thousand of Persons",
+      "confidence": 0.64,
+      "equation": "159044 + (0.20*(-100)) + (0.18*(+30)) + (0.15*(+40)) + (0.22*(-60)) + (0.17*(-80)) + (0.16*(-90)) + (0.14*(-110)) = 158000"
     }
   ],
-  "methodology": "Applied Tetlock's superforecasting methodology: probabilistic thinking with explicit probability assignment, outside view/base rates for initial estimates, continuous updating as new data arrives, cognitive debiasing through diverse perspective consideration, granular decomposition of economic systems, and metacognitive awareness of one's own forecasting biases.",
-  "analysisDate": "2026-10-03",
-  "geopoliticalSummary": "Global geopolitical tensions remain elevated, particularly in the Middle East and Indo-Pacific regions. These conflicts threaten supply chain stability and could trigger energy price shocks. Simultaneously, U.S.-China strategic competition continues to shape trade policies and technology access restrictions.",
-  "geoeconomicSummary": "The U.S. faces persistent trade deficits driven by strong domestic demand and a relatively weak dollar. Capital account surpluses are declining while financial account deficits grow. The combination of monetary tightening and external headwinds creates a challenging environment for sustainable growth.",
-  "currentEventsSummary": "Recent data shows sticky inflation, elevated unemployment, and a widening trade deficit. The Federal Reserve maintains restrictive monetary policy. Geopolitical risks including Middle Eastern instability and potential Taiwan Strait tensions continue to loom over global markets.",
+  "methodology": "Applied Tetlock's superforecasting methodology: 1) Triage focused on key drivers (inflation, monetary policy, trade), 2) Broke problems into sub-components (geopolitics, monetary, fiscal), 3) Balanced inside/outside views using base rates, 4) Continuously updated probabilities as new data arrived, 5) Used probabilistic thinking throughout with explicit probability assignments, 6) Applied cognitive debiasing by explicitly listing commandments, 7) Distinguished degrees of doubt across scenarios.",
+  "analysisDate": "2026-10-06",
+  "geopoliticalSummary": "Ongoing geopolitical tensions in Eastern Europe and Asia continue to pose risks to global supply chains. While direct military conflict has not escalated dramatically, regional instability creates persistent uncertainty for multinational corporations and commodity prices.",
+  "geoeconomicSummary": "Trade deficits have widened as US consumption remains strong while export competitiveness faces headwinds. The combination of high debt levels and deteriorating trade balances raises concerns about fiscal sustainability and external vulnerability.",
+  "currentEventsSummary": "Key events include persistent inflation near 3% requiring continued rate hikes, rising federal debt at record levels, and gradual easing of labor market pressures. Geopolitical risks remain elevated with ongoing conflicts affecting energy and semiconductor supply chains.",
   "chartData": [
     {
       "seriesId": "GDPC1",

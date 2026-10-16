@@ -1,7 +1,0 @@
-{
-  "failedAt": "2026-10-15T20:35:29.015Z",
-  "message": "Unexpected token 'U', \"User Safety: safe\" is not valid JSON",
-  "openaiBaseUrl": "https://openrouter.ai/api/v1",
-  "openaiModel": "openrouter/free",
-  "hasApiKey": true
-}

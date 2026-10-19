@@ -1,0 +1,7 @@
+{
+  "failedAt": "2026-10-19T02:00:41.856Z",
+  "message": "No response content from OpenAI",
+  "openaiBaseUrl": "https://openrouter.ai/api/v1",
+  "openaiModel": "openrouter/free",
+  "hasApiKey": true
+}

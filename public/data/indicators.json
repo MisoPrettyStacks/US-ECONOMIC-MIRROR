@@ -45,10 +45,10 @@
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 5.12,
-      "previousValue": 5.15,
-      "percentChange": -0.5825242718446649,
-      "date": "2026-10-20"
+      "value": 5.13,
+      "previousValue": 5.12,
+      "percentChange": 0.19531249999999584,
+      "date": "2026-10-21"
     },
     {
       "seriesId": "GFDEBTN",
@@ -111,5 +111,5 @@
       "date": "2026-09-01"
     }
   ],
-  "lastRefresh": "2026-10-22T16:08:53.220Z"
+  "lastRefresh": "2026-10-22T20:54:01.092Z"
 }

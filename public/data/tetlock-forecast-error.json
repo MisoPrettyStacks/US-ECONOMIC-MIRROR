@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-10-22T20:55:17.472Z",
-  "message": "No response content from OpenAI",
+  "failedAt": "2026-10-23T02:19:28.228Z",
+  "message": "Unterminated string in JSON at position 8970",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

@@ -35,20 +35,20 @@
       "name": "Federal Funds Rate",
       "unit": "Percent",
       "category": "Monetary Policy",
-      "value": 3.75,
-      "previousValue": 3.63,
-      "percentChange": 3.305785123966945,
-      "date": "2026-09-01"
+      "value": 3.88,
+      "previousValue": 3.75,
+      "percentChange": 3.4666666666666637,
+      "date": "2026-10-01"
     },
     {
       "seriesId": "DGS10",
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 4.98,
-      "previousValue": 5.05,
-      "percentChange": -1.3861386138613743,
-      "date": "2026-10-29"
+      "value": 4.94,
+      "previousValue": 4.98,
+      "percentChange": -0.8032128514056232,
+      "date": "2026-10-30"
     },
     {
       "seriesId": "GFDEBTN",
@@ -111,5 +111,5 @@
       "date": "2026-09-01"
     }
   ],
-  "lastRefresh": "2026-11-02T13:56:53.758Z"
+  "lastRefresh": "2026-11-03T00:05:18.347Z"
 }

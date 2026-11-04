@@ -45,10 +45,10 @@
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 4.91,
-      "previousValue": 4.94,
-      "percentChange": -0.6072874493927175,
-      "date": "2026-11-02"
+      "value": 4.95,
+      "previousValue": 4.91,
+      "percentChange": 0.8146639511201635,
+      "date": "2026-11-03"
     },
     {
       "seriesId": "GFDEBTN",
@@ -65,10 +65,10 @@
       "name": "Goods and Services Trade Balance",
       "unit": "Millions of Dollars",
       "category": "Trade",
-      "value": -105572,
-      "previousValue": -92826,
-      "percentChange": -13.731066726994593,
-      "date": "2026-08-01"
+      "value": -105047,
+      "previousValue": -105737,
+      "percentChange": 0.6525624899514834,
+      "date": "2026-09-01"
     },
     {
       "seriesId": "INDPRO",
@@ -111,5 +111,5 @@
       "date": "2026-09-01"
     }
   ],
-  "lastRefresh": "2026-11-04T13:20:54.899Z"
+  "lastRefresh": "2026-11-04T22:56:41.868Z"
 }

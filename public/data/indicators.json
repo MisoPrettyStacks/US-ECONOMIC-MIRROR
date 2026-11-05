@@ -25,10 +25,9 @@
       "name": "Inflation Rate",
       "unit": "Index 1982-1984=100",
       "category": "Prices",
-      "value": 3.72,
-      "previousValue": 3.05,
-      "percentChange": 21.96721311475411,
-      "date": "2026-09-01"
+      "value": 0,
+      "percentChange": 0,
+      "date": ""
     },
     {
       "seriesId": "FEDFUNDS",
@@ -111,5 +110,5 @@
       "date": "2026-09-01"
     }
   ],
-  "lastRefresh": "2026-11-04T22:56:41.868Z"
+  "lastRefresh": "2026-11-05T03:52:37.879Z"
 }

@@ -15,10 +15,10 @@
       "name": "Unemployment Rate",
       "unit": "Percent",
       "category": "Labor",
-      "value": 4.2,
-      "previousValue": 4.1,
-      "percentChange": 2.4390243902439157,
-      "date": "2026-09-01"
+      "value": 4.1,
+      "previousValue": 4.2,
+      "percentChange": -2.380952380952394,
+      "date": "2026-10-01"
     },
     {
       "seriesId": "CPIAUCSL",
@@ -44,10 +44,10 @@
       "name": "10-Year Treasury Yield",
       "unit": "Percent",
       "category": "Interest Rates",
-      "value": 4.9,
-      "previousValue": 4.95,
-      "percentChange": -1.0101010101010066,
-      "date": "2026-11-04"
+      "value": 4.84,
+      "previousValue": 4.9,
+      "percentChange": -1.2244897959183774,
+      "date": "2026-11-05"
     },
     {
       "seriesId": "GFDEBTN",
@@ -104,11 +104,11 @@
       "name": "Nonfarm Payrolls",
       "unit": "Thousands of Persons",
       "category": "Employment",
-      "value": 159044,
-      "previousValue": 159015,
-      "percentChange": 0.01823727321321888,
-      "date": "2026-09-01"
+      "value": 159293,
+      "previousValue": 159128,
+      "percentChange": 0.10369011110552512,
+      "date": "2026-10-01"
     }
   ],
-  "lastRefresh": "2026-11-06T13:18:40.887Z"
+  "lastRefresh": "2026-11-06T22:27:31.761Z"
 }

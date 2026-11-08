@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-11-08T02:53:32.793Z",
-  "message": "Expected double-quoted property name in JSON at position 4426",
+  "failedAt": "2026-11-08T12:19:00.620Z",
+  "message": "No response content from OpenAI",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-11-09T14:29:30.850Z",
-  "message": "Expected ',' or '}' after property value in JSON at position 3527",
+  "failedAt": "2026-11-10T00:56:34.818Z",
+  "message": "No response content from OpenAI",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

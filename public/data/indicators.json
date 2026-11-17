@@ -74,20 +74,20 @@
       "name": "Industrial Production",
       "unit": "Index 2017=100",
       "category": "Production",
-      "value": 103.9506,
-      "previousValue": 103.2664,
-      "percentChange": 0.6625581989882381,
-      "date": "2026-09-01"
+      "value": 103.3954,
+      "previousValue": 103.8458,
+      "percentChange": -0.43371999637924874,
+      "date": "2026-10-01"
     },
     {
       "seriesId": "RSAFS",
       "name": "Retail Sales",
       "unit": "Millions of Dollars",
       "category": "Consumer",
-      "value": 745021,
-      "previousValue": 739322,
-      "percentChange": 0.7708413925190919,
-      "date": "2026-09-01"
+      "value": 748220,
+      "previousValue": 746637,
+      "percentChange": 0.21201735247516532,
+      "date": "2026-10-01"
     },
     {
       "seriesId": "HOUST",
@@ -110,5 +110,5 @@
       "date": "2026-10-01"
     }
   ],
-  "lastRefresh": "2026-11-17T01:10:08.299Z"
+  "lastRefresh": "2026-11-17T14:58:50.660Z"
 }

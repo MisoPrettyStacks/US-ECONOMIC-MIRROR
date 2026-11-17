@@ -1,6 +1,6 @@
 {
-  "failedAt": "2026-11-16T14:08:33.171Z",
-  "message": "Unexpected end of JSON input",
+  "failedAt": "2026-11-17T01:10:46.614Z",
+  "message": "No response content from OpenAI",
   "openaiBaseUrl": "https://openrouter.ai/api/v1",
   "openaiModel": "openrouter/free",
   "hasApiKey": true

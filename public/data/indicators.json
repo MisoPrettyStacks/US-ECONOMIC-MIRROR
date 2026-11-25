@@ -45,9 +45,9 @@
       "unit": "Percent",
       "category": "Interest Rates",
       "value": 4.92,
-      "previousValue": 5.04,
-      "percentChange": -2.3809523809523827,
-      "date": "2026-11-20"
+      "previousValue": 4.92,
+      "percentChange": 0,
+      "date": "2026-11-23"
     },
     {
       "seriesId": "GFDEBTN",
@@ -74,9 +74,9 @@
       "name": "Industrial Production",
       "unit": "Index 2017=100",
       "category": "Production",
-      "value": 103.3954,
-      "previousValue": 103.8458,
-      "percentChange": -0.43371999637924874,
+      "value": 102.2421,
+      "previousValue": 102.6785,
+      "percentChange": -0.42501594783718705,
       "date": "2026-10-01"
     },
     {
@@ -110,5 +110,5 @@
       "date": "2026-10-01"
     }
   ],
-  "lastRefresh": "2026-11-24T16:33:47.449Z"
+  "lastRefresh": "2026-11-25T01:40:14.932Z"
 }
